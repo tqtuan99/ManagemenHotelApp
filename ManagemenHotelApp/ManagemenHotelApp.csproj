@@ -84,6 +84,7 @@
     <Compile Include="AllUserControll\UserRegisterRoom.Designer.cs">
       <DependentUpon>UserRegisterRoom.cs</DependentUpon>
     </Compile>
+    <Compile Include="BranchLong.cs" />
     <Compile Include="ConnectBase.cs" />
     <Compile Include="frmManager.cs">
       <SubType>Form</SubType>
