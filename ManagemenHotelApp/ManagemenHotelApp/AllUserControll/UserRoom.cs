@@ -186,8 +186,8 @@ namespace ManagemenHotelApp.AllUserControll
         private void dtgRoom_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             setVisibleUpdate(true);
-            //try
-            //{
+            try
+            {
                 String id = dtgRoom.Rows[e.RowIndex].Cells[0].Value.ToString();
                 lbNewID.Text = id;
 
@@ -209,12 +209,12 @@ namespace ManagemenHotelApp.AllUserControll
                 {
                     cbNewStatus.SelectedIndex = 1;
                 }
-                txtNewNote.Text = ds.Tables[0].Rows[0][9].ToString(); 
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Vui lòng click đúng vào hàng chưa thông tin cần chỉnh sửa!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //}
+                txtNewNote.Text = ds.Tables[0].Rows[0][9].ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Vui lòng click đúng vào hàng chưa thông tin cần chỉnh sửa!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
 
         }
 
@@ -236,31 +236,37 @@ namespace ManagemenHotelApp.AllUserControll
             }
             else if (MessageBox.Show("Bạn có chắc muốn cập nhật thông tin phòng không?", "Xác Nhận!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
-                int Floor = int.Parse(cbNewFloor.Text);
-                int TypeRoom = cbNewTypeRoom.SelectedIndex + 1;
-                String NameRoom = txtNewNameRoom.Text;
-                float BedNumber = float.Parse(txtNewBedNumber.Text);
-                float Discount = float.Parse(txtNewDiscount.Text);
-                int PriceRoom = int.Parse(txtNewPrice.Text);
-                String Note = txtNewNote.Text;
-                int PersonNumber = int.Parse(txtNewPersonNumber.Text);
-                int Status;
-
-                if (cbNewStatus.SelectedIndex == 0)
-                {
-                    Status = 0;
-                }
-                else Status = 1;
                 try
                 {
-                    query = @"Update PHONG set idloaiphong = '" + TypeRoom + "', tang = '" + Floor + "', tenphong = '" + NameRoom +
-                        "', dongia = '" + PriceRoom + "', mucgiamgia = '" + Discount + "',sogiuong = '" + BedNumber +
-                        "',songuoi = '" + PersonNumber + "',trangthai = '" + Status + "',ghichu = '" + Note + "' where idphong = '" + lbNewID.Text + "'";
-                    cn.setData(query, "Cập nhật thành công!");
-                }
-                catch (Exception ex)
+                    int Floor = int.Parse(cbNewFloor.Text);
+                    int TypeRoom = cbNewTypeRoom.SelectedIndex + 1;
+                    String NameRoom = txtNewNameRoom.Text;
+                    float BedNumber = float.Parse(txtNewBedNumber.Text);
+                    float Discount = float.Parse(txtNewDiscount.Text);
+                    int PriceRoom = int.Parse(txtNewPrice.Text);
+                    String Note = txtNewNote.Text;
+                    int PersonNumber = int.Parse(txtNewPersonNumber.Text);
+                    int Status;
+
+                    if (cbNewStatus.SelectedIndex == 0)
+                    {
+                        Status = 1;
+                    }
+                    else Status = 0;
+                    try
+                    {
+                        query = @"Update PHONG set idloaiphong = '" + TypeRoom + "', tang = '" + Floor + "', tenphong = '" + NameRoom +
+                            "', dongia = '" + PriceRoom + "', mucgiamgia = '" + Discount + "',sogiuong = '" + BedNumber +
+                            "',songuoi = '" + PersonNumber + "',trangthai = '" + Status + "',ghichu = '" + Note + "' where idphong = '" + lbNewID.Text + "'";
+                        cn.setData(query, "Cập nhật thành công!");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Không thể sửa dữ liệu trong database!");
+                    }
+                }catch(Exception ex)
                 {
-                    MessageBox.Show(ex + "");
+                    MessageBox.Show("Dữ liệu nhập không hợp lệ! Vui lòng nhập đúng định dạng.");
                 }
             }
             tabControl1_SelectedIndexChanged(sender, e);

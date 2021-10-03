@@ -66,7 +66,8 @@ namespace ManagemenHotelApp
             btnSta.Checked = false;
 
             btnManaService.Checked = true;
-
+            userService1.Visible = true;
+            userService1.BringToFront();
             btnTextContent.Text = btnManaService.Text;
         }
 
