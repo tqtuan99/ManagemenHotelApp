@@ -40,13 +40,15 @@
             this.panelScroll = new System.Windows.Forms.Panel();
             this.btnManaEm = new Guna.UI2.WinForms.Guna2Button();
             this.pnContent = new System.Windows.Forms.Panel();
-            this.userRoom1 = new ManagemenHotelApp.AllUserControll.UserRoom();
-            this.userManaEm1 = new ManagemenHotelApp.AllUserControll.UserManaEm();
             this.btnTextContent = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.userService1 = new ManagemenHotelApp.AllUserControll.UserService();
+            this.userRoom1 = new ManagemenHotelApp.AllUserControll.UserRoom();
+            this.userManaEm1 = new ManagemenHotelApp.AllUserControll.UserManaEm();
+            this.userFood1 = new ManagemenHotelApp.AllUserControll.UserFood();
             this.panel1.SuspendLayout();
             this.pnContent.SuspendLayout();
             this.SuspendLayout();
@@ -257,6 +259,7 @@
             // 
             // pnContent
             // 
+            this.pnContent.Controls.Add(this.userFood1);
             this.pnContent.Controls.Add(this.userService1);
             this.pnContent.Controls.Add(this.userRoom1);
             this.pnContent.Controls.Add(this.userManaEm1);
@@ -266,23 +269,6 @@
             this.pnContent.Size = new System.Drawing.Size(2011, 774);
             this.pnContent.TabIndex = 2;
             this.pnContent.Paint += new System.Windows.Forms.PaintEventHandler(this.pnContent_Paint);
-            // 
-            // userRoom1
-            // 
-            this.userRoom1.BackColor = System.Drawing.Color.White;
-            this.userRoom1.Location = new System.Drawing.Point(0, 0);
-            this.userRoom1.Name = "userRoom1";
-            this.userRoom1.Size = new System.Drawing.Size(2011, 774);
-            this.userRoom1.TabIndex = 1;
-            // 
-            // userManaEm1
-            // 
-            this.userManaEm1.BackColor = System.Drawing.Color.White;
-            this.userManaEm1.Location = new System.Drawing.Point(0, 0);
-            this.userManaEm1.Margin = new System.Windows.Forms.Padding(5);
-            this.userManaEm1.Name = "userManaEm1";
-            this.userManaEm1.Size = new System.Drawing.Size(2011, 774);
-            this.userManaEm1.TabIndex = 0;
             // 
             // btnTextContent
             // 
@@ -319,6 +305,11 @@
             this.guna2Elipse3.BorderRadius = 30;
             this.guna2Elipse3.TargetControl = this.pnContent;
             // 
+            // guna2Elipse4
+            // 
+            this.guna2Elipse4.BorderRadius = 30;
+            this.guna2Elipse4.TargetControl = this.pnContent;
+            // 
             // userService1
             // 
             this.userService1.BackColor = System.Drawing.Color.White;
@@ -326,6 +317,32 @@
             this.userService1.Name = "userService1";
             this.userService1.Size = new System.Drawing.Size(2011, 774);
             this.userService1.TabIndex = 2;
+            // 
+            // userRoom1
+            // 
+            this.userRoom1.BackColor = System.Drawing.Color.White;
+            this.userRoom1.Location = new System.Drawing.Point(0, 0);
+            this.userRoom1.Name = "userRoom1";
+            this.userRoom1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.userRoom1.Size = new System.Drawing.Size(2011, 774);
+            this.userRoom1.TabIndex = 1;
+            // 
+            // userManaEm1
+            // 
+            this.userManaEm1.BackColor = System.Drawing.Color.White;
+            this.userManaEm1.Location = new System.Drawing.Point(0, 0);
+            this.userManaEm1.Margin = new System.Windows.Forms.Padding(5);
+            this.userManaEm1.Name = "userManaEm1";
+            this.userManaEm1.Size = new System.Drawing.Size(2011, 774);
+            this.userManaEm1.TabIndex = 0;
+            // 
+            // userFood1
+            // 
+            this.userFood1.BackColor = System.Drawing.Color.White;
+            this.userFood1.Location = new System.Drawing.Point(0, 0);
+            this.userFood1.Name = "userFood1";
+            this.userFood1.Size = new System.Drawing.Size(2011, 774);
+            this.userFood1.TabIndex = 3;
             // 
             // frmManager
             // 
@@ -368,5 +385,7 @@
         private System.Windows.Forms.Button button1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
         private AllUserControll.UserService userService1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse4;
+        private AllUserControll.UserFood userFood1;
     }
 }

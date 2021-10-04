@@ -84,7 +84,7 @@ namespace ManagemenHotelApp.AllUserControll
             if (txtDiscount.Text == "") txtDiscount.Text = "0";
             if (txtNameService.Text != "" && txtPriceService.Text != "" && txtQuantity.Text != "")
             {
-                if (MessageBox.Show("Bạn có chắc muốn thêm phòng mới không?", "Xác nhận", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                try
                 {
                     String NameService = txtNameService.Text;
                     float PriceService = float.Parse(txtPriceService.Text);
@@ -92,23 +92,31 @@ namespace ManagemenHotelApp.AllUserControll
                     float Discount = float.Parse(txtDiscount.Text);
                     String Description = txtDescription.Text;
                     String Note = txtNote.Text;
-                    try
+                    if (MessageBox.Show("Bạn có chắc muốn thêm dịch vụ mới không?", "Xác nhận", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                     {
-                        //id dịch vụ tự tăng nên khi thêm mới không cần thêm id
-                        query = @"insert into DICHVU (tendichvu,giadichvu,soluong,trangthai,mota,mucgiamgia,ghichu)  
-                                    values (N'" + NameService + "',N'" + PriceService + "',N'" + Quantity + "','1',N'" + Description + "',N'" + Discount + "',N'" + Note + "')";
-                        cn.setData(query, "Thêm dịch vụ thành công.");
-                        Clear();
-                    }catch (Exception ex)
-                    {
-                        MessageBox.Show("Thông tin vừa nhập không hợp lệ", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
 
-            }
+                        try
+                        {
+                            //id dịch vụ tự tăng nên khi thêm mới không cần thêm id
+                            query = @"insert into DICHVU (tendichvu,giadichvu,soluong,trangthai,mota,mucgiamgia,ghichu)  
+                                    values (N'" + NameService + "',N'" + PriceService + "',N'" + Quantity + "','1',N'" + Description + "',N'" + Discount + "',N'" + Note + "')";
+                            cn.setData(query, "Thêm dịch vụ thành công.");
+                            Clear();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Không thể thêm mới dịch vụ vào database!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Dữ liệu nhập không hợp lệ! Vui lòng nhập đúng định dạng.");
+                }
             }
             else
             {
-                MessageBox.Show("Vui lòng điển đầy đủ thông tin: ", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng điển đầy đủ thông tin!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             FillData(dtgService, "");
         }

@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -55,21 +55,11 @@
             this.txtPriceRoom = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.lbNoti1 = new System.Windows.Forms.Label();
-            this.dtgRoom = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.idphong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenloaiphong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenphong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.songuoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sogiuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dongia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mucgiamgia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngaynghiviec = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ghichu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtNameSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
+            this.btnEdit = new Guna.UI2.WinForms.Guna2Button();
             this.pnUpdate = new System.Windows.Forms.Panel();
+            this.lbNewID = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
             this.cbNewStatus = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label32 = new System.Windows.Forms.Label();
             this.txtNewPersonNumber = new Guna.UI2.WinForms.Guna2TextBox();
@@ -88,15 +78,25 @@
             this.label30 = new System.Windows.Forms.Label();
             this.txtNewPrice = new Guna.UI2.WinForms.Guna2TextBox();
             this.label31 = new System.Windows.Forms.Label();
-            this.lbNewID = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
-            this.btnEdit = new Guna.UI2.WinForms.Guna2Button();
+            this.lbNoti1 = new System.Windows.Forms.Label();
+            this.dtgRoom = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.idphong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenloaiphong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenphong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.songuoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sogiuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dongia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mucgiamgia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngaynghiviec = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ghichu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtNameSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgRoom)).BeginInit();
             this.pnUpdate.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgRoom)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -507,206 +507,49 @@
             this.tabPage2.Text = "Tra Cứu Thông Tin";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // lbNoti1
+            // btnDelete
             // 
-            this.lbNoti1.AutoSize = true;
-            this.lbNoti1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.lbNoti1.Location = new System.Drawing.Point(293, 101);
-            this.lbNoti1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbNoti1.Name = "lbNoti1";
-            this.lbNoti1.Size = new System.Drawing.Size(323, 22);
-            this.lbNoti1.TabIndex = 9;
-            this.lbNoti1.Text = "Click vào phòng để sửa hoặc xóa phòng";
+            this.btnDelete.BorderRadius = 5;
+            this.btnDelete.Checked = true;
+            this.btnDelete.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnDelete.CheckedState.Parent = this.btnDelete;
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnDelete.CustomImages.Parent = this.btnDelete;
+            this.btnDelete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnDelete.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.HoverState.Parent = this.btnDelete;
+            this.btnDelete.ImageSize = new System.Drawing.Size(32, 32);
+            this.btnDelete.Location = new System.Drawing.Point(1654, 558);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.ShadowDecoration.Parent = this.btnDelete;
+            this.btnDelete.Size = new System.Drawing.Size(211, 57);
+            this.btnDelete.TabIndex = 93;
+            this.btnDelete.Text = "Xóa";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click_1);
             // 
-            // dtgRoom
+            // btnEdit
             // 
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            this.dtgRoom.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
-            this.dtgRoom.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtgRoom.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dtgRoom.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dtgRoom.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dtgRoom.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgRoom.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
-            this.dtgRoom.ColumnHeadersHeight = 4;
-            this.dtgRoom.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idphong,
-            this.tenloaiphong,
-            this.tenphong,
-            this.tang,
-            this.songuoi,
-            this.sogiuong,
-            this.dongia,
-            this.mucgiamgia,
-            this.ngaynghiviec,
-            this.ghichu});
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgRoom.DefaultCellStyle = dataGridViewCellStyle12;
-            this.dtgRoom.EnableHeadersVisualStyles = false;
-            this.dtgRoom.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgRoom.Location = new System.Drawing.Point(22, 136);
-            this.dtgRoom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dtgRoom.Name = "dtgRoom";
-            this.dtgRoom.ReadOnly = true;
-            this.dtgRoom.RowHeadersVisible = false;
-            this.dtgRoom.RowTemplate.Height = 24;
-            this.dtgRoom.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgRoom.Size = new System.Drawing.Size(910, 527);
-            this.dtgRoom.TabIndex = 2;
-            this.dtgRoom.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
-            this.dtgRoom.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dtgRoom.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dtgRoom.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dtgRoom.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dtgRoom.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dtgRoom.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dtgRoom.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgRoom.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dtgRoom.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dtgRoom.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtgRoom.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dtgRoom.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dtgRoom.ThemeStyle.HeaderStyle.Height = 4;
-            this.dtgRoom.ThemeStyle.ReadOnly = true;
-            this.dtgRoom.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dtgRoom.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dtgRoom.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtgRoom.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dtgRoom.ThemeStyle.RowsStyle.Height = 24;
-            this.dtgRoom.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgRoom.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dtgRoom.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgRoom_CellContentClick);
-            // 
-            // idphong
-            // 
-            this.idphong.DataPropertyName = "idphong";
-            this.idphong.HeaderText = "ID phòng";
-            this.idphong.Name = "idphong";
-            this.idphong.ReadOnly = true;
-            // 
-            // tenloaiphong
-            // 
-            this.tenloaiphong.DataPropertyName = "tenloaiphong";
-            this.tenloaiphong.HeaderText = "Loại phòng";
-            this.tenloaiphong.Name = "tenloaiphong";
-            this.tenloaiphong.ReadOnly = true;
-            // 
-            // tenphong
-            // 
-            this.tenphong.DataPropertyName = "tenphong";
-            this.tenphong.HeaderText = "Tên phòng";
-            this.tenphong.Name = "tenphong";
-            this.tenphong.ReadOnly = true;
-            // 
-            // tang
-            // 
-            this.tang.DataPropertyName = "tang";
-            this.tang.HeaderText = "Tầng";
-            this.tang.Name = "tang";
-            this.tang.ReadOnly = true;
-            // 
-            // songuoi
-            // 
-            this.songuoi.DataPropertyName = "songuoi";
-            this.songuoi.HeaderText = "Số người";
-            this.songuoi.Name = "songuoi";
-            this.songuoi.ReadOnly = true;
-            // 
-            // sogiuong
-            // 
-            this.sogiuong.DataPropertyName = "sogiuong";
-            this.sogiuong.HeaderText = "Số giường";
-            this.sogiuong.Name = "sogiuong";
-            this.sogiuong.ReadOnly = true;
-            // 
-            // dongia
-            // 
-            this.dongia.DataPropertyName = "dongia";
-            this.dongia.HeaderText = "Đơn giá";
-            this.dongia.Name = "dongia";
-            this.dongia.ReadOnly = true;
-            // 
-            // mucgiamgia
-            // 
-            this.mucgiamgia.DataPropertyName = "mucgiamgia";
-            this.mucgiamgia.HeaderText = "Mức giảm giá";
-            this.mucgiamgia.Name = "mucgiamgia";
-            this.mucgiamgia.ReadOnly = true;
-            // 
-            // ngaynghiviec
-            // 
-            this.ngaynghiviec.DataPropertyName = "trangthai";
-            this.ngaynghiviec.HeaderText = "Trạng thái";
-            this.ngaynghiviec.Name = "ngaynghiviec";
-            this.ngaynghiviec.ReadOnly = true;
-            // 
-            // ghichu
-            // 
-            this.ghichu.DataPropertyName = "ghichu";
-            this.ghichu.HeaderText = "Ghi Chú";
-            this.ghichu.Name = "ghichu";
-            this.ghichu.ReadOnly = true;
-            // 
-            // txtNameSearch
-            // 
-            this.txtNameSearch.BorderRadius = 15;
-            this.txtNameSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNameSearch.DefaultText = "";
-            this.txtNameSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtNameSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtNameSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNameSearch.DisabledState.Parent = this.txtNameSearch;
-            this.txtNameSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNameSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNameSearch.FocusedState.Parent = this.txtNameSearch;
-            this.txtNameSearch.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNameSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNameSearch.HoverState.Parent = this.txtNameSearch;
-            this.txtNameSearch.Location = new System.Drawing.Point(256, 25);
-            this.txtNameSearch.Margin = new System.Windows.Forms.Padding(9);
-            this.txtNameSearch.Name = "txtNameSearch";
-            this.txtNameSearch.PasswordChar = '\0';
-            this.txtNameSearch.PlaceholderText = "Nhập tên hoặc ID phòng";
-            this.txtNameSearch.SelectedText = "";
-            this.txtNameSearch.ShadowDecoration.Parent = this.txtNameSearch;
-            this.txtNameSearch.Size = new System.Drawing.Size(568, 57);
-            this.txtNameSearch.TabIndex = 1;
-            this.txtNameSearch.TextChanged += new System.EventHandler(this.txtNameSearch_TextChanged);
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BorderRadius = 5;
-            this.btnSearch.Checked = true;
-            this.btnSearch.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnSearch.CheckedState.Parent = this.btnSearch;
-            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnSearch.CustomImages.Parent = this.btnSearch;
-            this.btnSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnSearch.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.HoverState.Parent = this.btnSearch;
-            this.btnSearch.Image = global::ManagemenHotelApp.Properties.Resources.search;
-            this.btnSearch.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnSearch.Location = new System.Drawing.Point(21, 25);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.ShadowDecoration.Parent = this.btnSearch;
-            this.btnSearch.Size = new System.Drawing.Size(211, 57);
-            this.btnSearch.TabIndex = 0;
-            this.btnSearch.Text = "Tìm Kiếm";
+            this.btnEdit.BorderRadius = 5;
+            this.btnEdit.Checked = true;
+            this.btnEdit.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnEdit.CheckedState.Parent = this.btnEdit;
+            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnEdit.CustomImages.Parent = this.btnEdit;
+            this.btnEdit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnEdit.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.ForeColor = System.Drawing.Color.White;
+            this.btnEdit.HoverState.Parent = this.btnEdit;
+            this.btnEdit.ImageSize = new System.Drawing.Size(32, 32);
+            this.btnEdit.Location = new System.Drawing.Point(1327, 558);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.ShadowDecoration.Parent = this.btnEdit;
+            this.btnEdit.Size = new System.Drawing.Size(211, 57);
+            this.btnEdit.TabIndex = 92;
+            this.btnEdit.Text = "Sửa";
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click_1);
             // 
             // pnUpdate
             // 
@@ -734,6 +577,30 @@
             this.pnUpdate.Name = "pnUpdate";
             this.pnUpdate.Size = new System.Drawing.Size(975, 513);
             this.pnUpdate.TabIndex = 72;
+            // 
+            // lbNewID
+            // 
+            this.lbNewID.AutoSize = true;
+            this.lbNewID.Font = new System.Drawing.Font("Tahoma", 18F);
+            this.lbNewID.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lbNewID.Location = new System.Drawing.Point(111, 21);
+            this.lbNewID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbNewID.Name = "lbNewID";
+            this.lbNewID.Size = new System.Drawing.Size(63, 36);
+            this.lbNewID.TabIndex = 93;
+            this.lbNewID.Text = "___";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Tahoma", 18F);
+            this.label29.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label29.Location = new System.Drawing.Point(47, 21);
+            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(75, 36);
+            this.label29.TabIndex = 92;
+            this.label29.Text = "ID - ";
             // 
             // cbNewStatus
             // 
@@ -1065,73 +932,206 @@
             this.label31.TabIndex = 72;
             this.label31.Text = "Đơn giá";
             // 
-            // lbNewID
+            // lbNoti1
             // 
-            this.lbNewID.AutoSize = true;
-            this.lbNewID.Font = new System.Drawing.Font("Tahoma", 18F);
-            this.lbNewID.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lbNewID.Location = new System.Drawing.Point(111, 21);
-            this.lbNewID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbNewID.Name = "lbNewID";
-            this.lbNewID.Size = new System.Drawing.Size(63, 36);
-            this.lbNewID.TabIndex = 93;
-            this.lbNewID.Text = "___";
+            this.lbNoti1.AutoSize = true;
+            this.lbNoti1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.lbNoti1.Location = new System.Drawing.Point(293, 101);
+            this.lbNoti1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbNoti1.Name = "lbNoti1";
+            this.lbNoti1.Size = new System.Drawing.Size(323, 22);
+            this.lbNoti1.TabIndex = 9;
+            this.lbNoti1.Text = "Click vào phòng để sửa hoặc xóa phòng";
             // 
-            // label29
+            // dtgRoom
             // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Tahoma", 18F);
-            this.label29.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label29.Location = new System.Drawing.Point(47, 21);
-            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(75, 36);
-            this.label29.TabIndex = 92;
-            this.label29.Text = "ID - ";
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dtgRoom.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgRoom.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgRoom.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dtgRoom.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtgRoom.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dtgRoom.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgRoom.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dtgRoom.ColumnHeadersHeight = 4;
+            this.dtgRoom.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idphong,
+            this.tenloaiphong,
+            this.tenphong,
+            this.tang,
+            this.songuoi,
+            this.sogiuong,
+            this.dongia,
+            this.mucgiamgia,
+            this.ngaynghiviec,
+            this.ghichu});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgRoom.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dtgRoom.EnableHeadersVisualStyles = false;
+            this.dtgRoom.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dtgRoom.Location = new System.Drawing.Point(22, 136);
+            this.dtgRoom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtgRoom.Name = "dtgRoom";
+            this.dtgRoom.ReadOnly = true;
+            this.dtgRoom.RowHeadersVisible = false;
+            this.dtgRoom.RowTemplate.Height = 24;
+            this.dtgRoom.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgRoom.Size = new System.Drawing.Size(910, 527);
+            this.dtgRoom.TabIndex = 2;
+            this.dtgRoom.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
+            this.dtgRoom.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dtgRoom.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dtgRoom.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dtgRoom.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dtgRoom.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dtgRoom.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dtgRoom.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dtgRoom.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dtgRoom.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dtgRoom.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtgRoom.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dtgRoom.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dtgRoom.ThemeStyle.HeaderStyle.Height = 4;
+            this.dtgRoom.ThemeStyle.ReadOnly = true;
+            this.dtgRoom.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dtgRoom.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dtgRoom.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtgRoom.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dtgRoom.ThemeStyle.RowsStyle.Height = 24;
+            this.dtgRoom.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dtgRoom.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dtgRoom.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgRoom_CellContentClick);
             // 
-            // btnDelete
+            // idphong
             // 
-            this.btnDelete.BorderRadius = 5;
-            this.btnDelete.Checked = true;
-            this.btnDelete.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnDelete.CheckedState.Parent = this.btnDelete;
-            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnDelete.CustomImages.Parent = this.btnDelete;
-            this.btnDelete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnDelete.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.HoverState.Parent = this.btnDelete;
-            this.btnDelete.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnDelete.Location = new System.Drawing.Point(1654, 558);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.ShadowDecoration.Parent = this.btnDelete;
-            this.btnDelete.Size = new System.Drawing.Size(211, 57);
-            this.btnDelete.TabIndex = 93;
-            this.btnDelete.Text = "Xóa";
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click_1);
+            this.idphong.DataPropertyName = "idphong";
+            this.idphong.HeaderText = "ID phòng";
+            this.idphong.Name = "idphong";
+            this.idphong.ReadOnly = true;
             // 
-            // btnEdit
+            // tenloaiphong
             // 
-            this.btnEdit.BorderRadius = 5;
-            this.btnEdit.Checked = true;
-            this.btnEdit.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnEdit.CheckedState.Parent = this.btnEdit;
-            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnEdit.CustomImages.Parent = this.btnEdit;
-            this.btnEdit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnEdit.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.HoverState.Parent = this.btnEdit;
-            this.btnEdit.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnEdit.Location = new System.Drawing.Point(1327, 558);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.ShadowDecoration.Parent = this.btnEdit;
-            this.btnEdit.Size = new System.Drawing.Size(211, 57);
-            this.btnEdit.TabIndex = 92;
-            this.btnEdit.Text = "Sửa";
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click_1);
+            this.tenloaiphong.DataPropertyName = "tenloaiphong";
+            this.tenloaiphong.HeaderText = "Loại phòng";
+            this.tenloaiphong.Name = "tenloaiphong";
+            this.tenloaiphong.ReadOnly = true;
+            // 
+            // tenphong
+            // 
+            this.tenphong.DataPropertyName = "tenphong";
+            this.tenphong.HeaderText = "Tên phòng";
+            this.tenphong.Name = "tenphong";
+            this.tenphong.ReadOnly = true;
+            // 
+            // tang
+            // 
+            this.tang.DataPropertyName = "tang";
+            this.tang.HeaderText = "Tầng";
+            this.tang.Name = "tang";
+            this.tang.ReadOnly = true;
+            // 
+            // songuoi
+            // 
+            this.songuoi.DataPropertyName = "songuoi";
+            this.songuoi.HeaderText = "Số người";
+            this.songuoi.Name = "songuoi";
+            this.songuoi.ReadOnly = true;
+            // 
+            // sogiuong
+            // 
+            this.sogiuong.DataPropertyName = "sogiuong";
+            this.sogiuong.HeaderText = "Số giường";
+            this.sogiuong.Name = "sogiuong";
+            this.sogiuong.ReadOnly = true;
+            // 
+            // dongia
+            // 
+            this.dongia.DataPropertyName = "dongia";
+            this.dongia.HeaderText = "Đơn giá";
+            this.dongia.Name = "dongia";
+            this.dongia.ReadOnly = true;
+            // 
+            // mucgiamgia
+            // 
+            this.mucgiamgia.DataPropertyName = "mucgiamgia";
+            this.mucgiamgia.HeaderText = "Mức giảm giá";
+            this.mucgiamgia.Name = "mucgiamgia";
+            this.mucgiamgia.ReadOnly = true;
+            // 
+            // ngaynghiviec
+            // 
+            this.ngaynghiviec.DataPropertyName = "trangthai";
+            this.ngaynghiviec.HeaderText = "Trạng thái";
+            this.ngaynghiviec.Name = "ngaynghiviec";
+            this.ngaynghiviec.ReadOnly = true;
+            // 
+            // ghichu
+            // 
+            this.ghichu.DataPropertyName = "ghichu";
+            this.ghichu.HeaderText = "Ghi Chú";
+            this.ghichu.Name = "ghichu";
+            this.ghichu.ReadOnly = true;
+            // 
+            // txtNameSearch
+            // 
+            this.txtNameSearch.BorderRadius = 15;
+            this.txtNameSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNameSearch.DefaultText = "";
+            this.txtNameSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNameSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNameSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNameSearch.DisabledState.Parent = this.txtNameSearch;
+            this.txtNameSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNameSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNameSearch.FocusedState.Parent = this.txtNameSearch;
+            this.txtNameSearch.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNameSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNameSearch.HoverState.Parent = this.txtNameSearch;
+            this.txtNameSearch.Location = new System.Drawing.Point(256, 25);
+            this.txtNameSearch.Margin = new System.Windows.Forms.Padding(9);
+            this.txtNameSearch.Name = "txtNameSearch";
+            this.txtNameSearch.PasswordChar = '\0';
+            this.txtNameSearch.PlaceholderText = "Nhập tên hoặc ID phòng";
+            this.txtNameSearch.SelectedText = "";
+            this.txtNameSearch.ShadowDecoration.Parent = this.txtNameSearch;
+            this.txtNameSearch.Size = new System.Drawing.Size(568, 57);
+            this.txtNameSearch.TabIndex = 1;
+            this.txtNameSearch.TextChanged += new System.EventHandler(this.txtNameSearch_TextChanged);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BorderRadius = 5;
+            this.btnSearch.Checked = true;
+            this.btnSearch.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnSearch.CheckedState.Parent = this.btnSearch;
+            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnSearch.CustomImages.Parent = this.btnSearch;
+            this.btnSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnSearch.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.HoverState.Parent = this.btnSearch;
+            this.btnSearch.Image = global::ManagemenHotelApp.Properties.Resources.search;
+            this.btnSearch.ImageSize = new System.Drawing.Size(32, 32);
+            this.btnSearch.Location = new System.Drawing.Point(21, 25);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.ShadowDecoration.Parent = this.btnSearch;
+            this.btnSearch.Size = new System.Drawing.Size(211, 57);
+            this.btnSearch.TabIndex = 0;
+            this.btnSearch.Text = "Tìm Kiếm";
             // 
             // UserRoom
             // 
@@ -1140,6 +1140,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.tabControl1);
             this.Name = "UserRoom";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Size = new System.Drawing.Size(2011, 774);
             this.Load += new System.EventHandler(this.UserRoom_Load);
             this.tabControl1.ResumeLayout(false);
@@ -1147,9 +1148,9 @@
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgRoom)).EndInit();
             this.pnUpdate.ResumeLayout(false);
             this.pnUpdate.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgRoom)).EndInit();
             this.ResumeLayout(false);
 
         }

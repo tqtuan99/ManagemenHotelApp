@@ -19,8 +19,10 @@ namespace ManagemenHotelApp
 
         private void frmManager_Load(object sender, EventArgs e)
         {
-            userRoom1.Visible = false;
             userManaEm1.Visible = true;
+            userRoom1.Visible = false;
+            userService1.Visible = false;
+            userFood1.Visible = false;
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -80,7 +82,8 @@ namespace ManagemenHotelApp
             btnSta.Checked = false;
 
             btnManaFood.Checked = true;
-
+            userFood1.Visible = true;
+            userFood1.BringToFront();
             btnTextContent.Text = btnManaFood.Text;
         }
 

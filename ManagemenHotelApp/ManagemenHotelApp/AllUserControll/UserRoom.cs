@@ -213,7 +213,7 @@ namespace ManagemenHotelApp.AllUserControll
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Vui lòng click đúng vào hàng chưa thông tin cần chỉnh sửa!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
 
         }
@@ -255,9 +255,9 @@ namespace ManagemenHotelApp.AllUserControll
                     else Status = 0;
                     try
                     {
-                        query = @"Update PHONG set idloaiphong = '" + TypeRoom + "', tang = '" + Floor + "', tenphong = '" + NameRoom +
+                        query = @"Update PHONG set idloaiphong = '" + TypeRoom + "', tang = '" + Floor + "', tenphong = N'" + NameRoom +
                             "', dongia = '" + PriceRoom + "', mucgiamgia = '" + Discount + "',sogiuong = '" + BedNumber +
-                            "',songuoi = '" + PersonNumber + "',trangthai = '" + Status + "',ghichu = '" + Note + "' where idphong = '" + lbNewID.Text + "'";
+                            "',songuoi = '" + PersonNumber + "',trangthai = '" + Status + "',ghichu = N'" + Note + "' where idphong = '" + lbNewID.Text + "'";
                         cn.setData(query, "Cập nhật thành công!");
                     }
                     catch (Exception ex)

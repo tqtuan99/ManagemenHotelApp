@@ -72,6 +72,12 @@
     <Compile Include="AllUserControll\UserAddCus.Designer.cs">
       <DependentUpon>UserAddCus.cs</DependentUpon>
     </Compile>
+    <Compile Include="AllUserControll\UserFood.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AllUserControll\UserFood.Designer.cs">
+      <DependentUpon>UserFood.cs</DependentUpon>
+    </Compile>
     <Compile Include="AllUserControll\UserManaEm.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -119,6 +125,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AllUserControll\UserAddCus.resx">
       <DependentUpon>UserAddCus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllUserControll\UserFood.resx">
+      <DependentUpon>UserFood.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AllUserControll\UserManaEm.resx">
       <DependentUpon>UserManaEm.cs</DependentUpon>

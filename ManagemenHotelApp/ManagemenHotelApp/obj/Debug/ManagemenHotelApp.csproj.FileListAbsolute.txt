@@ -55,3 +55,24 @@ D:\OneDrive\Máy tính\git-hub\hotel_manager_cdio4\ManagemenHotelApp\ManagemenHo
 D:\OneDrive\Máy tính\git-hub\hotel_manager_cdio4\ManagemenHotelApp\ManagemenHotelApp\obj\Debug\ManagemenHotelApp.csproj.CopyComplete
 D:\OneDrive\Máy tính\git-hub\hotel_manager_cdio4\ManagemenHotelApp\ManagemenHotelApp\obj\Debug\ManagemenHotelApp.exe
 D:\OneDrive\Máy tính\git-hub\hotel_manager_cdio4\ManagemenHotelApp\ManagemenHotelApp\obj\Debug\ManagemenHotelApp.pdb
+D:\OneDrive\Destop\git-hub\ManagemenHotelApp\ManagemenHotelApp\ManagemenHotelApp\bin\Debug\QLKS.mdf
+D:\OneDrive\Destop\git-hub\ManagemenHotelApp\ManagemenHotelApp\ManagemenHotelApp\bin\Debug\QLKS_log.ldf
+D:\OneDrive\Destop\git-hub\ManagemenHotelApp\ManagemenHotelApp\ManagemenHotelApp\bin\Debug\ManagemenHotelApp.exe.config
+D:\OneDrive\Destop\git-hub\ManagemenHotelApp\ManagemenHotelApp\ManagemenHotelApp\bin\Debug\ManagemenHotelApp.exe
+D:\OneDrive\Destop\git-hub\ManagemenHotelApp\ManagemenHotelApp\ManagemenHotelApp\bin\Debug\ManagemenHotelApp.pdb
+D:\OneDrive\Destop\git-hub\ManagemenHotelApp\ManagemenHotelApp\ManagemenHotelApp\obj\Debug\ManagemenHotelApp.csprojAssemblyReference.cache
+D:\OneDrive\Destop\git-hub\ManagemenHotelApp\ManagemenHotelApp\ManagemenHotelApp\obj\Debug\ManagemenHotelApp.AllUserControll.UserAddCus.resources
+D:\OneDrive\Destop\git-hub\ManagemenHotelApp\ManagemenHotelApp\ManagemenHotelApp\obj\Debug\ManagemenHotelApp.AllUserControll.UserManaEm.resources
+D:\OneDrive\Destop\git-hub\ManagemenHotelApp\ManagemenHotelApp\ManagemenHotelApp\obj\Debug\ManagemenHotelApp.AllUserControll.UserRegisterRoom.resources
+D:\OneDrive\Destop\git-hub\ManagemenHotelApp\ManagemenHotelApp\ManagemenHotelApp\obj\Debug\ManagemenHotelApp.AllUserControll.UserRoom.resources
+D:\OneDrive\Destop\git-hub\ManagemenHotelApp\ManagemenHotelApp\ManagemenHotelApp\obj\Debug\ManagemenHotelApp.AllUserControll.UserService.resources
+D:\OneDrive\Destop\git-hub\ManagemenHotelApp\ManagemenHotelApp\ManagemenHotelApp\obj\Debug\ManagemenHotelApp.frmManager.resources
+D:\OneDrive\Destop\git-hub\ManagemenHotelApp\ManagemenHotelApp\ManagemenHotelApp\obj\Debug\ManagemenHotelApp.frm_Login.resources
+D:\OneDrive\Destop\git-hub\ManagemenHotelApp\ManagemenHotelApp\ManagemenHotelApp\obj\Debug\ManagemenHotelApp.frm_Main.resources
+D:\OneDrive\Destop\git-hub\ManagemenHotelApp\ManagemenHotelApp\ManagemenHotelApp\obj\Debug\ManagemenHotelApp.Properties.Resources.resources
+D:\OneDrive\Destop\git-hub\ManagemenHotelApp\ManagemenHotelApp\ManagemenHotelApp\obj\Debug\ManagemenHotelApp.csproj.GenerateResource.cache
+D:\OneDrive\Destop\git-hub\ManagemenHotelApp\ManagemenHotelApp\ManagemenHotelApp\obj\Debug\ManagemenHotelApp.csproj.CoreCompileInputs.cache
+D:\OneDrive\Destop\git-hub\ManagemenHotelApp\ManagemenHotelApp\ManagemenHotelApp\obj\Debug\ManagemenHotelApp.csproj.CopyComplete
+D:\OneDrive\Destop\git-hub\ManagemenHotelApp\ManagemenHotelApp\ManagemenHotelApp\obj\Debug\ManagemenHotelApp.exe
+D:\OneDrive\Destop\git-hub\ManagemenHotelApp\ManagemenHotelApp\ManagemenHotelApp\obj\Debug\ManagemenHotelApp.pdb
+D:\OneDrive\Destop\git-hub\ManagemenHotelApp\ManagemenHotelApp\ManagemenHotelApp\obj\Debug\ManagemenHotelApp.AllUserControll.UserFood.resources
