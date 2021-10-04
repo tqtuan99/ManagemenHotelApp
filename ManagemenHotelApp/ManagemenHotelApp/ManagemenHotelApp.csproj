@@ -102,6 +102,7 @@
     <Compile Include="AllUserControll\UserService.Designer.cs">
       <DependentUpon>UserService.cs</DependentUpon>
     </Compile>
+    <Compile Include="Class1.cs" />
     <Compile Include="ConnectBase.cs" />
     <Compile Include="frmManager.cs">
       <SubType>Form</SubType>
