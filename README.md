@@ -27,8 +27,8 @@ Hotel Management Application is a small and medium hotel management software wit
 | Nguyễn Đại Long | Plan, code     |                   | In progress |
 | Huỳnh Văn Khánh | Database, code |                   | In progress |
 | Trần Quốc Tuấn  | UI, code       |                   | In progress |
-| Nguyễn Mạnh Việt|                |                   | In progress |
-|Tăng Thanh Phong |                |                   | In progress |
+| Nguyễn Mạnh Việt| Code           |                   | In progress |
+|Tăng Thanh Phong | Code           |                   | In progress |
 
 ## Implementation 🤝
 
