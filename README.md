@@ -6,15 +6,15 @@ Hotel Management Application is a small and medium hotel management software wit
 
 ## Table of contents
 
-- [Concept]()
+- [Concept](https://github.com/tqtuan99/ManagemenHotelApp#concept)
 
-- [Assignment sheet]()
+- [Assignment sheet](https://github.com/tqtuan99/ManagemenHotelApp#assignment-sheet)
 
-- [Implementation]()
+- [Implementation](https://github.com/tqtuan99/ManagemenHotelApp#implementation)
 
-- [Product pictures]()
+- [Product pictures](https://github.com/tqtuan99/ManagemenHotelApp#product-pictures)
 
-- [Conclude]()
+- [Conclude](https://github.com/tqtuan99/ManagemenHotelApp#conclude)
 
 ## Concept 🧐
 
