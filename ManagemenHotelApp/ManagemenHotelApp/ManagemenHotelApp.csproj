@@ -72,6 +72,18 @@
     <Compile Include="AllUserControll\UserAddCus.Designer.cs">
       <DependentUpon>UserAddCus.cs</DependentUpon>
     </Compile>
+    <Compile Include="AllUserControll\UserRegisterFood.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AllUserControll\UserRegisterFood.Designer.cs">
+      <DependentUpon>UserRegisterFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllUserControll\UserRegisterService.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AllUserControll\UserRegisterService.Designer.cs">
+      <DependentUpon>UserRegisterService.cs</DependentUpon>
+    </Compile>
     <Compile Include="AllUserControll\UserFood.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -102,7 +114,6 @@
     <Compile Include="AllUserControll\UserService.Designer.cs">
       <DependentUpon>UserService.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class1.cs" />
     <Compile Include="ConnectBase.cs" />
     <Compile Include="frmManager.cs">
       <SubType>Form</SubType>
@@ -126,6 +137,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AllUserControll\UserAddCus.resx">
       <DependentUpon>UserAddCus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllUserControll\UserRegisterFood.resx">
+      <DependentUpon>UserRegisterFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllUserControll\UserRegisterService.resx">
+      <DependentUpon>UserRegisterService.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AllUserControll\UserFood.resx">
       <DependentUpon>UserFood.cs</DependentUpon>
@@ -230,6 +247,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>QLKS.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\plus.png" />
     <None Include="Resources\Logout-icon.png" />
   </ItemGroup>
   <ItemGroup>

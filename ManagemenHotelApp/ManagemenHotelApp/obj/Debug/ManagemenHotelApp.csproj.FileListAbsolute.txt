@@ -76,3 +76,5 @@ D:\OneDrive\Destop\git-hub\ManagemenHotelApp\ManagemenHotelApp\ManagemenHotelApp
 D:\OneDrive\Destop\git-hub\ManagemenHotelApp\ManagemenHotelApp\ManagemenHotelApp\obj\Debug\ManagemenHotelApp.exe
 D:\OneDrive\Destop\git-hub\ManagemenHotelApp\ManagemenHotelApp\ManagemenHotelApp\obj\Debug\ManagemenHotelApp.pdb
 D:\OneDrive\Destop\git-hub\ManagemenHotelApp\ManagemenHotelApp\ManagemenHotelApp\obj\Debug\ManagemenHotelApp.AllUserControll.UserFood.resources
+D:\OneDrive\Destop\git-hub\ManagemenHotelApp\ManagemenHotelApp\ManagemenHotelApp\obj\Debug\ManagemenHotelApp.AllUserControll.UserRegisterService.resources
+D:\OneDrive\Destop\git-hub\ManagemenHotelApp\ManagemenHotelApp\ManagemenHotelApp\obj\Debug\ManagemenHotelApp.AllUserControll.UserRegisterFood.resources

@@ -68,7 +68,7 @@ namespace ManagemenHotelApp.AllUserControll
             }
             catch
             {
-                MessageBox.Show("Vui lòng click vào hàng chứa thông tin khách hàng cần đặt phòng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
             }
         }
 
@@ -85,7 +85,7 @@ namespace ManagemenHotelApp.AllUserControll
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Vui lòng click vào hàng chứa thông tin phòng khách hàng muốn đặt!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
             }
         }
 
@@ -109,17 +109,17 @@ namespace ManagemenHotelApp.AllUserControll
                     cn.setData(query, "");
                     //Cập nhật lại trạng thái của phòng vừa được đặt
                     query = @"update Phong set trangthai = '0' where idphong = '" + txtIDRoom.Text + "'";
-                    cn.setData(query, "Đã hoàn tất đặt phòng! Tiếp tục thêm đặt thêm phòng cho khách hàng này nếu có yêu cầu. ");
+                    cn.setData(query, "Đã hoàn tất đặt phòng.");
                     clearRegisRoom();
                 }
                 catch(Exception ex)
                 {
-                    MessageBox.Show(ex+"Thêm hóa đơn thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Thêm hóa đơn thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else
             {
-                MessageBox.Show("Vui lòng click vào hàng chứa thông tin phù hợp ở bảng trên để đẩy thông tin khách hàng và phòng cần đặt vào hóa đơn bên dưới trước khi tiến hành đặt phòng!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Chưa chọn khách hàng hoặc dịch vụ!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -162,9 +162,21 @@ namespace ManagemenHotelApp.AllUserControll
             txtRoomType.Clear();
             txtSale.Clear();
             lbIdhoadon.Text = getMaxIdRoomBill();
-            String getRoomNull = "Select idphong, tenphong, tang, tenloaiphong, dongia, mucgiamgia, sogiuong, songuoi, phong.ghichu from PHONG,LOAIPHONG where trangthai = '1' and phong.idloaiphong = loaiphong.idloaiphong";
+            String getRoomNull = "Select idphong, tenphong, tang, tenloaiphong, dongia, mucgiamgia, sogiuong, songuoi, phong.ghichu " +
+                "from PHONG,LOAIPHONG where trangthai = '1' and phong.idloaiphong = loaiphong.idloaiphong";
             FillData(tbRoomNull, getRoomNull);
         }
-        
+
+        private void txtNameSearch_TextChanged(object sender, EventArgs e)
+        {
+            //FillData vào bảng khách hàng
+            String getCus = "Select * From KHACHHANG where  (convert(nvarchar(10),idkhachhang) like N'" + txtNameSearch.Text + "%' or convert(nvarchar(10),hotenkh) like N'" + txtNameSearch.Text + "%')";
+            FillData(tbCustumer, getCus);
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

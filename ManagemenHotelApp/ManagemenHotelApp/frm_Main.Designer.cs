@@ -43,6 +43,8 @@
             this.lbTextContent = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.userRegisterService1 = new ManagemenHotelApp.AllUserControll.UserRegisterService();
             this.userRegisterRoom1 = new ManagemenHotelApp.AllUserControll.UserRegisterRoom();
             this.userAddCus1 = new ManagemenHotelApp.AllUserControll.UserAddCus();
             this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
@@ -53,6 +55,8 @@
             this.btnAddService = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddRoom = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddCus = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.userRegisterFood1 = new ManagemenHotelApp.AllUserControll.UserRegisterFood();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -193,6 +197,8 @@
             // panelContent
             // 
             this.panelContent.BackColor = System.Drawing.Color.Transparent;
+            this.panelContent.Controls.Add(this.userRegisterFood1);
+            this.panelContent.Controls.Add(this.userRegisterService1);
             this.panelContent.Controls.Add(this.userRegisterRoom1);
             this.panelContent.Controls.Add(this.userAddCus1);
             this.panelContent.Location = new System.Drawing.Point(361, 165);
@@ -231,6 +237,19 @@
             // 
             this.guna2Elipse2.BorderRadius = 30;
             this.guna2Elipse2.TargetControl = this.panelContent;
+            // 
+            // guna2Elipse3
+            // 
+            this.guna2Elipse3.BorderRadius = 30;
+            this.guna2Elipse3.TargetControl = this.panelContent;
+            // 
+            // userRegisterService1
+            // 
+            this.userRegisterService1.BackColor = System.Drawing.Color.White;
+            this.userRegisterService1.Location = new System.Drawing.Point(0, -1);
+            this.userRegisterService1.Name = "userRegisterService1";
+            this.userRegisterService1.Size = new System.Drawing.Size(1668, 857);
+            this.userRegisterService1.TabIndex = 2;
             // 
             // userRegisterRoom1
             // 
@@ -454,6 +473,19 @@
             this.btnAddCus.Text = "Thêm khách";
             this.btnAddCus.Click += new System.EventHandler(this.btnAddCus_Click);
             // 
+            // guna2Elipse4
+            // 
+            this.guna2Elipse4.BorderRadius = 30;
+            this.guna2Elipse4.TargetControl = this.panelContent;
+            // 
+            // userRegisterFood1
+            // 
+            this.userRegisterFood1.BackColor = System.Drawing.Color.White;
+            this.userRegisterFood1.Location = new System.Drawing.Point(0, -1);
+            this.userRegisterFood1.Name = "userRegisterFood1";
+            this.userRegisterFood1.Size = new System.Drawing.Size(1668, 857);
+            this.userRegisterFood1.TabIndex = 3;
+            // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -507,5 +539,9 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2Button btnLogOut;
+        private AllUserControll.UserRegisterService userRegisterService1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse4;
+        private AllUserControll.UserRegisterFood userRegisterFood1;
     }
 }

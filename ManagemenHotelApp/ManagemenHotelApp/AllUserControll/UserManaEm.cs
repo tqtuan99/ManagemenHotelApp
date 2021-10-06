@@ -478,5 +478,10 @@ namespace ManagemenHotelApp.AllUserControll
         {
 
         }
+
+        private void txtNameBill_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

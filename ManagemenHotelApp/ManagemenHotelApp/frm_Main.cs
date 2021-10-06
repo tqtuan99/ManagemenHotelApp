@@ -111,6 +111,8 @@ namespace ManagemenHotelApp
             btnCheckOut.Width = 221;
             btnManagement.Width = 221;
 
+            userRegisterService1.Visible = true;
+            userRegisterService1.BringToFront();
             lbTextContent.Text = btnAddService.Text;
 
         }
@@ -139,6 +141,8 @@ namespace ManagemenHotelApp
             btnCheckOut.Width = 221;
             btnManagement.Width = 221;
 
+            userRegisterFood1.Visible = true;
+            userRegisterFood1.BringToFront();
             lbTextContent.Text = btnAddFood.Text;
 
         }
@@ -213,6 +217,7 @@ namespace ManagemenHotelApp
         {
             userAddCus1.Visible = false;
             userRegisterRoom1.Visible = false;
+            //userRegisterService1.Visible = true;
             btnAddCus.PerformClick();
         }
 

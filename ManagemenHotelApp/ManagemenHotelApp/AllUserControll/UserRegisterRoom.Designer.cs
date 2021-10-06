@@ -37,7 +37,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.txtNameSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
             this.tbRoomNull = new Guna.UI2.WinForms.Guna2DataGridView();
             this.idphong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenphong = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,6 +70,9 @@
             this.txtDayCrea = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tbCustumer = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.txtNote = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
             this.makhachhang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hotenkh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gioitinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -78,10 +80,7 @@
             this.socmnd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sodienthoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quoctich = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtNote = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tbRoomNull)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbCustumer)).BeginInit();
             this.SuspendLayout();
@@ -110,33 +109,12 @@
             this.txtNameSearch.Margin = new System.Windows.Forms.Padding(9);
             this.txtNameSearch.Name = "txtNameSearch";
             this.txtNameSearch.PasswordChar = '\0';
-            this.txtNameSearch.PlaceholderText = "Nhập tên khách hàng để tìm kiếm khách hàng cần đặt phòng";
+            this.txtNameSearch.PlaceholderText = "Nhập ID hoặc tên khách hàng để tìm kiếm";
             this.txtNameSearch.SelectedText = "";
             this.txtNameSearch.ShadowDecoration.Parent = this.txtNameSearch;
             this.txtNameSearch.Size = new System.Drawing.Size(787, 57);
             this.txtNameSearch.TabIndex = 3;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BorderRadius = 5;
-            this.btnSearch.Checked = true;
-            this.btnSearch.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnSearch.CheckedState.Parent = this.btnSearch;
-            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnSearch.CustomImages.Parent = this.btnSearch;
-            this.btnSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnSearch.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.HoverState.Parent = this.btnSearch;
-            this.btnSearch.Image = global::ManagemenHotelApp.Properties.Resources.search;
-            this.btnSearch.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnSearch.Location = new System.Drawing.Point(56, 33);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.ShadowDecoration.Parent = this.btnSearch;
-            this.btnSearch.Size = new System.Drawing.Size(211, 57);
-            this.btnSearch.TabIndex = 2;
-            this.btnSearch.Text = "Tìm Kiếm";
+            this.txtNameSearch.TextChanged += new System.EventHandler(this.txtNameSearch_TextChanged);
             // 
             // tbRoomNull
             // 
@@ -155,7 +133,7 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.tbRoomNull.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.tbRoomNull.ColumnHeadersHeight = 4;
+            this.tbRoomNull.ColumnHeadersHeight = 52;
             this.tbRoomNull.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idphong,
             this.tenphong,
@@ -176,12 +154,12 @@
             this.tbRoomNull.DefaultCellStyle = dataGridViewCellStyle6;
             this.tbRoomNull.EnableHeadersVisualStyles = false;
             this.tbRoomNull.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.tbRoomNull.Location = new System.Drawing.Point(53, 308);
+            this.tbRoomNull.Location = new System.Drawing.Point(843, 128);
             this.tbRoomNull.Margin = new System.Windows.Forms.Padding(4);
             this.tbRoomNull.Name = "tbRoomNull";
             this.tbRoomNull.RowHeadersVisible = false;
             this.tbRoomNull.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tbRoomNull.Size = new System.Drawing.Size(1548, 130);
+            this.tbRoomNull.Size = new System.Drawing.Size(825, 310);
             this.tbRoomNull.TabIndex = 15;
             this.tbRoomNull.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.tbRoomNull.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -196,7 +174,7 @@
             this.tbRoomNull.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.tbRoomNull.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.tbRoomNull.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.tbRoomNull.ThemeStyle.HeaderStyle.Height = 4;
+            this.tbRoomNull.ThemeStyle.HeaderStyle.Height = 52;
             this.tbRoomNull.ThemeStyle.ReadOnly = false;
             this.tbRoomNull.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.tbRoomNull.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -209,54 +187,67 @@
             // 
             // idphong
             // 
+            this.idphong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.idphong.DataPropertyName = "idphong";
-            this.idphong.HeaderText = "ID Phòng";
+            this.idphong.HeaderText = "ID";
             this.idphong.Name = "idphong";
+            this.idphong.Width = 57;
             // 
             // tenphong
             // 
+            this.tenphong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.tenphong.DataPropertyName = "tenphong";
             this.tenphong.HeaderText = "Tên Phòng";
             this.tenphong.Name = "tenphong";
+            this.tenphong.Width = 112;
             // 
             // tang
             // 
+            this.tang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.tang.DataPropertyName = "tang";
             this.tang.HeaderText = "Tầng";
             this.tang.Name = "tang";
             // 
             // tenloaiphong
             // 
+            this.tenloaiphong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.tenloaiphong.DataPropertyName = "tenloaiphong";
-            this.tenloaiphong.HeaderText = "Tên Loại Phòng";
+            this.tenloaiphong.HeaderText = "Loại Phòng";
             this.tenloaiphong.Name = "tenloaiphong";
+            this.tenloaiphong.Width = 117;
             // 
             // dongia
             // 
+            this.dongia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.dongia.DataPropertyName = "dongia";
             this.dongia.HeaderText = "Đơn Giá";
             this.dongia.Name = "dongia";
+            this.dongia.Width = 95;
             // 
             // mucgiamgia
             // 
+            this.mucgiamgia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.mucgiamgia.DataPropertyName = "mucgiamgia";
-            this.mucgiamgia.HeaderText = "Mức giảm giá";
+            this.mucgiamgia.HeaderText = "Giảm giá";
             this.mucgiamgia.Name = "mucgiamgia";
             // 
             // sogiuong
             // 
+            this.sogiuong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.sogiuong.DataPropertyName = "sogiuong";
             this.sogiuong.HeaderText = "Số Giường";
             this.sogiuong.Name = "sogiuong";
             // 
             // songuoi
             // 
+            this.songuoi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.songuoi.DataPropertyName = "songuoi";
             this.songuoi.HeaderText = "Số Người";
             this.songuoi.Name = "songuoi";
             // 
             // ghichu
             // 
+            this.ghichu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ghichu.DataPropertyName = "ghichu";
             this.ghichu.HeaderText = "Ghi Chú";
             this.ghichu.Name = "ghichu";
@@ -276,7 +267,7 @@
             this.txtIDCus.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtIDCus.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtIDCus.HoverState.Parent = this.txtIDCus;
-            this.txtIDCus.Location = new System.Drawing.Point(55, 564);
+            this.txtIDCus.Location = new System.Drawing.Point(52, 561);
             this.txtIDCus.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.txtIDCus.Name = "txtIDCus";
             this.txtIDCus.PasswordChar = '\0';
@@ -310,7 +301,7 @@
             this.btnBookRoom.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBookRoom.ForeColor = System.Drawing.Color.White;
             this.btnBookRoom.HoverState.Parent = this.btnBookRoom;
-            this.btnBookRoom.Location = new System.Drawing.Point(1181, 759);
+            this.btnBookRoom.Location = new System.Drawing.Point(1177, 751);
             this.btnBookRoom.Margin = new System.Windows.Forms.Padding(4);
             this.btnBookRoom.Name = "btnBookRoom";
             this.btnBookRoom.ShadowDecoration.Parent = this.btnBookRoom;
@@ -324,7 +315,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label5.Location = new System.Drawing.Point(683, 278);
+            this.label5.Location = new System.Drawing.Point(1116, 97);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(275, 27);
@@ -336,7 +327,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label1.Location = new System.Drawing.Point(707, 98);
+            this.label1.Location = new System.Drawing.Point(286, 97);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(229, 27);
@@ -380,7 +371,7 @@
             this.txtIDRoom.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtIDRoom.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtIDRoom.HoverState.Parent = this.txtIDRoom;
-            this.txtIDRoom.Location = new System.Drawing.Point(440, 564);
+            this.txtIDRoom.Location = new System.Drawing.Point(437, 561);
             this.txtIDRoom.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.txtIDRoom.Name = "txtIDRoom";
             this.txtIDRoom.PasswordChar = '\0';
@@ -396,7 +387,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(433, 532);
+            this.label3.Location = new System.Drawing.Point(430, 529);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(98, 23);
@@ -418,7 +409,7 @@
             this.txtNameCus.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtNameCus.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNameCus.HoverState.Parent = this.txtNameCus;
-            this.txtNameCus.Location = new System.Drawing.Point(56, 672);
+            this.txtNameCus.Location = new System.Drawing.Point(53, 669);
             this.txtNameCus.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.txtNameCus.Name = "txtNameCus";
             this.txtNameCus.PasswordChar = '\0';
@@ -434,7 +425,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(49, 640);
+            this.label4.Location = new System.Drawing.Point(46, 637);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(169, 23);
@@ -456,7 +447,7 @@
             this.txtNameRoom.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtNameRoom.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNameRoom.HoverState.Parent = this.txtNameRoom;
-            this.txtNameRoom.Location = new System.Drawing.Point(441, 672);
+            this.txtNameRoom.Location = new System.Drawing.Point(438, 669);
             this.txtNameRoom.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.txtNameRoom.Name = "txtNameRoom";
             this.txtNameRoom.PasswordChar = '\0';
@@ -472,7 +463,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(435, 640);
+            this.label6.Location = new System.Drawing.Point(432, 637);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(111, 23);
@@ -494,7 +485,7 @@
             this.txtRoomType.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtRoomType.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtRoomType.HoverState.Parent = this.txtRoomType;
-            this.txtRoomType.Location = new System.Drawing.Point(809, 564);
+            this.txtRoomType.Location = new System.Drawing.Point(806, 561);
             this.txtRoomType.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.txtRoomType.Name = "txtRoomType";
             this.txtRoomType.PasswordChar = '\0';
@@ -510,12 +501,13 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(803, 532);
+            this.label7.Location = new System.Drawing.Point(800, 529);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(112, 23);
             this.label7.TabIndex = 81;
             this.label7.Text = "Loại Phòng";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // txtPrice
             // 
@@ -532,7 +524,7 @@
             this.txtPrice.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPrice.HoverState.Parent = this.txtPrice;
-            this.txtPrice.Location = new System.Drawing.Point(811, 672);
+            this.txtPrice.Location = new System.Drawing.Point(808, 669);
             this.txtPrice.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.PasswordChar = '\0';
@@ -548,7 +540,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(804, 640);
+            this.label8.Location = new System.Drawing.Point(801, 637);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(83, 23);
@@ -570,7 +562,7 @@
             this.txtSale.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtSale.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSale.HoverState.Parent = this.txtSale;
-            this.txtSale.Location = new System.Drawing.Point(1199, 564);
+            this.txtSale.Location = new System.Drawing.Point(1196, 561);
             this.txtSale.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.txtSale.Name = "txtSale";
             this.txtSale.PasswordChar = '\0';
@@ -586,7 +578,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(1192, 532);
+            this.label10.Location = new System.Drawing.Point(1189, 529);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(135, 23);
@@ -597,7 +589,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(1193, 640);
+            this.label11.Location = new System.Drawing.Point(1190, 637);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(98, 23);
@@ -609,9 +601,9 @@
             this.txtDayCrea.CheckedState.Parent = this.txtDayCrea;
             this.txtDayCrea.Enabled = false;
             this.txtDayCrea.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDayCrea.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.txtDayCrea.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.txtDayCrea.HoverState.Parent = this.txtDayCrea;
-            this.txtDayCrea.Location = new System.Drawing.Point(1197, 670);
+            this.txtDayCrea.Location = new System.Drawing.Point(1194, 667);
             this.txtDayCrea.Margin = new System.Windows.Forms.Padding(4);
             this.txtDayCrea.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.txtDayCrea.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
@@ -648,7 +640,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.tbCustumer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.tbCustumer.ColumnHeadersHeight = 4;
+            this.tbCustumer.ColumnHeadersHeight = 27;
             this.tbCustumer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.makhachhang,
             this.hotenkh,
@@ -656,7 +648,8 @@
             this.ngaysinh,
             this.socmnd,
             this.sodienthoai,
-            this.quoctich});
+            this.quoctich,
+            this.Column1});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -667,13 +660,13 @@
             this.tbCustumer.DefaultCellStyle = dataGridViewCellStyle3;
             this.tbCustumer.EnableHeadersVisualStyles = false;
             this.tbCustumer.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.tbCustumer.Location = new System.Drawing.Point(56, 128);
+            this.tbCustumer.Location = new System.Drawing.Point(1, 128);
             this.tbCustumer.Margin = new System.Windows.Forms.Padding(4);
             this.tbCustumer.Name = "tbCustumer";
             this.tbCustumer.RowHeadersVisible = false;
             this.tbCustumer.RowHeadersWidth = 40;
             this.tbCustumer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tbCustumer.Size = new System.Drawing.Size(1545, 126);
+            this.tbCustumer.Size = new System.Drawing.Size(825, 310);
             this.tbCustumer.TabIndex = 90;
             this.tbCustumer.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.tbCustumer.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -688,7 +681,7 @@
             this.tbCustumer.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.tbCustumer.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.tbCustumer.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.tbCustumer.ThemeStyle.HeaderStyle.Height = 4;
+            this.tbCustumer.ThemeStyle.HeaderStyle.Height = 27;
             this.tbCustumer.ThemeStyle.ReadOnly = false;
             this.tbCustumer.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.tbCustumer.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -698,48 +691,6 @@
             this.tbCustumer.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.tbCustumer.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.tbCustumer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tbCustumer_CellContentClick);
-            // 
-            // makhachhang
-            // 
-            this.makhachhang.DataPropertyName = "idkhachhang";
-            this.makhachhang.HeaderText = "Mã Khách Hàng";
-            this.makhachhang.Name = "makhachhang";
-            // 
-            // hotenkh
-            // 
-            this.hotenkh.DataPropertyName = "hotenkh";
-            this.hotenkh.HeaderText = "Họ Tên";
-            this.hotenkh.Name = "hotenkh";
-            // 
-            // gioitinh
-            // 
-            this.gioitinh.DataPropertyName = "gioitinh";
-            this.gioitinh.HeaderText = "Giới Tính";
-            this.gioitinh.Name = "gioitinh";
-            // 
-            // ngaysinh
-            // 
-            this.ngaysinh.DataPropertyName = "ngaysinh";
-            this.ngaysinh.HeaderText = "Ngày Sinh";
-            this.ngaysinh.Name = "ngaysinh";
-            // 
-            // socmnd
-            // 
-            this.socmnd.DataPropertyName = "socccd";
-            this.socmnd.HeaderText = "Số CCCD";
-            this.socmnd.Name = "socmnd";
-            // 
-            // sodienthoai
-            // 
-            this.sodienthoai.DataPropertyName = "sodienthoai";
-            this.sodienthoai.HeaderText = "Số Điện Thoại";
-            this.sodienthoai.Name = "sodienthoai";
-            // 
-            // quoctich
-            // 
-            this.quoctich.DataPropertyName = "quoctich";
-            this.quoctich.HeaderText = "Quốc Tịch";
-            this.quoctich.Name = "quoctich";
             // 
             // txtNote
             // 
@@ -756,7 +707,7 @@
             this.txtNote.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtNote.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNote.HoverState.Parent = this.txtNote;
-            this.txtNote.Location = new System.Drawing.Point(53, 779);
+            this.txtNote.Location = new System.Drawing.Point(49, 771);
             this.txtNote.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.txtNote.Name = "txtNote";
             this.txtNote.PasswordChar = '\0';
@@ -772,26 +723,108 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(47, 747);
+            this.label12.Location = new System.Drawing.Point(43, 739);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(85, 23);
             this.label12.TabIndex = 91;
             this.label12.Text = "Ghi chú";
             // 
-            // dateTimePicker1
+            // btnSearch
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(1427, 694);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 93;
+            this.btnSearch.BorderRadius = 5;
+            this.btnSearch.Checked = true;
+            this.btnSearch.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnSearch.CheckedState.Parent = this.btnSearch;
+            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnSearch.CustomImages.Parent = this.btnSearch;
+            this.btnSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnSearch.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.HoverState.Parent = this.btnSearch;
+            this.btnSearch.Image = global::ManagemenHotelApp.Properties.Resources.search;
+            this.btnSearch.ImageSize = new System.Drawing.Size(32, 32);
+            this.btnSearch.Location = new System.Drawing.Point(56, 33);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.ShadowDecoration.Parent = this.btnSearch;
+            this.btnSearch.Size = new System.Drawing.Size(211, 57);
+            this.btnSearch.TabIndex = 2;
+            this.btnSearch.Text = "Tìm Kiếm";
+            // 
+            // makhachhang
+            // 
+            this.makhachhang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.makhachhang.DataPropertyName = "idkhachhang";
+            this.makhachhang.HeaderText = "ID";
+            this.makhachhang.Name = "makhachhang";
+            this.makhachhang.Width = 57;
+            // 
+            // hotenkh
+            // 
+            this.hotenkh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.hotenkh.DataPropertyName = "hotenkh";
+            this.hotenkh.FillWeight = 87.05584F;
+            this.hotenkh.HeaderText = "Họ Tên";
+            this.hotenkh.Name = "hotenkh";
+            this.hotenkh.Width = 94;
+            // 
+            // gioitinh
+            // 
+            this.gioitinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.gioitinh.DataPropertyName = "gioitinh";
+            this.gioitinh.FillWeight = 87.05584F;
+            this.gioitinh.HeaderText = "Giới Tính";
+            this.gioitinh.Name = "gioitinh";
+            // 
+            // ngaysinh
+            // 
+            this.ngaysinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.ngaysinh.DataPropertyName = "ngaysinh";
+            this.ngaysinh.FillWeight = 87.05584F;
+            this.ngaysinh.HeaderText = "Ngày Sinh";
+            this.ngaysinh.Name = "ngaysinh";
+            this.ngaysinh.Width = 120;
+            // 
+            // socmnd
+            // 
+            this.socmnd.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.socmnd.DataPropertyName = "socccd";
+            this.socmnd.FillWeight = 87.05584F;
+            this.socmnd.HeaderText = "Số CCCD";
+            this.socmnd.Name = "socmnd";
+            this.socmnd.Width = 111;
+            // 
+            // sodienthoai
+            // 
+            this.sodienthoai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.sodienthoai.DataPropertyName = "sodienthoai";
+            this.sodienthoai.FillWeight = 87.05584F;
+            this.sodienthoai.HeaderText = "SDT";
+            this.sodienthoai.Name = "sodienthoai";
+            this.sodienthoai.Width = 70;
+            // 
+            // quoctich
+            // 
+            this.quoctich.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.quoctich.DataPropertyName = "quoctich";
+            this.quoctich.FillWeight = 87.05584F;
+            this.quoctich.HeaderText = "Quốc Tịch";
+            this.quoctich.Name = "quoctich";
+            this.quoctich.Width = 118;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.DataPropertyName = "ghichu";
+            this.Column1.HeaderText = "Ghi chú";
+            this.Column1.Name = "Column1";
             // 
             // UserRegisterRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.txtNote);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.tbCustumer);
@@ -862,6 +895,8 @@
         private Guna.UI2.WinForms.Guna2TextBox txtIDRoom;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2DataGridView tbCustumer;
+        private Guna.UI2.WinForms.Guna2TextBox txtNote;
+        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DataGridViewTextBoxColumn idphong;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenphong;
         private System.Windows.Forms.DataGridViewTextBoxColumn tang;
@@ -871,9 +906,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn sogiuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn songuoi;
         private System.Windows.Forms.DataGridViewTextBoxColumn ghichu;
-        private Guna.UI2.WinForms.Guna2TextBox txtNote;
-        private System.Windows.Forms.Label label12;
-        private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
         private System.Windows.Forms.DataGridViewTextBoxColumn makhachhang;
         private System.Windows.Forms.DataGridViewTextBoxColumn hotenkh;
         private System.Windows.Forms.DataGridViewTextBoxColumn gioitinh;
@@ -881,6 +913,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn socmnd;
         private System.Windows.Forms.DataGridViewTextBoxColumn sodienthoai;
         private System.Windows.Forms.DataGridViewTextBoxColumn quoctich;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
     }
 }
