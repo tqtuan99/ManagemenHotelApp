@@ -1,4 +1,4 @@
-<h1 align="center">  Hi, this is the KLT.team 👋 </h1>
+<h1 align="center">  Hi, this is the CDIO.team 👋 </h1>
 
 # Hotel Management Application
 
@@ -27,6 +27,8 @@ Hotel Management Application is a small and medium hotel management software wit
 | Nguyễn Đại Long | Plan, code     |                   | In progress |
 | Huỳnh Văn Khánh | Database, code |                   | In progress |
 | Trần Quốc Tuấn  | UI, code       |                   | In progress |
+| Nguyễn Mạnh Việt|                |                   | In progress |
+|Tăng Thanh Phong |                |                   | In progress |
 
 ## Implementation 🤝
 
