@@ -160,9 +160,9 @@ namespace ManagemenHotelApp.AllUserControll
 
                 }
 
-                else if (Quantyti > GetQuantyti(IDSe))
+                else if (Quantyti > GetQuantyti(IDSe) || Quantyti == 0)
                 {
-                    MessageBox.Show("Thực phẩm <" + NameSer + "> số lượng chỉ còn <" + GetQuantyti(IDSe) + ">!");
+                    MessageBox.Show("Dịch vụ <" + NameSer + "> số lượng chỉ còn <" + GetQuantyti(IDSe) + ">!");
                 }
                 else
                 {

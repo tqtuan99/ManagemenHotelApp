@@ -38,8 +38,10 @@ namespace ManagemenHotelApp
             cmd.CommandText = query;
             cmd.ExecuteNonQuery();
             con.Close();
-
-            MessageBox.Show("'" + message + "'", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if(message != "")
+            {
+                MessageBox.Show("'" + message + "'", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

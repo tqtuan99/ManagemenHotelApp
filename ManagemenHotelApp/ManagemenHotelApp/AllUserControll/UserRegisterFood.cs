@@ -151,7 +151,7 @@ namespace ManagemenHotelApp.AllUserControll
                 if (NameCus == "" || NameFood == "" || IDCus == "" || IDFood == "")
                     MessageBox.Show("Vui lòng chọn khách hàng, chọn dịch vụ, nhập số lượng cần đặt!");
                 else
-                if (Quantyti > GetQuantyti(IDFood))
+                if (Quantyti > GetQuantyti(IDFood) || Quantyti == 0)
                 {
                     MessageBox.Show("Thực phẩm <" + txtNameFood.Text + "> số lượng chỉ còn <" + GetQuantyti(IDFood) + ">!");
                 }

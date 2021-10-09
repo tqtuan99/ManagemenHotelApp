@@ -26,7 +26,9 @@ namespace ManagemenHotelApp.AllUserControll
             fillData(dtgRoom);
             fillData(dtgNewRoom);
             getTypeRoom(cbTypeRoom);
+            getTypeRoom(cbNewTypeRoom);
             clear();
+            Clear();
         }
         public void getTypeRoom(ComboBox cb)
         {
@@ -199,48 +201,15 @@ namespace ManagemenHotelApp.AllUserControll
             }
         }
 
-        private void dtgNewRoom_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            setVisibleUpdate(true);
-            try
-            {
-                String id = dtgNewRoom.Rows[e.RowIndex].Cells[0].Value.ToString();
-                lbNewID.Text = id;
-
-                query = @"Select idphong,loaiphong.idloaiphong,tang,tenphong,dongia,mucgiamgia,sogiuong,songuoi,trangthai,phong.ghichu
-                        from phong,loaiphong where phong.idloaiphong = loaiphong.idloaiphong and idphong = '" + id + "'";
-                DataSet ds = cn.getData(query);
-                cbNewTypeRoom.SelectedIndex = Convert.ToInt32(ds.Tables[0].Rows[0][1].ToString()) - 1;
-                cbNewFloor.Text = ds.Tables[0].Rows[0][2].ToString();
-                txtNewNameRoom.Text = ds.Tables[0].Rows[0][3].ToString();
-                txtNewPrice.Text = ds.Tables[0].Rows[0][4].ToString();
-                txtNewDiscount.Text = ds.Tables[0].Rows[0][5].ToString();
-                txtNewBedNumber.Text = ds.Tables[0].Rows[0][6].ToString();
-                txtNewPersonNumber.Text = ds.Tables[0].Rows[0][7].ToString();
-                if (ds.Tables[0].Rows[0][8].ToString() == "True")
-                {
-                    cbNewStatus.SelectedIndex = 0;
-                }
-                else
-                {
-                    cbNewStatus.SelectedIndex = 1;
-                }
-                txtNewNote.Text = ds.Tables[0].Rows[0][9].ToString();
-            }
-            catch (Exception ex)
-            {
-                return;
-            }
-        }
-
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn có chắc muốn xóa phòng ID " + lbNewID.Text + " không?", "Xác Nhận!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
                 query = "delete from PHONG where idphong = '" + lbNewID.Text + "'";
                 cn.setData(query, "Xóa thành thành công!");
+                tabControl1_SelectedIndexChanged(sender, e);
+
             }
-            tabControl1_SelectedIndexChanged(sender, e);
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -274,6 +243,8 @@ namespace ManagemenHotelApp.AllUserControll
                             "', dongia = '" + PriceRoom + "', mucgiamgia = '" + Discount + "',sogiuong = '" + BedNumber +
                             "',songuoi = '" + PersonNumber + "',trangthai = '" + Status + "',ghichu = N'" + Note + "' where idphong = '" + lbNewID.Text + "'";
                         cn.setData(query, "Cập nhật thành công!");
+                        tabControl1_SelectedIndexChanged(sender, e);
+
                     }
                     catch (Exception ex)
                     {
@@ -285,8 +256,40 @@ namespace ManagemenHotelApp.AllUserControll
                     MessageBox.Show("Dữ liệu nhập không hợp lệ! Vui lòng nhập đúng định dạng.");
                 }
             }
-            tabControl1_SelectedIndexChanged(sender, e);
         }
 
+        private void dtgNewRoom_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            setVisibleUpdate(true);
+            try
+            {
+                String id = dtgNewRoom.Rows[e.RowIndex].Cells[0].Value.ToString();
+                lbNewID.Text = id;
+
+                query = @"Select idphong,loaiphong.idloaiphong,tang,tenphong,dongia,mucgiamgia,sogiuong,songuoi,trangthai,phong.ghichu
+                        from phong,loaiphong where phong.idloaiphong = loaiphong.idloaiphong and idphong = '" + id + "'";
+                DataSet ds = cn.getData(query);
+                cbNewTypeRoom.SelectedIndex = Convert.ToInt32(ds.Tables[0].Rows[0][1].ToString()) - 1;
+                cbNewFloor.Text = ds.Tables[0].Rows[0][2].ToString();
+                txtNewNameRoom.Text = ds.Tables[0].Rows[0][3].ToString();
+                txtNewPrice.Text = ds.Tables[0].Rows[0][4].ToString();
+                txtNewDiscount.Text = ds.Tables[0].Rows[0][5].ToString();
+                txtNewBedNumber.Text = ds.Tables[0].Rows[0][6].ToString();
+                txtNewPersonNumber.Text = ds.Tables[0].Rows[0][7].ToString();
+                if (ds.Tables[0].Rows[0][8].ToString() == "True")
+                {
+                    cbNewStatus.SelectedIndex = 0;
+                }
+                else
+                {
+                    cbNewStatus.SelectedIndex = 1;
+                }
+                txtNewNote.Text = ds.Tables[0].Rows[0][9].ToString();
+            }
+            catch (Exception ex)
+            {
+                return;
+            }
+        }
     }
 }
