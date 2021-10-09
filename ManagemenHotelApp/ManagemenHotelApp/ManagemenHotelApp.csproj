@@ -153,6 +153,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="test.cs" />
     <EmbeddedResource Include="AllUserControll\UserAddCus.resx">
       <DependentUpon>UserAddCus.cs</DependentUpon>
     </EmbeddedResource>

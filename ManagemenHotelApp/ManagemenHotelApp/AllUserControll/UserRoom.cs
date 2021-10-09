@@ -82,6 +82,7 @@ namespace ManagemenHotelApp.AllUserControll
             else if (tabControl1.SelectedIndex == 1)
             {
                 UserRoom_Load(this, null);
+                getTypeRoom(cbNewTypeRoom);
                 setVisibleUpdate(false);
             }
         }
@@ -204,7 +205,7 @@ namespace ManagemenHotelApp.AllUserControll
             setVisibleUpdate(true);
             try
             {
-                String id = dtgNewRoom.Rows[e.RowIndex].Cells[0].Value.ToString();
+                String id = dtgRoom.Rows[e.RowIndex].Cells[0].Value.ToString();
                 lbNewID.Text = id;
 
                 query = @"Select idphong,loaiphong.idloaiphong,tang,tenphong,dongia,mucgiamgia,sogiuong,songuoi,trangthai,phong.ghichu

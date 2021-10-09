@@ -71,9 +71,8 @@
             this.panel1.Controls.Add(this.panelScroll);
             this.panel1.Controls.Add(this.btnManaEm);
             this.panel1.Location = new System.Drawing.Point(0, 1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(2044, 190);
+            this.panel1.Size = new System.Drawing.Size(1534, 155);
             this.panel1.TabIndex = 1;
             // 
             // btnLogout
@@ -86,10 +85,11 @@
             this.btnLogout.HoverState.Parent = this.btnLogout;
             this.btnLogout.Image = global::ManagemenHotelApp.Properties.Resources.Logout_icon;
             this.btnLogout.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnLogout.Location = new System.Drawing.Point(3, -2);
+            this.btnLogout.Location = new System.Drawing.Point(2, -2);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.ShadowDecoration.Parent = this.btnLogout;
-            this.btnLogout.Size = new System.Drawing.Size(42, 45);
+            this.btnLogout.Size = new System.Drawing.Size(32, 37);
             this.btnLogout.TabIndex = 8;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
@@ -103,11 +103,10 @@
             this.btnZoomOut.ForeColor = System.Drawing.Color.White;
             this.btnZoomOut.HoverState.FillColor = System.Drawing.Color.Red;
             this.btnZoomOut.HoverState.Parent = this.btnZoomOut;
-            this.btnZoomOut.Location = new System.Drawing.Point(1953, 0);
-            this.btnZoomOut.Margin = new System.Windows.Forms.Padding(4);
+            this.btnZoomOut.Location = new System.Drawing.Point(1465, 0);
             this.btnZoomOut.Name = "btnZoomOut";
             this.btnZoomOut.ShadowDecoration.Parent = this.btnZoomOut;
-            this.btnZoomOut.Size = new System.Drawing.Size(43, 37);
+            this.btnZoomOut.Size = new System.Drawing.Size(32, 30);
             this.btnZoomOut.TabIndex = 7;
             this.btnZoomOut.Text = "__";
             this.btnZoomOut.Click += new System.EventHandler(this.btnZoomOut_Click);
@@ -122,11 +121,10 @@
             this.btnExit.ForeColor = System.Drawing.Color.White;
             this.btnExit.HoverState.FillColor = System.Drawing.Color.Red;
             this.btnExit.HoverState.Parent = this.btnExit;
-            this.btnExit.Location = new System.Drawing.Point(1996, 0);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExit.Location = new System.Drawing.Point(1497, 0);
             this.btnExit.Name = "btnExit";
             this.btnExit.ShadowDecoration.Parent = this.btnExit;
-            this.btnExit.Size = new System.Drawing.Size(43, 37);
+            this.btnExit.Size = new System.Drawing.Size(32, 30);
             this.btnExit.TabIndex = 3;
             this.btnExit.Text = "X";
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -143,12 +141,11 @@
             this.guna2CircleButton1.HoverState.Parent = this.guna2CircleButton1;
             this.guna2CircleButton1.Image = global::ManagemenHotelApp.Properties.Resources._24h128;
             this.guna2CircleButton1.ImageSize = new System.Drawing.Size(102, 102);
-            this.guna2CircleButton1.Location = new System.Drawing.Point(48, 36);
-            this.guna2CircleButton1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2CircleButton1.Location = new System.Drawing.Point(36, 29);
             this.guna2CircleButton1.Name = "guna2CircleButton1";
             this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CircleButton1.ShadowDecoration.Parent = this.guna2CircleButton1;
-            this.guna2CircleButton1.Size = new System.Drawing.Size(167, 132);
+            this.guna2CircleButton1.Size = new System.Drawing.Size(125, 107);
             this.guna2CircleButton1.TabIndex = 6;
             // 
             // btnSta
@@ -167,11 +164,10 @@
             this.btnSta.HoverState.Parent = this.btnSta;
             this.btnSta.Image = global::ManagemenHotelApp.Properties.Resources.check_out;
             this.btnSta.ImageSize = new System.Drawing.Size(24, 24);
-            this.btnSta.Location = new System.Drawing.Point(1637, 41);
-            this.btnSta.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSta.Location = new System.Drawing.Point(1228, 33);
             this.btnSta.Name = "btnSta";
             this.btnSta.ShadowDecoration.Parent = this.btnSta;
-            this.btnSta.Size = new System.Drawing.Size(327, 107);
+            this.btnSta.Size = new System.Drawing.Size(245, 87);
             this.btnSta.TabIndex = 5;
             this.btnSta.Text = "Thống Kê";
             this.btnSta.Click += new System.EventHandler(this.btnSta_Click);
@@ -192,11 +188,10 @@
             this.btnManaFood.HoverState.Parent = this.btnManaFood;
             this.btnManaFood.Image = global::ManagemenHotelApp.Properties.Resources.order_food;
             this.btnManaFood.ImageSize = new System.Drawing.Size(24, 24);
-            this.btnManaFood.Location = new System.Drawing.Point(1289, 41);
-            this.btnManaFood.Margin = new System.Windows.Forms.Padding(4);
+            this.btnManaFood.Location = new System.Drawing.Point(967, 33);
             this.btnManaFood.Name = "btnManaFood";
             this.btnManaFood.ShadowDecoration.Parent = this.btnManaFood;
-            this.btnManaFood.Size = new System.Drawing.Size(327, 107);
+            this.btnManaFood.Size = new System.Drawing.Size(245, 87);
             this.btnManaFood.TabIndex = 3;
             this.btnManaFood.Text = "Quản Lý Thực Phẩm";
             this.btnManaFood.Click += new System.EventHandler(this.btnManaFood_Click);
@@ -217,11 +212,10 @@
             this.btnManaService.HoverState.Parent = this.btnManaService;
             this.btnManaService.Image = global::ManagemenHotelApp.Properties.Resources.car_rental;
             this.btnManaService.ImageSize = new System.Drawing.Size(24, 24);
-            this.btnManaService.Location = new System.Drawing.Point(941, 41);
-            this.btnManaService.Margin = new System.Windows.Forms.Padding(4);
+            this.btnManaService.Location = new System.Drawing.Point(706, 33);
             this.btnManaService.Name = "btnManaService";
             this.btnManaService.ShadowDecoration.Parent = this.btnManaService;
-            this.btnManaService.Size = new System.Drawing.Size(327, 107);
+            this.btnManaService.Size = new System.Drawing.Size(245, 87);
             this.btnManaService.TabIndex = 2;
             this.btnManaService.Text = "Quản Lý Dịch Vụ";
             this.btnManaService.Click += new System.EventHandler(this.btnManaService_Click);
@@ -242,11 +236,10 @@
             this.btnManaRoom.HoverState.Parent = this.btnManaRoom;
             this.btnManaRoom.Image = global::ManagemenHotelApp.Properties.Resources.room;
             this.btnManaRoom.ImageSize = new System.Drawing.Size(24, 24);
-            this.btnManaRoom.Location = new System.Drawing.Point(592, 41);
-            this.btnManaRoom.Margin = new System.Windows.Forms.Padding(4);
+            this.btnManaRoom.Location = new System.Drawing.Point(444, 33);
             this.btnManaRoom.Name = "btnManaRoom";
             this.btnManaRoom.ShadowDecoration.Parent = this.btnManaRoom;
-            this.btnManaRoom.Size = new System.Drawing.Size(327, 107);
+            this.btnManaRoom.Size = new System.Drawing.Size(245, 87);
             this.btnManaRoom.TabIndex = 1;
             this.btnManaRoom.Text = "Quản Lý Phòng";
             this.btnManaRoom.Click += new System.EventHandler(this.btnAddRoom_Click);
@@ -254,10 +247,9 @@
             // panelScroll
             // 
             this.panelScroll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(179)))), ((int)(((byte)(194)))));
-            this.panelScroll.Location = new System.Drawing.Point(260, 150);
-            this.panelScroll.Margin = new System.Windows.Forms.Padding(4);
+            this.panelScroll.Location = new System.Drawing.Point(195, 122);
             this.panelScroll.Name = "panelScroll";
-            this.panelScroll.Size = new System.Drawing.Size(297, 12);
+            this.panelScroll.Size = new System.Drawing.Size(223, 10);
             this.panelScroll.TabIndex = 0;
             // 
             // btnManaEm
@@ -277,11 +269,10 @@
             this.btnManaEm.HoverState.Parent = this.btnManaEm;
             this.btnManaEm.Image = global::ManagemenHotelApp.Properties.Resources.follow;
             this.btnManaEm.ImageSize = new System.Drawing.Size(24, 24);
-            this.btnManaEm.Location = new System.Drawing.Point(245, 41);
-            this.btnManaEm.Margin = new System.Windows.Forms.Padding(4);
+            this.btnManaEm.Location = new System.Drawing.Point(184, 33);
             this.btnManaEm.Name = "btnManaEm";
             this.btnManaEm.ShadowDecoration.Parent = this.btnManaEm;
-            this.btnManaEm.Size = new System.Drawing.Size(327, 107);
+            this.btnManaEm.Size = new System.Drawing.Size(245, 87);
             this.btnManaEm.TabIndex = 0;
             this.btnManaEm.Text = "Quản Lý Nhân Sự";
             this.btnManaEm.Click += new System.EventHandler(this.btnAddEm_Click);
@@ -293,10 +284,9 @@
             this.pnContent.Controls.Add(this.userRoom1);
             this.pnContent.Controls.Add(this.userSta1);
             this.pnContent.Controls.Add(this.userManaEm1);
-            this.pnContent.Location = new System.Drawing.Point(16, 278);
-            this.pnContent.Margin = new System.Windows.Forms.Padding(4);
+            this.pnContent.Location = new System.Drawing.Point(12, 226);
             this.pnContent.Name = "pnContent";
-            this.pnContent.Size = new System.Drawing.Size(2011, 774);
+            this.pnContent.Size = new System.Drawing.Size(1508, 629);
             this.pnContent.TabIndex = 2;
             this.pnContent.Paint += new System.Windows.Forms.PaintEventHandler(this.pnContent_Paint);
             // 
@@ -305,45 +295,45 @@
             this.userServive1.BackColor = System.Drawing.Color.White;
             this.userServive1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userServive1.Location = new System.Drawing.Point(0, 0);
-            this.userServive1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.userServive1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.userServive1.Name = "userServive1";
-            this.userServive1.Size = new System.Drawing.Size(2011, 774);
+            this.userServive1.Size = new System.Drawing.Size(1508, 629);
             this.userServive1.TabIndex = 4;
             // 
             // userFood1
             // 
             this.userFood1.BackColor = System.Drawing.Color.White;
             this.userFood1.Location = new System.Drawing.Point(0, 0);
-            this.userFood1.Margin = new System.Windows.Forms.Padding(5);
+            this.userFood1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.userFood1.Name = "userFood1";
-            this.userFood1.Size = new System.Drawing.Size(2011, 774);
+            this.userFood1.Size = new System.Drawing.Size(1508, 629);
             this.userFood1.TabIndex = 3;
             // 
             // userRoom1
             // 
             this.userRoom1.BackColor = System.Drawing.Color.White;
             this.userRoom1.Location = new System.Drawing.Point(0, 0);
-            this.userRoom1.Margin = new System.Windows.Forms.Padding(5);
+            this.userRoom1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.userRoom1.Name = "userRoom1";
-            this.userRoom1.Size = new System.Drawing.Size(2011, 774);
+            this.userRoom1.Size = new System.Drawing.Size(1508, 629);
             this.userRoom1.TabIndex = 2;
             // 
             // userSta1
             // 
             this.userSta1.BackColor = System.Drawing.Color.White;
             this.userSta1.Location = new System.Drawing.Point(0, 0);
-            this.userSta1.Margin = new System.Windows.Forms.Padding(5);
+            this.userSta1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.userSta1.Name = "userSta1";
-            this.userSta1.Size = new System.Drawing.Size(2011, 774);
+            this.userSta1.Size = new System.Drawing.Size(1508, 629);
             this.userSta1.TabIndex = 1;
             // 
             // userManaEm1
             // 
             this.userManaEm1.BackColor = System.Drawing.Color.White;
             this.userManaEm1.Location = new System.Drawing.Point(0, 0);
-            this.userManaEm1.Margin = new System.Windows.Forms.Padding(5);
+            this.userManaEm1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.userManaEm1.Name = "userManaEm1";
-            this.userManaEm1.Size = new System.Drawing.Size(2011, 774);
+            this.userManaEm1.Size = new System.Drawing.Size(1508, 629);
             this.userManaEm1.TabIndex = 0;
             // 
             // btnTextContent
@@ -357,11 +347,10 @@
             this.btnTextContent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(110)))), ((int)(((byte)(133)))));
             this.btnTextContent.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.btnTextContent.HoverState.Parent = this.btnTextContent;
-            this.btnTextContent.Location = new System.Drawing.Point(848, 215);
-            this.btnTextContent.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTextContent.Location = new System.Drawing.Point(636, 175);
             this.btnTextContent.Name = "btnTextContent";
             this.btnTextContent.ShadowDecoration.Parent = this.btnTextContent;
-            this.btnTextContent.Size = new System.Drawing.Size(737, 55);
+            this.btnTextContent.Size = new System.Drawing.Size(553, 45);
             this.btnTextContent.TabIndex = 4;
             this.btnTextContent.Text = "Quản lý nhân sự";
             this.btnTextContent.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -392,15 +381,15 @@
             // 
             // frmManager
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1924, 1055);
+            this.ClientSize = new System.Drawing.Size(1536, 884);
             this.Controls.Add(this.btnTextContent);
             this.Controls.Add(this.pnContent);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmManager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmManager";
