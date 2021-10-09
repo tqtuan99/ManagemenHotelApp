@@ -115,7 +115,7 @@ namespace ManagemenHotelApp
             btnManagement.Width = 221;
 
             lbTextContent.Text = btnAddService.Text;
-
+            userRegisterService1.Tag = idEm;
         }
 
         private void btnAddFood_Click(object sender, EventArgs e)
@@ -146,7 +146,7 @@ namespace ManagemenHotelApp
             btnManagement.Width = 221;
 
             lbTextContent.Text = btnAddFood.Text;
-
+            userRegisterFood1.Tag = idEm;
         }
 
         private void btnCheckOut_Click(object sender, EventArgs e)

@@ -86,7 +86,7 @@
             this.btnLogout.Image = global::ManagemenHotelApp.Properties.Resources.Logout_icon;
             this.btnLogout.ImageSize = new System.Drawing.Size(30, 30);
             this.btnLogout.Location = new System.Drawing.Point(2, -2);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.ShadowDecoration.Parent = this.btnLogout;
             this.btnLogout.Size = new System.Drawing.Size(32, 37);
@@ -304,7 +304,7 @@
             // 
             this.userFood1.BackColor = System.Drawing.Color.White;
             this.userFood1.Location = new System.Drawing.Point(0, 0);
-            this.userFood1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.userFood1.Margin = new System.Windows.Forms.Padding(4);
             this.userFood1.Name = "userFood1";
             this.userFood1.Size = new System.Drawing.Size(1508, 629);
             this.userFood1.TabIndex = 3;
@@ -313,7 +313,7 @@
             // 
             this.userRoom1.BackColor = System.Drawing.Color.White;
             this.userRoom1.Location = new System.Drawing.Point(0, 0);
-            this.userRoom1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.userRoom1.Margin = new System.Windows.Forms.Padding(4);
             this.userRoom1.Name = "userRoom1";
             this.userRoom1.Size = new System.Drawing.Size(1508, 629);
             this.userRoom1.TabIndex = 2;
@@ -322,7 +322,7 @@
             // 
             this.userSta1.BackColor = System.Drawing.Color.White;
             this.userSta1.Location = new System.Drawing.Point(0, 0);
-            this.userSta1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.userSta1.Margin = new System.Windows.Forms.Padding(4);
             this.userSta1.Name = "userSta1";
             this.userSta1.Size = new System.Drawing.Size(1508, 629);
             this.userSta1.TabIndex = 1;
@@ -331,7 +331,7 @@
             // 
             this.userManaEm1.BackColor = System.Drawing.Color.White;
             this.userManaEm1.Location = new System.Drawing.Point(0, 0);
-            this.userManaEm1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.userManaEm1.Margin = new System.Windows.Forms.Padding(4);
             this.userManaEm1.Name = "userManaEm1";
             this.userManaEm1.Size = new System.Drawing.Size(1508, 629);
             this.userManaEm1.TabIndex = 0;

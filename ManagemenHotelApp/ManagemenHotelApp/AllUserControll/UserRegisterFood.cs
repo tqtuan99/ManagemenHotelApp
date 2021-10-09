@@ -180,7 +180,7 @@ namespace ManagemenHotelApp.AllUserControll
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Vui lòng chọn khách hàng, chọn thực phẩm, nhập số lượng cần đặt!");
+                MessageBox.Show(ex +"Vui lòng chọn khách hàng, chọn thực phẩm, nhập số lượng cần đặt!");
             }
         }
 
