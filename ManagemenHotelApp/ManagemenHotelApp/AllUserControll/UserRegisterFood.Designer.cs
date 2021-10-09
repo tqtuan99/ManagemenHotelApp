@@ -55,7 +55,7 @@
             this.btnBookFood = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtDayCreat = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lbDate = new System.Windows.Forms.Label();
             this.txtNameFood = new Guna.UI2.WinForms.Guna2TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtPriceFood = new Guna.UI2.WinForms.Guna2TextBox();
@@ -402,16 +402,16 @@
             this.txtDayCreat.TabIndex = 168;
             this.txtDayCreat.Value = new System.DateTime(2021, 9, 15, 0, 0, 0, 0);
             // 
-            // label11
+            // lbDate
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(1231, 639);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(98, 23);
-            this.label11.TabIndex = 167;
-            this.label11.Text = "Ngày tạo";
+            this.lbDate.AutoSize = true;
+            this.lbDate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDate.Location = new System.Drawing.Point(1231, 639);
+            this.lbDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbDate.Name = "lbDate";
+            this.lbDate.Size = new System.Drawing.Size(98, 23);
+            this.lbDate.TabIndex = 167;
+            this.lbDate.Text = "Ngày tạo";
             // 
             // txtNameFood
             // 
@@ -826,7 +826,7 @@
             this.Controls.Add(this.btnBookFood);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtDayCreat);
-            this.Controls.Add(this.label11);
+            this.Controls.Add(this.lbDate);
             this.Controls.Add(this.txtNameFood);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtPriceFood);
@@ -869,7 +869,7 @@
         private Guna.UI2.WinForms.Guna2Button btnBookFood;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2DateTimePicker txtDayCreat;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lbDate;
         private Guna.UI2.WinForms.Guna2TextBox txtNameFood;
         private System.Windows.Forms.Label label10;
         private Guna.UI2.WinForms.Guna2TextBox txtPriceFood;

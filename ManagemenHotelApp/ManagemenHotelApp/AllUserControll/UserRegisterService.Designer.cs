@@ -63,7 +63,7 @@
             this.btnBookService = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtDayCreat = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lbDate = new System.Windows.Forms.Label();
             this.txtDiscount = new Guna.UI2.WinForms.Guna2TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtPriceService = new Guna.UI2.WinForms.Guna2TextBox();
@@ -128,7 +128,7 @@
             this.tbCustumer.EnableHeadersVisualStyles = false;
             this.tbCustumer.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.tbCustumer.Location = new System.Drawing.Point(-1, 133);
-            this.tbCustumer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbCustumer.Margin = new System.Windows.Forms.Padding(4);
             this.tbCustumer.Name = "tbCustumer";
             this.tbCustumer.RowHeadersVisible = false;
             this.tbCustumer.RowHeadersWidth = 40;
@@ -291,7 +291,7 @@
             this.tbService.EnableHeadersVisualStyles = false;
             this.tbService.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.tbService.Location = new System.Drawing.Point(840, 133);
-            this.tbService.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbService.Margin = new System.Windows.Forms.Padding(4);
             this.tbService.Name = "tbService";
             this.tbService.RowHeadersVisible = false;
             this.tbService.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -398,7 +398,7 @@
             this.txtNameSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNameSearch.HoverState.Parent = this.txtNameSearch;
             this.txtNameSearch.Location = new System.Drawing.Point(288, 38);
-            this.txtNameSearch.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.txtNameSearch.Margin = new System.Windows.Forms.Padding(9);
             this.txtNameSearch.Name = "txtNameSearch";
             this.txtNameSearch.PasswordChar = '\0';
             this.txtNameSearch.PlaceholderText = "Nhập ID hoặc tên khách hàng để tìm kiếm";
@@ -421,7 +421,7 @@
             this.btnplus.Image = global::ManagemenHotelApp.Properties.Resources.plus;
             this.btnplus.ImageSize = new System.Drawing.Size(35, 35);
             this.btnplus.Location = new System.Drawing.Point(711, 662);
-            this.btnplus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnplus.Margin = new System.Windows.Forms.Padding(4);
             this.btnplus.Name = "btnplus";
             this.btnplus.ShadowDecoration.Parent = this.btnplus;
             this.btnplus.Size = new System.Drawing.Size(79, 57);
@@ -477,7 +477,7 @@
             this.btnBookService.ForeColor = System.Drawing.Color.White;
             this.btnBookService.HoverState.Parent = this.btnBookService;
             this.btnBookService.Location = new System.Drawing.Point(1224, 758);
-            this.btnBookService.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBookService.Margin = new System.Windows.Forms.Padding(4);
             this.btnBookService.Name = "btnBookService";
             this.btnBookService.ShadowDecoration.Parent = this.btnBookService;
             this.btnBookService.Size = new System.Drawing.Size(351, 62);
@@ -490,7 +490,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Location = new System.Drawing.Point(603, 513);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(538, 4);
             this.panel1.TabIndex = 140;
@@ -503,7 +503,7 @@
             this.txtDayCreat.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.txtDayCreat.HoverState.Parent = this.txtDayCreat;
             this.txtDayCreat.Location = new System.Drawing.Point(1241, 674);
-            this.txtDayCreat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDayCreat.Margin = new System.Windows.Forms.Padding(4);
             this.txtDayCreat.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.txtDayCreat.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.txtDayCreat.Name = "txtDayCreat";
@@ -512,16 +512,16 @@
             this.txtDayCreat.TabIndex = 139;
             this.txtDayCreat.Value = new System.DateTime(2021, 9, 15, 0, 0, 0, 0);
             // 
-            // label11
+            // lbDate
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(1236, 645);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(98, 23);
-            this.label11.TabIndex = 138;
-            this.label11.Text = "Ngày tạo";
+            this.lbDate.AutoSize = true;
+            this.lbDate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDate.Location = new System.Drawing.Point(1236, 645);
+            this.lbDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbDate.Name = "lbDate";
+            this.lbDate.Size = new System.Drawing.Size(98, 23);
+            this.lbDate.TabIndex = 138;
+            this.lbDate.Text = "Ngày tạo";
             // 
             // txtDiscount
             // 
@@ -843,7 +843,7 @@
             this.Controls.Add(this.btnBookService);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtDayCreat);
-            this.Controls.Add(this.label11);
+            this.Controls.Add(this.lbDate);
             this.Controls.Add(this.txtDiscount);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtPriceService);
@@ -866,7 +866,7 @@
             this.Controls.Add(this.tbService);
             this.Controls.Add(this.txtNameSearch);
             this.Controls.Add(this.btnSearch);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UserRegisterService";
             this.Size = new System.Drawing.Size(1668, 857);
             this.Load += new System.EventHandler(this.UserRegisterService_Load);
@@ -908,7 +908,7 @@
         private Guna.UI2.WinForms.Guna2Button btnBookService;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2DateTimePicker txtDayCreat;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lbDate;
         private Guna.UI2.WinForms.Guna2TextBox txtDiscount;
         private System.Windows.Forms.Label label10;
         private Guna.UI2.WinForms.Guna2TextBox txtPriceService;

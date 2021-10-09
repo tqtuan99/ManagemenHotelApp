@@ -53,7 +53,13 @@ namespace ManagemenHotelApp.AllUserControll
             }
             else if (tabControl1.SelectedIndex == 3)
             {
+                FillData(dtgEmDel, "");
                 txtIDDel.Clear();
+            }
+            else if (tabControl1.SelectedIndex == 4)
+            {
+                clear();
+                Fill_dtgAcount();
             }
         }
 
@@ -84,11 +90,12 @@ namespace ManagemenHotelApp.AllUserControll
                         query = @"insert into NHANVIEN (idchucvu,hotennv,gioitinh,socccd, sodienthoai, ngaysinh, ngayvaolam, diachi, email, hesoluong, trangthai, ghichu) 
                             values (N'" + duty + "',N'" + name + "',N'" + sex + "',N'" + cccd + "',N'" + phone + "',N'" + DofB + "',N'" + SDay + "',N'" + address + "',N'" + email + "', N'" + hsl + "','1',N'" + note + "')";
                         cn.setData(query, "Đã thêm thông tin nhân viên.");
+                        cn.setData("insert into TAIKHOAN(idnhanvien,username,pass) values (N'" + lbId.Text + "',N'" + cccd + "',N'" + phone + "')", "");
                         clear();
                     }                  
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Thông tin vừa nhập không hợp lệ hoặc thông tin đã trùng lắp", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Lỗi khi thêm dữ liệu vào Database!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
 
                     UserManaEm_Load(this, null); //reset lại from
@@ -110,6 +117,10 @@ namespace ManagemenHotelApp.AllUserControll
                 Int64 num = Int64.Parse(ds.Tables[0].Rows[0][0].ToString());
                 lbId.Text = (num + 1).ToString();
             }
+            else
+            {
+                lbId.Text = "1";
+            }
         } 
         //Clear from 
         public void clear()
@@ -125,6 +136,10 @@ namespace ManagemenHotelApp.AllUserControll
             txtAddress.Clear();
             txtDofB.Value = DateTime.Now;
             txtStartDay.Value = DateTime.Now;
+            txtName_Acount.ResetText();
+            txtCCCD_Acount.ResetText();
+            txtUsername.ResetText();
+            txtPass.ResetText();
         }
 
         //======================================================Tra cứu thông tin====================================================================
@@ -438,6 +453,12 @@ namespace ManagemenHotelApp.AllUserControll
             }
         }
 
+        public void Fill_dtgAcount()
+        {
+            DataSet ds = cn.getData("select nhanvien.idnhanvien,hotennv,socccd,sodienthoai,username,pass from nhanvien,taikhoan where nhanvien.idnhanvien = taikhoan.idnhanvien");
+            dtgAcount.DataSource = ds.Tables[0];
+        }
+
         public void getDuty(ComboBox cb)
         {
             try
@@ -494,6 +515,65 @@ namespace ManagemenHotelApp.AllUserControll
             }
         }
 
-        
+        private void dtgAcount_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                lbID_Acount.Text = dtgAcount.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtName_Acount.Text = dtgAcount.Rows[e.RowIndex].Cells[1].Value.ToString();
+                txtCCCD_Acount.Text = dtgAcount.Rows[e.RowIndex].Cells[2].Value.ToString();
+                txtUsername.Text = dtgAcount.Rows[e.RowIndex].Cells[4].Value.ToString();
+                txtPass.Text = dtgAcount.Rows[e.RowIndex].Cells[5].Value.ToString();
+            }
+            catch(Exception ex)
+            {
+                return;
+            }
+        }
+
+        private void btnEditAcount_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if(MessageBox.Show("Bạn có muốn sửa không?","Thông báo",MessageBoxButtons.YesNo,MessageBoxIcon.Information) == DialogResult.Yes)
+                {
+                    cn.setData("update taikhoan set username = N'" + txtUsername.Text + "', pass =N'" + txtPass.Text + "' where idnhanvien =N'" + lbID_Acount.Text + "'", "Sửa thành công!");
+                }
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Không thể sửa!" + ex);
+            }
+        }
+
+        private void btnDeleteAcount_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MessageBox.Show("Bạn có muốn sửa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                {
+                  cn.setData("delete from taikhoan where idnhanvien =N'" + lbID_Acount.Text + "'", "Xóa thành công!");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Không thể xóa !" + ex);
+            }
+        }
+
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                DataSet ds = cn.getData("select nhanvien.idnhanvien,hotennv,socccd,sodienthoai,username,pass from nhanvien,taikhoan where nhanvien.idnhanvien = taikhoan.idnhanvien and (convert(nvarchar(10),nhanvien.idnhanvien) like N'" + txtFind_Acount.Text + "%' or (convert(nvarchar(10),hotennv) like N'" + txtFind_Acount.Text + "%'");
+                dtgAcount.DataSource = ds.Tables[0];
+            }catch(Exception ex)
+            {
+                return;
+            }
+            
+        }
     }
 }

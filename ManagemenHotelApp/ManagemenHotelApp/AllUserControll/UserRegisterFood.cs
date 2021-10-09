@@ -122,10 +122,12 @@ namespace ManagemenHotelApp.AllUserControll
                     if (dsCheck.Tables[0].Rows.Count == 1)
                     {
                         lbIdhoadon.Text = dsCheck.Tables[0].Rows[0][0].ToString();
+                        lbDate.Text = "Ngày yêu cầu";
                     }
                     else //Ngược lại thì id hóa đơn sẽ được thêm mới
                     {
                         lbIdhoadon.Text = getMaxIdFoodBill();
+                        lbDate.Text = "Ngày tạo";
                     }
                 }
                 catch (Exception ex)
@@ -180,7 +182,7 @@ namespace ManagemenHotelApp.AllUserControll
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Vui lòng chọn khách hàng, chọn thực phẩm, nhập số lượng cần đặt!");
+                MessageBox.Show(ex +"Vui lòng chọn khách hàng, chọn thực phẩm, nhập số lượng cần đặt!");
             }
         }
 

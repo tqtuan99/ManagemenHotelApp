@@ -85,5 +85,13 @@ namespace ManagemenHotelApp
                 txtUsername.Focus();
             }
         }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin_Click(sender,e);
+            }
+        }
     }
 }

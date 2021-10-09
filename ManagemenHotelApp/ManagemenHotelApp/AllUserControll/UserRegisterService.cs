@@ -107,14 +107,16 @@ namespace ManagemenHotelApp.AllUserControll
                     String check = @"Select idhoadon from Khachhang, hoadondichvu where khachhang.idkhachhang = hoadondichvu.idkhachhang
                   and hoadondichvu.ngaythanhtoan IS NULL and khachhang.idkhachhang = '" + id + "'";
                     DataSet dsCheck = cn.getData(check);
-                    //Nếu tồn tại hóa đơn chưa thanh toán thì id hóa đơn thêm phòng sẽ là id hóa đơn chưa thanh toán
+                    //Nếu tồn tại hóa đơn chưa thanh toán thì id hóa đơn thêm dịch vụ sẽ là id hóa đơn chưa thanh toán
                     if (dsCheck.Tables[0].Rows.Count == 1)
                     {
                         lbIdhoadon.Text = dsCheck.Tables[0].Rows[0][0].ToString();
+                        lbDate.Text = "Ngày yêu cầu";
                     }
                     else //Ngược lại thì id hóa đơn sẽ được thêm mới
                     {
                         lbIdhoadon.Text = getMaxIdServiceBill();
+                        lbDate.Text = "Ngày tạo";
                     }
                 }
                 catch (Exception ex)
