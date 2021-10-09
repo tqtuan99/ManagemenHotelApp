@@ -84,6 +84,7 @@ namespace ManagemenHotelApp.AllUserControll
             else if (tabControl1.SelectedIndex == 1)
             {
                 UserRoom_Load(this, null);
+                getTypeRoom(cbNewTypeRoom);
                 setVisibleUpdate(false);
             }
         }
@@ -201,6 +202,43 @@ namespace ManagemenHotelApp.AllUserControll
             }
         }
 
+<<<<<<< HEAD
+=======
+        private void dtgNewRoom_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            setVisibleUpdate(true);
+            try
+            {
+                String id = dtgRoom.Rows[e.RowIndex].Cells[0].Value.ToString();
+                lbNewID.Text = id;
+
+                query = @"Select idphong,loaiphong.idloaiphong,tang,tenphong,dongia,mucgiamgia,sogiuong,songuoi,trangthai,phong.ghichu
+                        from phong,loaiphong where phong.idloaiphong = loaiphong.idloaiphong and idphong = '" + id + "'";
+                DataSet ds = cn.getData(query);
+                cbNewTypeRoom.SelectedIndex = Convert.ToInt32(ds.Tables[0].Rows[0][1].ToString()) - 1;
+                cbNewFloor.Text = ds.Tables[0].Rows[0][2].ToString();
+                txtNewNameRoom.Text = ds.Tables[0].Rows[0][3].ToString();
+                txtNewPrice.Text = ds.Tables[0].Rows[0][4].ToString();
+                txtNewDiscount.Text = ds.Tables[0].Rows[0][5].ToString();
+                txtNewBedNumber.Text = ds.Tables[0].Rows[0][6].ToString();
+                txtNewPersonNumber.Text = ds.Tables[0].Rows[0][7].ToString();
+                if (ds.Tables[0].Rows[0][8].ToString() == "True")
+                {
+                    cbNewStatus.SelectedIndex = 0;
+                }
+                else
+                {
+                    cbNewStatus.SelectedIndex = 1;
+                }
+                txtNewNote.Text = ds.Tables[0].Rows[0][9].ToString();
+            }
+            catch (Exception ex)
+            {
+                return;
+            }
+        }
+
+>>>>>>> a0029ce9e0f161856657053141e4d953edd9114f
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn có chắc muốn xóa phòng ID " + lbNewID.Text + " không?", "Xác Nhận!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)

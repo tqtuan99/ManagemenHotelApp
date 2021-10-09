@@ -24,8 +24,8 @@ namespace ManagemenHotelApp.AllUserControll
         {
             //FillMonthInYear("2021");
             setChart(dataGridView1);
-        //FillMonthInYear("2021");
-        //chart1.Series[0].ChartType = SeriesChartType.Pie;
+            //FillMonthInYear("2021");
+            //chart1.Series[0].ChartType = SeriesChartType.Pie;
 
         }
 
@@ -127,13 +127,13 @@ namespace ManagemenHotelApp.AllUserControll
 
         private void checkMonthInYear_Click(object sender, EventArgs e)
         {
-            //FillMonthInYear(txtYear.Text);
+            FillMonthInYear(txtYear.Text);
             setChart(dataGridView1);
         }
 
         private void radioButton1_Click(object sender, EventArgs e)
         {
-            //FillDayInMonthAndYear(txtMonth.Text, txtYear.Text);
+            FillDayInMonthAndYear(txtMonth.Text, txtYear.Text);
             setChart(dataGridView1);
         }
 
