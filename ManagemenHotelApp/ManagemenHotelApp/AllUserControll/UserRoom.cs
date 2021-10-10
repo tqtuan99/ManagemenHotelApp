@@ -25,11 +25,34 @@ namespace ManagemenHotelApp.AllUserControll
         {
             fillData(dtgRoom);
             fillData(dtgNewRoom);
+            fillDataTypeRoom();
             getTypeRoom(cbTypeRoom);
             getTypeRoom(cbNewTypeRoom);
             clear();
             Clear();
+            ClearTypeRoom();
         }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedIndex == 0)
+            {
+                UserRoom_Load(this, null);
+            }
+            else if (tabControl1.SelectedIndex == 1)
+            {
+                UserRoom_Load(this, null);
+                getTypeRoom(cbNewTypeRoom);
+                setVisibleUpdate(false);
+            }
+            else if (tabControl1.SelectedIndex == 2)
+            {
+                UserRoom_Load(this, null);
+                setVisibleTypeRoom(false);
+            }
+        }
+        //===========================================================================================================================//
+
         public void getTypeRoom(ComboBox cb)
         {
             try
@@ -72,20 +95,6 @@ namespace ManagemenHotelApp.AllUserControll
             else
             {
                 lbIdp.Text = "0001";
-            }
-        }
-
-        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (tabControl1.SelectedIndex == 0)
-            {
-                UserRoom_Load(this, null);
-            }
-            else if (tabControl1.SelectedIndex == 1)
-            {
-                UserRoom_Load(this, null);
-                getTypeRoom(cbNewTypeRoom);
-                setVisibleUpdate(false);
             }
         }
         public void setVisibleUpdate(bool b)
@@ -135,6 +144,48 @@ namespace ManagemenHotelApp.AllUserControll
 
         }
 
+        //Lấy tên loại phòng từ db
+        public int GetNameTypeRoom(String s)
+        {
+            DataSet ds = cn.getData("select tenloaiphong from loaiphong");
+            foreach (DataTable table in ds.Tables)
+            {
+                foreach (DataRow dr in table.Rows)
+                {
+                    if (s == dr[0].ToString())
+                    {
+                        return 1;
+                    }
+                }
+            }
+            return 0;
+
+        }
+
+        public void setVisibleTypeRoom(Boolean b)
+        {
+            lbHDTypeRoom.Visible = !b;
+            btnDeleteTypeRoom.Visible = b;
+            btnEditTypeRoom.Visible = b;
+            lbIDTypeRoom.Visible = b;
+            lbIdtr.Visible = b;
+            ClearTypeRoom();
+        }
+
+        public void ClearTypeRoom()
+        {
+            txtNameTypeRoom.ResetText();
+            txtNoteTypeRoom.ResetText();
+            lbIDTypeRoom.Text = "___";
+        }
+
+        public void fillDataTypeRoom()
+        {
+            query = @"Select * from loaiphong";
+            DataSet ds = cn.getData(query);
+            dtgTypeRoom.DataSource = ds.Tables[0];
+        }
+        //===========================================================================================================================//
         private void btnAddRom_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn có chắc muốn thêm phòng mới không?", "Xác nhận", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
@@ -291,6 +342,92 @@ namespace ManagemenHotelApp.AllUserControll
             catch (Exception ex)
             {
                 return;
+            }
+        }
+
+        private void dtgTypeRoom_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                setVisibleTypeRoom(true);
+                lbIDTypeRoom.Text = dtgTypeRoom.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtNameTypeRoom.Text = dtgTypeRoom.Rows[e.RowIndex].Cells[1].Value.ToString();
+                txtNoteTypeRoom.Text = dtgTypeRoom.Rows[e.RowIndex].Cells[2].Value.ToString();
+            }catch(Exception ex)
+            {
+                return;
+            }
+        }
+        
+        private void btnAddTypeRoom_Click(object sender, EventArgs e)
+        {
+            if(lbIDTypeRoom.Text != "___")
+            {
+                setVisibleTypeRoom(false);
+                ClearTypeRoom();
+            }
+            else
+            {
+                if(GetNameTypeRoom(txtNameTypeRoom.Text) == 1)
+                {
+                    MessageBox.Show("Tên loại phòng trùng! Vui lòng chọn tên khác.");
+                }
+                else if(txtNameTypeRoom.Text != "")
+                {
+                    if (MessageBox.Show("Bạn có chắc muốn thêm không?", "Xác Nhận!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                    {
+                        cn.setData("insert into loaiphong (tenloaiphong, ghichu) values ('" + txtNameTypeRoom.Text + "','" + txtNoteTypeRoom.Text + "')", "Thêm mới thành công!");
+                        UserRoom_Load(sender, e);
+                    }
+                    
+                }
+                else
+                    MessageBox.Show("Vui lòng nhập thông tin để thêm!");
+
+            }
+
+        }
+
+        private void btnEditTypeRoom_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (GetNameTypeRoom(txtNameTypeRoom.Text) == 1)
+                {
+                    MessageBox.Show("Tên loại phòng trùng! Vui lòng chọn tên khác.");
+                }
+                else
+                {
+                    if (MessageBox.Show("Bạn có chắc muốn sửa không?", "Xác Nhận!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                    {
+                        cn.setData("update loaiphong set tenloaiphong = N'" + txtNameTypeRoom.Text + "', ghichu =N'" + txtNoteTypeRoom.Text + "' where idloaiphong = N'" + lbIDTypeRoom.Text + "'", "Sửa thành công!");
+                        UserRoom_Load(sender, e);
+                        setVisibleTypeRoom(false);
+                    }
+                } 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗ không thể sửa thông tin!");
+
+            }
+        }
+
+        private void btnDeleteTypeRoom_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MessageBox.Show("Bạn có chắc muốn xóa không?", "Xác Nhận!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                {
+                    cn.setData("delete from loaiphong where idloaiphong = N'" + lbIDTypeRoom.Text + "'", "Xóa thành công!");
+                    UserRoom_Load(sender, e);
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗ không thể xóa thông tin!");
+
             }
         }
     }

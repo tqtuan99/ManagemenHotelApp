@@ -28,6 +28,8 @@ namespace ManagemenHotelApp.AllUserControll
             getMaxIdEm();
             getDuty(txtDuty);
             clear();
+            Fill_dtgAcount();
+            setVisibleAcount(false);
         }
 
         //===================================================Di chuyển giữa các tab thêm mới, tra cứu, chỉnh sửa, xóa==============================================
@@ -63,6 +65,11 @@ namespace ManagemenHotelApp.AllUserControll
             }
         }
 
+        public void setVisibleAcount(Boolean b)
+        {
+            lbHDAcount.Visible = !b;
+            pnAcount.Visible = b;
+        }
         //======================================================Thêm nhân viên====================================================================
 
         //Button thêm nhân viên
@@ -72,33 +79,40 @@ namespace ManagemenHotelApp.AllUserControll
             {
                 if (txtName.Text != "" && txtDuty.Text != "" && txtSex.Text != "" && txtPhoneNum.Text != "" && txtAddress.Text != "" && txtCCCD.Text != "" && txtDofB.Text != "" && txtStartDay.Text != "")
                 {
-                    DateTime DofB = txtDofB.Value;
-                    DateTime SDay = txtStartDay.Value;
-                    String name = txtName.Text;
-                    String cccd = txtCCCD.Text;
-                    String phone = txtPhoneNum.Text;
-                    int duty = txtDuty.SelectedIndex + 1;
-                    String sex = txtSex.Text;
-                    String address = txtAddress.Text;
-                    String note = txtNote.Text;
-                    float hsl = float.Parse(txtHSL.Text);
-                    String email = txtEmail.Text;
-
                     try
                     {
-                        //id nhân viên trong bảng sql set tự động tăng nên không cần thêm idnhanvien
-                        query = @"insert into NHANVIEN (idchucvu,hotennv,gioitinh,socccd, sodienthoai, ngaysinh, ngayvaolam, diachi, email, hesoluong, trangthai, ghichu) 
-                            values (N'" + duty + "',N'" + name + "',N'" + sex + "',N'" + cccd + "',N'" + phone + "',N'" + DofB + "',N'" + SDay + "',N'" + address + "',N'" + email + "', N'" + hsl + "','1',N'" + note + "')";
-                        cn.setData(query, "Đã thêm thông tin nhân viên.");
-                        cn.setData("insert into TAIKHOAN(idnhanvien,username,pass) values (N'" + lbId.Text + "',N'" + cccd + "',N'" + phone + "')", "");
-                        clear();
-                    }                  
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Lỗi khi thêm dữ liệu vào Database!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
+                        DateTime DofB = txtDofB.Value;
+                        DateTime SDay = txtStartDay.Value;
+                        String name = txtName.Text;
+                        int cccd1 = int.Parse(txtCCCD.Text);//test ko cho nhập chữ
+                        String cccd = txtCCCD.Text;
+                        String phone = txtPhoneNum.Text;
+                        int phone1 = int.Parse(txtPhoneNum.Text);//test ko cho nhập chữ
+                        int duty = txtDuty.SelectedIndex + 1;
+                        String sex = txtSex.Text;
+                        String address = txtAddress.Text;
+                        String note = txtNote.Text;
+                        float hsl = float.Parse(txtHSL.Text);
+                        String email = txtEmail.Text;
 
-                    UserManaEm_Load(this, null); //reset lại from
+                        try
+                        {
+                            //id nhân viên trong bảng sql set tự động tăng nên không cần thêm idnhanvien
+                            query = @"insert into NHANVIEN (idchucvu,hotennv,gioitinh,socccd, sodienthoai, ngaysinh, ngayvaolam, diachi, email, hesoluong, trangthai, ghichu) 
+                            values (N'" + duty + "',N'" + name + "',N'" + sex + "',N'" + cccd + "',N'" + phone + "',N'" + DofB + "',N'" + SDay + "',N'" + address + "',N'" + email + "', N'" + hsl + "','1',N'" + note + "')";
+                            cn.setData(query, "Đã thêm thông tin nhân viên.");
+                            cn.setData("insert into TAIKHOAN(idnhanvien,username,pass) values (N'" + lbId.Text + "',N'" + cccd + "',N'" + phone + "')", "");
+                            clear();
+                            UserManaEm_Load(this, null); //reset lại from
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Số Căn Cước Công Dân không được trùng!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }catch(Exception ex)
+                    {
+                        MessageBox.Show("Dữ liệu nhập vào không đúng định dạng!");
+                    }
                 }
                 else
                 {
@@ -519,6 +533,7 @@ namespace ManagemenHotelApp.AllUserControll
         {
             try
             {
+                setVisibleAcount(true);
                 lbID_Acount.Text = dtgAcount.Rows[e.RowIndex].Cells[0].Value.ToString();
                 txtName_Acount.Text = dtgAcount.Rows[e.RowIndex].Cells[1].Value.ToString();
                 txtCCCD_Acount.Text = dtgAcount.Rows[e.RowIndex].Cells[2].Value.ToString();
@@ -535,11 +550,15 @@ namespace ManagemenHotelApp.AllUserControll
         {
             try
             {
-                if(MessageBox.Show("Bạn có muốn sửa không?","Thông báo",MessageBoxButtons.YesNo,MessageBoxIcon.Information) == DialogResult.Yes)
+                if(GetNameAcount(txtUsername.Text) == 1)
+                {
+                    MessageBox.Show("Tên tài khoản đã tồn tại?");
+                }
+                else if (MessageBox.Show("Bạn có muốn sửa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
                     cn.setData("update taikhoan set username = N'" + txtUsername.Text + "', pass =N'" + txtPass.Text + "' where idnhanvien =N'" + lbID_Acount.Text + "'", "Sửa thành công!");
+                    UserManaEm_Load(sender, e);
                 }
-
             }
             catch(Exception ex)
             {
@@ -553,7 +572,8 @@ namespace ManagemenHotelApp.AllUserControll
             {
                 if (MessageBox.Show("Bạn có muốn sửa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
-                  cn.setData("delete from taikhoan where idnhanvien =N'" + lbID_Acount.Text + "'", "Xóa thành công!");
+                    cn.setData("delete from taikhoan where idnhanvien =N'" + lbID_Acount.Text + "'", "Xóa thành công!");
+                    UserManaEm_Load(sender, e);
                 }
 
             }
@@ -563,17 +583,34 @@ namespace ManagemenHotelApp.AllUserControll
             }
         }
 
-        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        public int GetNameAcount(String s)
+        {
+            DataSet ds = cn.getData("select username from taikhoan");
+            foreach (DataTable table in ds.Tables)
+            {
+                foreach (DataRow dr in table.Rows)
+                {
+                    if (s == dr[0].ToString())
+                    {
+                        return 1;
+                    }
+                }
+            }
+            return 0;
+
+        }
+
+        private void txtFind_Acount_TextChanged(object sender, EventArgs e)
         {
             try
             {
-                DataSet ds = cn.getData("select nhanvien.idnhanvien,hotennv,socccd,sodienthoai,username,pass from nhanvien,taikhoan where nhanvien.idnhanvien = taikhoan.idnhanvien and (convert(nvarchar(10),nhanvien.idnhanvien) like N'" + txtFind_Acount.Text + "%' or (convert(nvarchar(10),hotennv) like N'" + txtFind_Acount.Text + "%'");
+                DataSet ds = cn.getData("select nhanvien.idnhanvien,hotennv,socccd,sodienthoai,username,pass from nhanvien,taikhoan where nhanvien.idnhanvien = taikhoan.idnhanvien and (convert(nvarchar(10),username) like N'" + txtFind_Acount.Text + "%')");
                 dtgAcount.DataSource = ds.Tables[0];
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 return;
             }
-            
         }
     }
 }

@@ -122,6 +122,48 @@ namespace ManagemenHotelApp.AllUserControll
             return 0;
 
         }
+
+        public void setVisibleTypeFood(Boolean b)
+        {
+            lbHDTypeFood.Visible = !b;
+            btnDeleteTypeFood.Visible = b;
+            btnEditTypeFood.Visible = b;
+            lbIDTypeFood.Visible = b;
+            lbIdtf.Visible = b;
+            ClearTypeFood();
+        }
+
+        public void ClearTypeFood()
+        {
+            txtNameTypeFood.ResetText();
+            txtNoteTypeFood.ResetText();
+            lbIDTypeFood.Text = "___";
+        }
+
+        public void fillDataTypeFood()
+        {
+            query = @"Select * from loaithucpham";
+            DataSet ds = cn.getData(query);
+            dtgTypeFood.DataSource = ds.Tables[0];
+        }
+
+        //Lấy tên loại thực phẩm từ db
+        public int GetNameTypeFood(String s)
+        {
+            DataSet ds = cn.getData("select tenloai from loaithucpham");
+            foreach (DataTable table in ds.Tables)
+            {
+                foreach (DataRow dr in table.Rows)
+                {
+                    if (s == dr[0].ToString())
+                    {
+                        return 1;
+                    }
+                }
+            }
+            return 0;
+
+        }
         //==================================================================================================//
 
         private void UserFood_Load(object sender, EventArgs e)
@@ -129,6 +171,29 @@ namespace ManagemenHotelApp.AllUserControll
             FillData(dtgFood, "");
             getTypeFood(cbTypeFood);
             getMaxIdFood();
+            fillDataTypeFood();
+            ClearTypeFood();
+        }
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedIndex == 0)
+            {
+                getTypeFood(cbTypeFood);
+                UserFood_Load(sender, e);
+            }
+            else if (tabControl1.SelectedIndex == 1)
+            {
+                getTypeFood(cbNewTypeFood);
+                txtNameSearch.ResetText();
+                FillData(dtgNewFood, "");
+                setVisible(false);
+                UserFood_Load(sender, e);
+            }
+            else if (tabControl1.SelectedIndex == 2)
+            {
+                UserFood_Load(sender, e);
+                setVisibleTypeFood(false);
+            }
         }
 
         private void btnAddRom_Click(object sender, EventArgs e)
@@ -201,21 +266,6 @@ namespace ManagemenHotelApp.AllUserControll
             }
         }
 
-        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (tabControl1.SelectedIndex == 0)
-            {
-                getTypeFood(cbTypeFood);
-            }
-            else if (tabControl1.SelectedIndex == 1)
-            {
-                getTypeFood(cbNewTypeFood);
-                txtNameSearch.ResetText();
-                FillData(dtgNewFood, "");
-                setVisible(false);
-            }
-        }
-
         private void txtNameSearch_TextChanged(object sender, EventArgs e)
         {
             try
@@ -275,6 +325,94 @@ namespace ManagemenHotelApp.AllUserControll
                 cn.setData(query, "Xóa thành thành công!");
             }
             tabControl1_SelectedIndexChanged(sender, e);
+        }
+
+        private void dtgTypeFood_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                setVisibleTypeFood(true);
+                lbIDTypeFood.Text = dtgTypeFood.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtNameTypeFood.Text = dtgTypeFood.Rows[e.RowIndex].Cells[1].Value.ToString();
+                txtNoteTypeFood.Text = dtgTypeFood.Rows[e.RowIndex].Cells[2].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                return;
+            }
+        }
+
+        private void btnAddTypeFood_Click(object sender, EventArgs e)
+        {
+            if (lbIDTypeFood.Text != "___")
+            {
+                setVisibleTypeFood(false);
+                ClearTypeFood();
+            }
+            else
+            {
+                if (GetNameTypeFood(txtNameTypeFood.Text) == 1)
+                {
+                    MessageBox.Show("Tên loại phòng trùng! Vui lòng chọn tên khác.");
+                }
+                else if (txtNameTypeFood.Text != "")
+                {
+                    if (MessageBox.Show("Bạn có chắc muốn thêm không?", "Xác Nhận!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                    {
+                        cn.setData("insert into loaithucpham (tenloai, ghichuloai) values (N'" + txtNameTypeFood.Text + "',N'" + txtNoteTypeFood.Text + "')", "Thêm mới thành công!");
+                        UserFood_Load(sender, e);
+                    }
+                    
+                }
+                else
+                    MessageBox.Show("Vui lòng nhập thông tin để thêm!");
+
+            }
+        }
+
+        private void btnEditTypeFood_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (GetNameTypeFood(txtNameTypeFood.Text) == 1)
+                {
+                    MessageBox.Show("Tên loại phòng trùng! Vui lòng chọn tên khác.");
+                }
+                else
+                {
+                    if (MessageBox.Show("Bạn có chắc muốn sửa không?", "Xác Nhận!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                    {
+                        cn.setData("update loaithucpham set tenloai = N'" + txtNameTypeFood.Text + "', ghichuloai =N'" + txtNoteTypeFood.Text + "' where idloaithucpham = N'" + lbIDTypeFood.Text + "'", "Sửa thành công!");
+                        UserFood_Load(sender, e);
+                        setVisibleTypeFood(false);
+                    }
+                    
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗ không thể sửa thông tin!");
+
+            }
+        }
+
+        private void btnDeleteTypeFood_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MessageBox.Show("Bạn có chắc muốn xóa không?", "Xác Nhận!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                {
+                    cn.setData("delete from loaithucpham where idloaithucpham = N'" + lbIDTypeFood.Text + "'", "Xóa thành công!");
+                    UserFood_Load(sender, e);
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗ không thể xóa thông tin!");
+
+            }
         }
     }
 }

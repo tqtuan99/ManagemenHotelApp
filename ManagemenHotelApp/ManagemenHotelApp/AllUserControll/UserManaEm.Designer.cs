@@ -161,7 +161,8 @@
             this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
             this.txtIDDel = new Guna.UI2.WinForms.Guna2TextBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.lbHDAcount = new System.Windows.Forms.Label();
+            this.pnAcount = new System.Windows.Forms.Panel();
             this.txtCCCD_Acount = new Guna.UI2.WinForms.Guna2TextBox();
             this.label30 = new System.Windows.Forms.Label();
             this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
@@ -194,7 +195,7 @@
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgEmDel)).BeginInit();
             this.tabPage5.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.pnAcount.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgAcount)).BeginInit();
             this.SuspendLayout();
             // 
@@ -699,7 +700,7 @@
             this.dtgDetailBill.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgDetailBill.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgDetailBill.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dtgDetailBill.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtgDetailBill.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dtgDetailBill.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dtgDetailBill.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -758,7 +759,7 @@
             this.dtgListBill.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dtgListBill.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgListBill.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dtgListBill.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtgListBill.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dtgListBill.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dtgListBill.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -769,7 +770,7 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtgListBill.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dtgListBill.ColumnHeadersHeight = 4;
+            this.dtgListBill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -800,7 +801,7 @@
             this.dtgListBill.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dtgListBill.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtgListBill.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dtgListBill.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dtgListBill.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgListBill.ThemeStyle.HeaderStyle.Height = 4;
             this.dtgListBill.ThemeStyle.ReadOnly = true;
             this.dtgListBill.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
@@ -925,7 +926,7 @@
             this.dtgEmDetail.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dtgEmDetail.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgEmDetail.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dtgEmDetail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtgEmDetail.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dtgEmDetail.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dtgEmDetail.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -2068,7 +2069,8 @@
             // 
             // tabPage5
             // 
-            this.tabPage5.Controls.Add(this.panel1);
+            this.tabPage5.Controls.Add(this.lbHDAcount);
+            this.tabPage5.Controls.Add(this.pnAcount);
             this.tabPage5.Controls.Add(this.btnDeleteAcount);
             this.tabPage5.Controls.Add(this.btnEditAcount);
             this.tabPage5.Controls.Add(this.txtFind_Acount);
@@ -2081,22 +2083,34 @@
             this.tabPage5.Text = "Quản lý tài khoản";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // panel1
+            // lbHDAcount
             // 
-            this.panel1.Controls.Add(this.txtCCCD_Acount);
-            this.panel1.Controls.Add(this.label30);
-            this.panel1.Controls.Add(this.txtUsername);
-            this.panel1.Controls.Add(this.label31);
-            this.panel1.Controls.Add(this.txtPass);
-            this.panel1.Controls.Add(this.lbID_Acount);
-            this.panel1.Controls.Add(this.label26);
-            this.panel1.Controls.Add(this.label27);
-            this.panel1.Controls.Add(this.txtName_Acount);
-            this.panel1.Controls.Add(this.label28);
-            this.panel1.Location = new System.Drawing.Point(1130, 16);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(777, 409);
-            this.panel1.TabIndex = 87;
+            this.lbHDAcount.AutoSize = true;
+            this.lbHDAcount.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHDAcount.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lbHDAcount.Location = new System.Drawing.Point(413, 122);
+            this.lbHDAcount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbHDAcount.Name = "lbHDAcount";
+            this.lbHDAcount.Size = new System.Drawing.Size(222, 19);
+            this.lbHDAcount.TabIndex = 95;
+            this.lbHDAcount.Text = "Chọn tài khoản để sửa hoặc xóa";
+            // 
+            // pnAcount
+            // 
+            this.pnAcount.Controls.Add(this.txtCCCD_Acount);
+            this.pnAcount.Controls.Add(this.label30);
+            this.pnAcount.Controls.Add(this.txtUsername);
+            this.pnAcount.Controls.Add(this.label31);
+            this.pnAcount.Controls.Add(this.txtPass);
+            this.pnAcount.Controls.Add(this.lbID_Acount);
+            this.pnAcount.Controls.Add(this.label26);
+            this.pnAcount.Controls.Add(this.label27);
+            this.pnAcount.Controls.Add(this.txtName_Acount);
+            this.pnAcount.Controls.Add(this.label28);
+            this.pnAcount.Location = new System.Drawing.Point(1130, 16);
+            this.pnAcount.Name = "pnAcount";
+            this.pnAcount.Size = new System.Drawing.Size(777, 409);
+            this.pnAcount.TabIndex = 87;
             // 
             // txtCCCD_Acount
             // 
@@ -2113,14 +2127,15 @@
             this.txtCCCD_Acount.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtCCCD_Acount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCCCD_Acount.HoverState.Parent = this.txtCCCD_Acount;
-            this.txtCCCD_Acount.Location = new System.Drawing.Point(479, 129);
+            this.txtCCCD_Acount.Location = new System.Drawing.Point(479, 136);
             this.txtCCCD_Acount.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.txtCCCD_Acount.Name = "txtCCCD_Acount";
             this.txtCCCD_Acount.PasswordChar = '\0';
             this.txtCCCD_Acount.PlaceholderText = "";
+            this.txtCCCD_Acount.ReadOnly = true;
             this.txtCCCD_Acount.SelectedText = "";
             this.txtCCCD_Acount.ShadowDecoration.Parent = this.txtCCCD_Acount;
-            this.txtCCCD_Acount.Size = new System.Drawing.Size(210, 48);
+            this.txtCCCD_Acount.Size = new System.Drawing.Size(210, 41);
             this.txtCCCD_Acount.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtCCCD_Acount.TabIndex = 94;
             // 
@@ -2203,7 +2218,7 @@
             this.lbID_Acount.AutoSize = true;
             this.lbID_Acount.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbID_Acount.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lbID_Acount.Location = new System.Drawing.Point(223, 9);
+            this.lbID_Acount.Location = new System.Drawing.Point(208, 9);
             this.lbID_Acount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbID_Acount.Name = "lbID_Acount";
             this.lbID_Acount.Size = new System.Drawing.Size(63, 36);
@@ -2218,9 +2233,9 @@
             this.label26.Location = new System.Drawing.Point(14, 9);
             this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(197, 36);
+            this.label26.Size = new System.Drawing.Size(186, 36);
             this.label26.TabIndex = 88;
-            this.label26.Text = "ID Cần Sửa --";
+            this.label26.Text = "ID Cần Sửa -";
             // 
             // label27
             // 
@@ -2253,6 +2268,7 @@
             this.txtName_Acount.Name = "txtName_Acount";
             this.txtName_Acount.PasswordChar = '\0';
             this.txtName_Acount.PlaceholderText = "";
+            this.txtName_Acount.ReadOnly = true;
             this.txtName_Acount.SelectedText = "";
             this.txtName_Acount.ShadowDecoration.Parent = this.txtName_Acount;
             this.txtName_Acount.Size = new System.Drawing.Size(210, 48);
@@ -2327,12 +2343,12 @@
             this.txtFind_Acount.Margin = new System.Windows.Forms.Padding(9);
             this.txtFind_Acount.Name = "txtFind_Acount";
             this.txtFind_Acount.PasswordChar = '\0';
-            this.txtFind_Acount.PlaceholderText = "Nhập ID để tìm nhân viên cần chỉnh sửa";
+            this.txtFind_Acount.PlaceholderText = "Nhập tên tài khoản để tìm";
             this.txtFind_Acount.SelectedText = "";
             this.txtFind_Acount.ShadowDecoration.Parent = this.txtFind_Acount;
             this.txtFind_Acount.Size = new System.Drawing.Size(505, 57);
             this.txtFind_Acount.TabIndex = 70;
-            this.txtFind_Acount.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
+            this.txtFind_Acount.TextChanged += new System.EventHandler(this.txtFind_Acount_TextChanged);
             // 
             // guna2Button2
             // 
@@ -2362,12 +2378,12 @@
             this.dtgAcount.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
             this.dtgAcount.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgAcount.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dtgAcount.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtgAcount.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dtgAcount.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dtgAcount.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -2383,7 +2399,7 @@
             this.Column2});
             dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
@@ -2392,12 +2408,13 @@
             this.dtgAcount.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dtgAcount.EnableHeadersVisualStyles = false;
             this.dtgAcount.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgAcount.Location = new System.Drawing.Point(31, 113);
+            this.dtgAcount.Location = new System.Drawing.Point(31, 145);
             this.dtgAcount.Margin = new System.Windows.Forms.Padding(4);
             this.dtgAcount.Name = "dtgAcount";
+            this.dtgAcount.ReadOnly = true;
             this.dtgAcount.RowHeadersVisible = false;
             this.dtgAcount.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgAcount.Size = new System.Drawing.Size(1032, 518);
+            this.dtgAcount.Size = new System.Drawing.Size(1032, 486);
             this.dtgAcount.TabIndex = 67;
             this.dtgAcount.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.dtgAcount.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -2413,7 +2430,7 @@
             this.dtgAcount.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dtgAcount.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dtgAcount.ThemeStyle.HeaderStyle.Height = 48;
-            this.dtgAcount.ThemeStyle.ReadOnly = false;
+            this.dtgAcount.ThemeStyle.ReadOnly = true;
             this.dtgAcount.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dtgAcount.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dtgAcount.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2429,6 +2446,7 @@
             this.dataGridViewTextBoxColumn16.FillWeight = 80F;
             this.dataGridViewTextBoxColumn16.HeaderText = "ID Nhân Viên";
             this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn17
             // 
@@ -2436,30 +2454,35 @@
             this.dataGridViewTextBoxColumn17.FillWeight = 150F;
             this.dataGridViewTextBoxColumn17.HeaderText = "Họ Tên";
             this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn18
             // 
             this.dataGridViewTextBoxColumn18.DataPropertyName = "socccd";
             this.dataGridViewTextBoxColumn18.HeaderText = "Số CCCD";
             this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.ReadOnly = true;
             // 
             // Column3
             // 
             this.Column3.DataPropertyName = "sodienthoai";
             this.Column3.HeaderText = "Số điện thoại";
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // Column1
             // 
             this.Column1.DataPropertyName = "username";
             this.Column1.HeaderText = "Tài khoản";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
             this.Column2.DataPropertyName = "pass";
             this.Column2.HeaderText = "Mật khẩu";
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // UserManaEm
             // 
@@ -2486,8 +2509,9 @@
             this.tabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgEmDel)).EndInit();
             this.tabPage5.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.tabPage5.PerformLayout();
+            this.pnAcount.ResumeLayout(false);
+            this.pnAcount.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgAcount)).EndInit();
             this.ResumeLayout(false);
 
@@ -2609,7 +2633,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
         private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnAcount;
         private Guna.UI2.WinForms.Guna2TextBox txtCCCD_Acount;
         private System.Windows.Forms.Label label30;
         private Guna.UI2.WinForms.Guna2TextBox txtUsername;
@@ -2631,5 +2655,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.Label lbHDAcount;
     }
 }
