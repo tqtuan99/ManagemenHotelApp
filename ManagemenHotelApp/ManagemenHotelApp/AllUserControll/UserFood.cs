@@ -60,7 +60,7 @@ namespace ManagemenHotelApp.AllUserControll
         {
             try
             {
-                query = @"Select idthucpham,tenloai,tenthucpham,soluong,gianhap,giaban,ghichu from thucpham,loaithucpham 
+                query = @"Select idthucpham,tenloai,tenthucpham,soluong,donvitinh,soluongtong,gianhap,giaban,ghichu from thucpham,loaithucpham 
                         where thucpham.idloaithucpham = loaithucpham.idloaithucpham " + s;
                 DataSet ds = cn.getData(query);
                 if (ds != null)
@@ -80,6 +80,8 @@ namespace ManagemenHotelApp.AllUserControll
             txtNameFood.ResetText();
             txtPriceFood.ResetText();
             txtQuantity.ResetText();
+            txtNewUnit.ResetText();
+            txtUnit.ResetText();
             cbTypeFood.SelectedIndex = -1;
             txtNoteF.ResetText();
             txtNewNameFood.ResetText();
@@ -98,9 +100,9 @@ namespace ManagemenHotelApp.AllUserControll
         }
 
         //lấy số lượng thực phẩm từ db
-        public int GetQuantyti(string id)
+        public int GetQuantyti(string a,string id)
         {
-            DataSet ds = cn.getData("select soluong from thucpham where idthucpham =" + id + "");
+            DataSet ds = cn.getData("select soluong"+a+" from thucpham where idthucpham =" + id + "");
             int Quantyti = int.Parse(ds.Tables[0].Rows[0][0].ToString());
             return Quantyti;
         }
@@ -219,8 +221,8 @@ namespace ManagemenHotelApp.AllUserControll
                         try
                         {
                             //id tự tăng nên khi thêm mới không cần thêm id
-                            query = @"insert into THUCPHAM (idloaithucpham,tenthucpham,soluong,soluongtong,gianhap,giaban,ghichu)  
-                                    values (N'" + TypeF + "',N'" + NameF + "',N'" + Quantity + "',N'" + Quantity + "',N'" + PriceF + "',N'" + SaleF + "',N'" + Note + "')";
+                            query = @"insert into THUCPHAM (idloaithucpham,tenthucpham,soluong,donvitinh,soluongtong,gianhap,giaban,ghichu)  
+                                    values (N'" + TypeF + "',N'" + NameF + "',N'" + Quantity + "',N'" + txtUnit.Text + "',N'" + Quantity + "',N'" + PriceF + "',N'" + SaleF + "',N'" + Note + "')";
                             cn.setData(query, "Thêm thực phẩm thành công.");
                             Clear();
                             UserFood_Load(sender, e);
@@ -250,15 +252,16 @@ namespace ManagemenHotelApp.AllUserControll
                 String id = dtgNewFood.Rows[e.RowIndex].Cells[0].Value.ToString();
                 lbNewID.Text = id;
 
-                query = @"select idthucpham,loaithucpham.idloaithucpham,tenthucpham,soluong,gianhap,giaban,ghichu from thucpham,loaithucpham
+                query = @"select idthucpham,loaithucpham.idloaithucpham,tenthucpham,soluong,donvitinh,gianhap,giaban,ghichu from thucpham,loaithucpham
                      where thucpham.idloaithucpham = loaithucpham.idloaithucpham and idthucpham = '" + id + "'";
                 DataSet ds = cn.getData(query);
                 cbNewTypeFood.SelectedIndex = Convert.ToInt32(ds.Tables[0].Rows[0][1].ToString()) - 1;
                 txtNewNameFood.Text = ds.Tables[0].Rows[0][2].ToString();
                 txtNewQuantity.Text = ds.Tables[0].Rows[0][3].ToString();
-                txtNewPrice.Text = ds.Tables[0].Rows[0][4].ToString();
-                txtNewSale.Text = ds.Tables[0].Rows[0][5].ToString();
-                txtNewNote.Text = ds.Tables[0].Rows[0][6].ToString();
+                txtNewUnit.Text = ds.Tables[0].Rows[0][4].ToString();
+                txtNewPrice.Text = ds.Tables[0].Rows[0][5].ToString();
+                txtNewSale.Text = ds.Tables[0].Rows[0][6].ToString();
+                txtNewNote.Text = ds.Tables[0].Rows[0][7].ToString();
             }
             catch (Exception ex)
             {
@@ -270,7 +273,7 @@ namespace ManagemenHotelApp.AllUserControll
         {
             try
             {
-                query = @"select idthucpham,loaithucpham.tenloai,tenthucpham,soluong,gianhap,giaban,ghichu from thucpham,loaithucpham
+                query = @"select idthucpham,loaithucpham.tenloai,tenthucpham,soluong,donvitinh,soluongtong,,gianhap,giaban,ghichu from thucpham,loaithucpham
                     where thucpham.idloaithucpham = loaithucpham.idloaithucpham and (convert(nvarchar(10),idthucpham) like N'" + txtNameSearch.Text + "%' or convert(nvarchar(10),tenthucpham) like N'" + txtNameSearch.Text + "%')";
                 DataSet ds = cn.getData(query);
                 dtgNewFood.DataSource = ds.Tables[0];
@@ -297,11 +300,16 @@ namespace ManagemenHotelApp.AllUserControll
                     int Quantity = int.Parse(txtNewQuantity.Text);
                     int TypeF = cbNewTypeFood.SelectedIndex + 1;
                     String Note = txtNewNote.Text;
+                    int Sum;
                     try
                     {
-                        int Sum = GetQuantyti(lbNewID.Text) + Quantity;
+                        //nếu số lượng sửa lớn hơn sl hiện có thì sl tổng (tăng sl sửa - sl có)
+                        if (GetQuantyti("", lbNewID.Text) < Quantity) Sum = (GetQuantyti("tong", lbNewID.Text) + (Quantity - GetQuantyti("", lbNewID.Text)));
+                        else if(GetQuantyti("", lbNewID.Text) == Quantity) Sum = GetQuantyti("", lbNewID.Text);
+                        else Sum = (GetQuantyti("tong", lbNewID.Text) - (GetQuantyti("", lbNewID.Text) - Quantity));
+
                         query = @"Update THUCPHAM set idloaithucpham = '" + TypeF + "', tenthucpham = N'" + NameF + "', soluong = '" + Quantity +
-                            "', soluongtong = N'" + Sum + "',gianhap = N'" + PriceF + "', giaban = N'" + SaleF + "', ghichu = N'" + Note + "' where idthucpham = '" + lbNewID.Text + "'";
+                            "',donvitinh = N'" + txtNewUnit.Text + "', soluongtong = N'" + Sum + "',gianhap = N'" + PriceF + "', giaban = N'" + SaleF + "', ghichu = N'" + Note + "' where idthucpham = '" + lbNewID.Text + "'";
                         cn.setData(query, "Cập nhật thành công!");
                     }
                     catch (Exception ex)
@@ -405,8 +413,10 @@ namespace ManagemenHotelApp.AllUserControll
                 {
                     cn.setData("delete from loaithucpham where idloaithucpham = N'" + lbIDTypeFood.Text + "'", "Xóa thành công!");
                     UserFood_Load(sender, e);
+                    setVisibleTypeFood(false);
+
                 }
-                
+
             }
             catch (Exception ex)
             {

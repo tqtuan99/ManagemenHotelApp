@@ -103,7 +103,7 @@ namespace ManagemenHotelApp.AllUserControll
             txtDayCreat.Value = DateTime.Now;
             Clear();
             FillData(tbCustumer, "select * from KHACHHANG");
-            FillData(tbFood, "select idthucpham,loaithucpham.tenloai,tenthucpham,giaban,soluong,ghichu " +
+            FillData(tbFood, "select idthucpham,loaithucpham.tenloai,tenthucpham,giaban,soluong,donvitinh,ghichu " +
                 "from THUCPHAM,LOAITHUCPHAM where thucpham.idloaithucpham = loaithucpham.idloaithucpham");
         }
 

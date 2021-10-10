@@ -41,9 +41,20 @@
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.txtUnit = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.txtSale = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dtgFood = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.giaban = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.txtQuantity = new Guna.UI2.WinForms.Guna2TextBox();
             this.cbTypeFood = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -60,9 +71,20 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dtgNewFood = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.idphong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenloaiphong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenphong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sogiuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dongia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ghichu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
             this.btnEdit = new Guna.UI2.WinForms.Guna2Button();
             this.pnUpdate = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtNewUnit = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtNewSale = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.lbNewID = new System.Windows.Forms.Label();
@@ -95,24 +117,6 @@
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtUnit = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.giaban = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idphong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenloaiphong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenphong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sogiuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dongia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ghichu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgFood)).BeginInit();
@@ -173,6 +177,43 @@
             this.tabPage1.Text = "Thêm thực phẩm";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // txtUnit
+            // 
+            this.txtUnit.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUnit.DefaultText = "";
+            this.txtUnit.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtUnit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtUnit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUnit.DisabledState.Parent = this.txtUnit;
+            this.txtUnit.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUnit.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUnit.FocusedState.Parent = this.txtUnit;
+            this.txtUnit.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUnit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtUnit.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUnit.HoverState.Parent = this.txtUnit;
+            this.txtUnit.Location = new System.Drawing.Point(565, 220);
+            this.txtUnit.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.txtUnit.Name = "txtUnit";
+            this.txtUnit.PasswordChar = '\0';
+            this.txtUnit.PlaceholderText = "";
+            this.txtUnit.SelectedText = "";
+            this.txtUnit.ShadowDecoration.Parent = this.txtUnit;
+            this.txtUnit.Size = new System.Drawing.Size(284, 48);
+            this.txtUnit.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.txtUnit.TabIndex = 60;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(560, 189);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(140, 30);
+            this.label12.TabIndex = 59;
+            this.label12.Text = "Đơn vị tính";
+            // 
             // txtSale
             // 
             this.txtSale.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -188,7 +229,7 @@
             this.txtSale.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtSale.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSale.HoverState.Parent = this.txtSale;
-            this.txtSale.Location = new System.Drawing.Point(532, 379);
+            this.txtSale.Location = new System.Drawing.Point(565, 346);
             this.txtSale.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.txtSale.Name = "txtSale";
             this.txtSale.PasswordChar = '\0';
@@ -203,7 +244,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(527, 348);
+            this.label4.Location = new System.Drawing.Point(560, 315);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(110, 30);
@@ -233,6 +274,7 @@
             this.Column2,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
+            this.Column6,
             this.Column1,
             this.dataGridViewTextBoxColumn8,
             this.giaban,
@@ -279,6 +321,69 @@
             this.dtgFood.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtgFood.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "idthucpham";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID thực phẩm";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "tenloai";
+            this.Column2.HeaderText = "Tên loại";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "tenthucpham";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Tên thực phẩm";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "soluong";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Số lượng";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "soluongtong";
+            this.Column6.HeaderText = "Số lượng tổng";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "donvitinh";
+            this.Column1.HeaderText = "Đơn vị tính";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "gianhap";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Giá nhập";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
+            // giaban
+            // 
+            this.giaban.DataPropertyName = "giaban";
+            this.giaban.HeaderText = "Giá bán";
+            this.giaban.Name = "giaban";
+            this.giaban.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "ghichu";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Ghi Chú";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -306,7 +411,7 @@
             this.txtQuantity.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtQuantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtQuantity.HoverState.Parent = this.txtQuantity;
-            this.txtQuantity.Location = new System.Drawing.Point(120, 240);
+            this.txtQuantity.Location = new System.Drawing.Point(120, 220);
             this.txtQuantity.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.PasswordChar = '\0';
@@ -407,10 +512,10 @@
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(115, 208);
+            this.label6.Location = new System.Drawing.Point(115, 177);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(131, 27);
+            this.label6.Size = new System.Drawing.Size(131, 37);
             this.label6.TabIndex = 31;
             this.label6.Text = "Số lượng";
             // 
@@ -429,7 +534,7 @@
             this.txtNoteF.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtNoteF.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNoteF.HoverState.Parent = this.txtNoteF;
-            this.txtNoteF.Location = new System.Drawing.Point(120, 481);
+            this.txtNoteF.Location = new System.Drawing.Point(120, 457);
             this.txtNoteF.Margin = new System.Windows.Forms.Padding(5);
             this.txtNoteF.Name = "txtNoteF";
             this.txtNoteF.PasswordChar = '\0';
@@ -443,10 +548,10 @@
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(115, 449);
+            this.label5.Location = new System.Drawing.Point(115, 425);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(559, 27);
+            this.label5.Size = new System.Drawing.Size(192, 27);
             this.label5.TabIndex = 28;
             this.label5.Text = "Ghi Chú";
             // 
@@ -487,7 +592,7 @@
             this.txtPriceFood.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtPriceFood.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPriceFood.HoverState.Parent = this.txtPriceFood;
-            this.txtPriceFood.Location = new System.Drawing.Point(120, 379);
+            this.txtPriceFood.Location = new System.Drawing.Point(120, 346);
             this.txtPriceFood.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.txtPriceFood.Name = "txtPriceFood";
             this.txtPriceFood.PasswordChar = '\0';
@@ -501,7 +606,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(115, 349);
+            this.label1.Location = new System.Drawing.Point(115, 316);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(125, 27);
@@ -550,6 +655,7 @@
             this.tenloaiphong,
             this.tenphong,
             this.sogiuong,
+            this.Column5,
             this.Column4,
             this.dongia,
             this.Column3,
@@ -597,6 +703,69 @@
             this.dtgNewFood.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dtgNewFood.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgNewFood_CellContentClick);
             // 
+            // idphong
+            // 
+            this.idphong.DataPropertyName = "idthucpham";
+            this.idphong.HeaderText = "ID thực phẩm";
+            this.idphong.Name = "idphong";
+            this.idphong.ReadOnly = true;
+            // 
+            // tenloaiphong
+            // 
+            this.tenloaiphong.DataPropertyName = "tenloai";
+            this.tenloaiphong.HeaderText = "Loại thực phẩm";
+            this.tenloaiphong.Name = "tenloaiphong";
+            this.tenloaiphong.ReadOnly = true;
+            // 
+            // tenphong
+            // 
+            this.tenphong.DataPropertyName = "tenthucpham";
+            this.tenphong.HeaderText = "Tên thực phẩm";
+            this.tenphong.Name = "tenphong";
+            this.tenphong.ReadOnly = true;
+            // 
+            // sogiuong
+            // 
+            this.sogiuong.DataPropertyName = "soluong";
+            this.sogiuong.HeaderText = "Số lượng";
+            this.sogiuong.Name = "sogiuong";
+            this.sogiuong.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "soluongtong";
+            this.Column5.HeaderText = "Số lượng tổng";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "donvitinh";
+            this.Column4.HeaderText = "Đơn vị tính";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // dongia
+            // 
+            this.dongia.DataPropertyName = "gianhap";
+            this.dongia.HeaderText = "Giá nhập";
+            this.dongia.Name = "dongia";
+            this.dongia.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "giaban";
+            this.Column3.HeaderText = "Giá bán";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // ghichu
+            // 
+            this.ghichu.DataPropertyName = "ghichu";
+            this.ghichu.HeaderText = "Ghi Chú";
+            this.ghichu.Name = "ghichu";
+            this.ghichu.ReadOnly = true;
+            // 
             // btnDelete
             // 
             this.btnDelete.BorderRadius = 20;
@@ -643,6 +812,8 @@
             // 
             // pnUpdate
             // 
+            this.pnUpdate.Controls.Add(this.label13);
+            this.pnUpdate.Controls.Add(this.txtNewUnit);
             this.pnUpdate.Controls.Add(this.txtNewSale);
             this.pnUpdate.Controls.Add(this.label8);
             this.pnUpdate.Controls.Add(this.lbNewID);
@@ -657,11 +828,47 @@
             this.pnUpdate.Controls.Add(this.label26);
             this.pnUpdate.Controls.Add(this.txtNewPrice);
             this.pnUpdate.Controls.Add(this.label31);
-            this.pnUpdate.Location = new System.Drawing.Point(1013, 25);
+            this.pnUpdate.Location = new System.Drawing.Point(1013, 6);
             this.pnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnUpdate.Name = "pnUpdate";
-            this.pnUpdate.Size = new System.Drawing.Size(917, 513);
+            this.pnUpdate.Size = new System.Drawing.Size(917, 532);
             this.pnUpdate.TabIndex = 72;
+            // 
+            // label13
+            // 
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(513, 159);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(180, 35);
+            this.label13.TabIndex = 100;
+            this.label13.Text = "Đơn vị tính";
+            // 
+            // txtNewUnit
+            // 
+            this.txtNewUnit.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNewUnit.DefaultText = "";
+            this.txtNewUnit.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNewUnit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNewUnit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNewUnit.DisabledState.Parent = this.txtNewUnit;
+            this.txtNewUnit.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNewUnit.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNewUnit.FocusedState.Parent = this.txtNewUnit;
+            this.txtNewUnit.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNewUnit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtNewUnit.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNewUnit.HoverState.Parent = this.txtNewUnit;
+            this.txtNewUnit.Location = new System.Drawing.Point(518, 200);
+            this.txtNewUnit.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.txtNewUnit.Name = "txtNewUnit";
+            this.txtNewUnit.PasswordChar = '\0';
+            this.txtNewUnit.PlaceholderText = "";
+            this.txtNewUnit.SelectedText = "";
+            this.txtNewUnit.ShadowDecoration.Parent = this.txtNewUnit;
+            this.txtNewUnit.Size = new System.Drawing.Size(281, 48);
+            this.txtNewUnit.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.txtNewUnit.TabIndex = 99;
             // 
             // txtNewSale
             // 
@@ -678,7 +885,7 @@
             this.txtNewSale.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtNewSale.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNewSale.HoverState.Parent = this.txtNewSale;
-            this.txtNewSale.Location = new System.Drawing.Point(92, 414);
+            this.txtNewSale.Location = new System.Drawing.Point(518, 310);
             this.txtNewSale.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.txtNewSale.Name = "txtNewSale";
             this.txtNewSale.PasswordChar = '\0';
@@ -693,7 +900,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(84, 383);
+            this.label8.Location = new System.Drawing.Point(510, 279);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(110, 30);
@@ -705,7 +912,7 @@
             this.lbNewID.AutoSize = true;
             this.lbNewID.Font = new System.Drawing.Font("Tahoma", 18F);
             this.lbNewID.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lbNewID.Location = new System.Drawing.Point(111, 21);
+            this.lbNewID.Location = new System.Drawing.Point(81, 9);
             this.lbNewID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbNewID.Name = "lbNewID";
             this.lbNewID.Size = new System.Drawing.Size(63, 36);
@@ -717,7 +924,7 @@
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Tahoma", 18F);
             this.label29.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label29.Location = new System.Drawing.Point(47, 21);
+            this.label29.Location = new System.Drawing.Point(17, 9);
             this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(75, 36);
@@ -739,7 +946,7 @@
             this.txtNewQuantity.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtNewQuantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNewQuantity.HoverState.Parent = this.txtNewQuantity;
-            this.txtNewQuantity.Location = new System.Drawing.Point(89, 281);
+            this.txtNewQuantity.Location = new System.Drawing.Point(55, 200);
             this.txtNewQuantity.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.txtNewQuantity.Name = "txtNewQuantity";
             this.txtNewQuantity.PasswordChar = '\0';
@@ -763,7 +970,7 @@
             this.cbNewTypeFood.HoverState.Parent = this.cbNewTypeFood;
             this.cbNewTypeFood.ItemHeight = 30;
             this.cbNewTypeFood.ItemsAppearance.Parent = this.cbNewTypeFood;
-            this.cbNewTypeFood.Location = new System.Drawing.Point(89, 139);
+            this.cbNewTypeFood.Location = new System.Drawing.Point(58, 103);
             this.cbNewTypeFood.Margin = new System.Windows.Forms.Padding(4);
             this.cbNewTypeFood.Name = "cbNewTypeFood";
             this.cbNewTypeFood.ShadowDecoration.Parent = this.cbNewTypeFood;
@@ -773,7 +980,7 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(83, 103);
+            this.label3.Location = new System.Drawing.Point(52, 67);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(192, 27);
@@ -795,7 +1002,7 @@
             this.txtNewNameFood.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtNewNameFood.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNewNameFood.HoverState.Parent = this.txtNewNameFood;
-            this.txtNewNameFood.Location = new System.Drawing.Point(549, 130);
+            this.txtNewNameFood.Location = new System.Drawing.Point(518, 94);
             this.txtNewNameFood.Margin = new System.Windows.Forms.Padding(5);
             this.txtNewNameFood.Name = "txtNewNameFood";
             this.txtNewNameFood.PasswordChar = '\0';
@@ -810,7 +1017,7 @@
             // label11
             // 
             this.label11.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(544, 98);
+            this.label11.Location = new System.Drawing.Point(513, 62);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(191, 27);
@@ -820,10 +1027,10 @@
             // label16
             // 
             this.label16.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(84, 249);
+            this.label16.Location = new System.Drawing.Point(53, 159);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(105, 27);
+            this.label16.Size = new System.Drawing.Size(180, 35);
             this.label16.TabIndex = 78;
             this.label16.Text = "Số lượng";
             // 
@@ -842,24 +1049,24 @@
             this.txtNewNote.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtNewNote.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNewNote.HoverState.Parent = this.txtNewNote;
-            this.txtNewNote.Location = new System.Drawing.Point(549, 415);
+            this.txtNewNote.Location = new System.Drawing.Point(54, 440);
             this.txtNewNote.Margin = new System.Windows.Forms.Padding(5);
             this.txtNewNote.Name = "txtNewNote";
             this.txtNewNote.PasswordChar = '\0';
             this.txtNewNote.PlaceholderText = "";
             this.txtNewNote.SelectedText = "";
             this.txtNewNote.ShadowDecoration.Parent = this.txtNewNote;
-            this.txtNewNote.Size = new System.Drawing.Size(281, 44);
+            this.txtNewNote.Size = new System.Drawing.Size(761, 44);
             this.txtNewNote.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtNewNote.TabIndex = 77;
             // 
             // label26
             // 
             this.label26.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(541, 383);
+            this.label26.Location = new System.Drawing.Point(49, 408);
             this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(115, 27);
+            this.label26.Size = new System.Drawing.Size(184, 27);
             this.label26.TabIndex = 76;
             this.label26.Text = "Ghi Chú";
             // 
@@ -878,7 +1085,7 @@
             this.txtNewPrice.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtNewPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNewPrice.HoverState.Parent = this.txtNewPrice;
-            this.txtNewPrice.Location = new System.Drawing.Point(549, 281);
+            this.txtNewPrice.Location = new System.Drawing.Point(54, 319);
             this.txtNewPrice.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.txtNewPrice.Name = "txtNewPrice";
             this.txtNewPrice.PasswordChar = '\0';
@@ -892,7 +1099,7 @@
             // label31
             // 
             this.label31.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(541, 251);
+            this.label31.Location = new System.Drawing.Point(49, 286);
             this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(125, 27);
@@ -1233,155 +1440,6 @@
             this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
             this.dataGridViewTextBoxColumn20.ReadOnly = true;
             // 
-            // txtUnit
-            // 
-            this.txtUnit.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtUnit.DefaultText = "";
-            this.txtUnit.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtUnit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtUnit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUnit.DisabledState.Parent = this.txtUnit;
-            this.txtUnit.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUnit.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUnit.FocusedState.Parent = this.txtUnit;
-            this.txtUnit.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUnit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtUnit.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUnit.HoverState.Parent = this.txtUnit;
-            this.txtUnit.Location = new System.Drawing.Point(565, 240);
-            this.txtUnit.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.txtUnit.Name = "txtUnit";
-            this.txtUnit.PasswordChar = '\0';
-            this.txtUnit.PlaceholderText = "";
-            this.txtUnit.SelectedText = "";
-            this.txtUnit.ShadowDecoration.Parent = this.txtUnit;
-            this.txtUnit.Size = new System.Drawing.Size(284, 48);
-            this.txtUnit.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.txtUnit.TabIndex = 60;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(560, 209);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(140, 30);
-            this.label12.TabIndex = 59;
-            this.label12.Text = "Đơn vị tính";
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "idthucpham";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID thực phẩm";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "tenloai";
-            this.Column2.HeaderText = "Tên loại";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "tenthucpham";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Tên thực phẩm";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "soluong";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Số lượng";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "donvitinh";
-            this.Column1.HeaderText = "Đơn vị tính";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "gianhap";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Giá nhập";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // giaban
-            // 
-            this.giaban.DataPropertyName = "giaban";
-            this.giaban.HeaderText = "Giá bán";
-            this.giaban.Name = "giaban";
-            this.giaban.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "ghichu";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Ghi Chú";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            // 
-            // idphong
-            // 
-            this.idphong.DataPropertyName = "idthucpham";
-            this.idphong.HeaderText = "ID thực phẩm";
-            this.idphong.Name = "idphong";
-            this.idphong.ReadOnly = true;
-            // 
-            // tenloaiphong
-            // 
-            this.tenloaiphong.DataPropertyName = "tenloai";
-            this.tenloaiphong.HeaderText = "Loại thực phẩm";
-            this.tenloaiphong.Name = "tenloaiphong";
-            this.tenloaiphong.ReadOnly = true;
-            // 
-            // tenphong
-            // 
-            this.tenphong.DataPropertyName = "tenthucpham";
-            this.tenphong.HeaderText = "Tên thực phẩm";
-            this.tenphong.Name = "tenphong";
-            this.tenphong.ReadOnly = true;
-            // 
-            // sogiuong
-            // 
-            this.sogiuong.DataPropertyName = "soluong";
-            this.sogiuong.HeaderText = "Số lượng";
-            this.sogiuong.Name = "sogiuong";
-            this.sogiuong.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "donvitinh";
-            this.Column4.HeaderText = "Đơn vị tính";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // dongia
-            // 
-            this.dongia.DataPropertyName = "gianhap";
-            this.dongia.HeaderText = "Giá nhập";
-            this.dongia.Name = "dongia";
-            this.dongia.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "giaban";
-            this.Column3.HeaderText = "Giá bán";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // ghichu
-            // 
-            this.ghichu.DataPropertyName = "ghichu";
-            this.ghichu.HeaderText = "Ghi Chú";
-            this.ghichu.Name = "ghichu";
-            this.ghichu.ReadOnly = true;
-            // 
             // UserFood
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1469,10 +1527,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
         private Guna.UI2.WinForms.Guna2TextBox txtUnit;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private Guna.UI2.WinForms.Guna2TextBox txtNewUnit;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn giaban;
@@ -1481,6 +1542,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tenloaiphong;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenphong;
         private System.Windows.Forms.DataGridViewTextBoxColumn sogiuong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dongia;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;

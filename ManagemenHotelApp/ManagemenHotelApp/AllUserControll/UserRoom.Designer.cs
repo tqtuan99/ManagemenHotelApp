@@ -809,10 +809,10 @@
             // label32
             // 
             this.label32.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(371, 409);
+            this.label32.Location = new System.Drawing.Point(371, 398);
             this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(131, 27);
+            this.label32.Size = new System.Drawing.Size(131, 38);
             this.label32.TabIndex = 88;
             this.label32.Text = "Trạng thái";
             // 
@@ -996,20 +996,20 @@
             // label12
             // 
             this.label12.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(47, 409);
+            this.label12.Location = new System.Drawing.Point(47, 407);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(105, 27);
+            this.label12.Size = new System.Drawing.Size(171, 38);
             this.label12.TabIndex = 79;
             this.label12.Text = "Số người";
             // 
             // label16
             // 
             this.label16.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(44, 249);
+            this.label16.Location = new System.Drawing.Point(44, 243);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(123, 27);
+            this.label16.Size = new System.Drawing.Size(157, 33);
             this.label16.TabIndex = 78;
             this.label16.Text = "Số giường";
             // 
@@ -1052,10 +1052,10 @@
             // label27
             // 
             this.label27.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(693, 251);
+            this.label27.Location = new System.Drawing.Point(693, 243);
             this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(172, 27);
+            this.label27.Size = new System.Drawing.Size(172, 35);
             this.label27.TabIndex = 75;
             this.label27.Text = "Mức giảm giá";
             // 
@@ -1098,10 +1098,10 @@
             // label31
             // 
             this.label31.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(365, 251);
+            this.label31.Location = new System.Drawing.Point(365, 243);
             this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(107, 27);
+            this.label31.Size = new System.Drawing.Size(107, 35);
             this.label31.TabIndex = 72;
             this.label31.Text = "Đơn giá";
             // 

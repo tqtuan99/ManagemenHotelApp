@@ -421,8 +421,9 @@ namespace ManagemenHotelApp.AllUserControll
                 {
                     cn.setData("delete from loaiphong where idloaiphong = N'" + lbIDTypeRoom.Text + "'", "Xóa thành công!");
                     UserRoom_Load(sender, e);
+                    setVisibleTypeRoom(false);
                 }
-                
+
             }
             catch (Exception ex)
             {

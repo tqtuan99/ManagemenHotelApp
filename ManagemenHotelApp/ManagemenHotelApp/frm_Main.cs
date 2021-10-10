@@ -204,7 +204,8 @@ namespace ManagemenHotelApp
             btnCheckOut.Width = 221;
 
             lbTextContent.Text = btnManagement.Text;
-
+            userManaInfoCus1.Visible = true;
+            userManaInfoCus1.BringToFront();
         }
 
         private void lbTextContent_Click(object sender, EventArgs e)

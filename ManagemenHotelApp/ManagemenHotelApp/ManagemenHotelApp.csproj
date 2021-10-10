@@ -84,6 +84,12 @@
     <Compile Include="AllUserControll\UserManaEm.Designer.cs">
       <DependentUpon>UserManaEm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AllUserControll\UserManaInfoCus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AllUserControll\UserManaInfoCus.Designer.cs">
+      <DependentUpon>UserManaInfoCus.cs</DependentUpon>
+    </Compile>
     <Compile Include="AllUserControll\UserPayBill.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -161,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AllUserControll\UserManaEm.resx">
       <DependentUpon>UserManaEm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllUserControll\UserManaInfoCus.resx">
+      <DependentUpon>UserManaInfoCus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AllUserControll\UserPayBill.resx">
       <DependentUpon>UserPayBill.cs</DependentUpon>
