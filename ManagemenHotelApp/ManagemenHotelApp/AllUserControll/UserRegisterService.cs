@@ -113,7 +113,11 @@ namespace ManagemenHotelApp.AllUserControll
                     if (dsCheck.Tables[0].Rows.Count == 1)
                     {
                         lbIdhoadon.Text = dsCheck.Tables[0].Rows[0][0].ToString();
+<<<<<<< HEAD
                         lbDate.Text = "Thời gian yêu cầu";
+=======
+                        lbDate.Text = "Ngày yêu cầu";
+>>>>>>> 18a6aba038ab44fe38a86fe92afb1f1533b86d40
                     }
                     else //Ngược lại thì id hóa đơn sẽ được thêm mới
                     {

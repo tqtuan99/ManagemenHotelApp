@@ -127,7 +127,12 @@
             this.tbCustumer.DefaultCellStyle = dataGridViewCellStyle3;
             this.tbCustumer.EnableHeadersVisualStyles = false;
             this.tbCustumer.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+<<<<<<< HEAD
             this.tbCustumer.Location = new System.Drawing.Point(30, 105);
+=======
+            this.tbCustumer.Location = new System.Drawing.Point(-1, 133);
+            this.tbCustumer.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> 18a6aba038ab44fe38a86fe92afb1f1533b86d40
             this.tbCustumer.Name = "tbCustumer";
             this.tbCustumer.ReadOnly = true;
             this.tbCustumer.RowHeadersVisible = false;
@@ -296,7 +301,12 @@
             this.tbService.DefaultCellStyle = dataGridViewCellStyle6;
             this.tbService.EnableHeadersVisualStyles = false;
             this.tbService.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+<<<<<<< HEAD
             this.tbService.Location = new System.Drawing.Point(29, 394);
+=======
+            this.tbService.Location = new System.Drawing.Point(840, 133);
+            this.tbService.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> 18a6aba038ab44fe38a86fe92afb1f1533b86d40
             this.tbService.Name = "tbService";
             this.tbService.ReadOnly = true;
             this.tbService.RowHeadersVisible = false;
@@ -411,8 +421,13 @@
             this.txtNameSearch.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNameSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNameSearch.HoverState.Parent = this.txtNameSearch;
+<<<<<<< HEAD
             this.txtNameSearch.Location = new System.Drawing.Point(206, 28);
             this.txtNameSearch.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+=======
+            this.txtNameSearch.Location = new System.Drawing.Point(288, 38);
+            this.txtNameSearch.Margin = new System.Windows.Forms.Padding(9);
+>>>>>>> 18a6aba038ab44fe38a86fe92afb1f1533b86d40
             this.txtNameSearch.Name = "txtNameSearch";
             this.txtNameSearch.PasswordChar = '\0';
             this.txtNameSearch.PlaceholderText = "Nhập ID hoặc tên khách hàng để tìm kiếm";
@@ -434,7 +449,12 @@
             this.btnplus.HoverState.Parent = this.btnplus;
             this.btnplus.Image = global::ManagemenHotelApp.Properties.Resources.plus;
             this.btnplus.ImageSize = new System.Drawing.Size(35, 35);
+<<<<<<< HEAD
             this.btnplus.Location = new System.Drawing.Point(1138, 343);
+=======
+            this.btnplus.Location = new System.Drawing.Point(711, 662);
+            this.btnplus.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> 18a6aba038ab44fe38a86fe92afb1f1533b86d40
             this.btnplus.Name = "btnplus";
             this.btnplus.ShadowDecoration.Parent = this.btnplus;
             this.btnplus.Size = new System.Drawing.Size(59, 46);
@@ -488,7 +508,12 @@
             this.btnBookService.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBookService.ForeColor = System.Drawing.Color.White;
             this.btnBookService.HoverState.Parent = this.btnBookService;
+<<<<<<< HEAD
             this.btnBookService.Location = new System.Drawing.Point(828, 616);
+=======
+            this.btnBookService.Location = new System.Drawing.Point(1224, 758);
+            this.btnBookService.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> 18a6aba038ab44fe38a86fe92afb1f1533b86d40
             this.btnBookService.Name = "btnBookService";
             this.btnBookService.ShadowDecoration.Parent = this.btnBookService;
             this.btnBookService.Size = new System.Drawing.Size(263, 50);
@@ -500,7 +525,12 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+<<<<<<< HEAD
             this.panel1.Location = new System.Drawing.Point(745, 116);
+=======
+            this.panel1.Location = new System.Drawing.Point(603, 513);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> 18a6aba038ab44fe38a86fe92afb1f1533b86d40
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(404, 4);
             this.panel1.TabIndex = 140;
@@ -512,7 +542,12 @@
             this.txtDayCreat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDayCreat.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.txtDayCreat.HoverState.Parent = this.txtDayCreat;
+<<<<<<< HEAD
             this.txtDayCreat.Location = new System.Drawing.Point(968, 451);
+=======
+            this.txtDayCreat.Location = new System.Drawing.Point(1241, 674);
+            this.txtDayCreat.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> 18a6aba038ab44fe38a86fe92afb1f1533b86d40
             this.txtDayCreat.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.txtDayCreat.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.txtDayCreat.Name = "txtDayCreat";
@@ -525,9 +560,16 @@
             // 
             this.lbDate.AutoSize = true;
             this.lbDate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.lbDate.Location = new System.Drawing.Point(964, 427);
             this.lbDate.Name = "lbDate";
             this.lbDate.Size = new System.Drawing.Size(82, 21);
+=======
+            this.lbDate.Location = new System.Drawing.Point(1236, 645);
+            this.lbDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbDate.Name = "lbDate";
+            this.lbDate.Size = new System.Drawing.Size(98, 23);
+>>>>>>> 18a6aba038ab44fe38a86fe92afb1f1533b86d40
             this.lbDate.TabIndex = 138;
             this.lbDate.Text = "Ngày tạo";
             // 
@@ -865,6 +907,10 @@
             this.Controls.Add(this.tbService);
             this.Controls.Add(this.txtNameSearch);
             this.Controls.Add(this.btnSearch);
+<<<<<<< HEAD
+=======
+            this.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> 18a6aba038ab44fe38a86fe92afb1f1533b86d40
             this.Name = "UserRegisterService";
             this.Size = new System.Drawing.Size(1251, 696);
             this.Load += new System.EventHandler(this.UserRegisterService_Load);

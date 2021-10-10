@@ -407,9 +407,16 @@
             // 
             this.lbDate.AutoSize = true;
             this.lbDate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.lbDate.Location = new System.Drawing.Point(964, 427);
             this.lbDate.Name = "lbDate";
             this.lbDate.Size = new System.Drawing.Size(82, 21);
+=======
+            this.lbDate.Location = new System.Drawing.Point(1231, 639);
+            this.lbDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbDate.Name = "lbDate";
+            this.lbDate.Size = new System.Drawing.Size(98, 23);
+>>>>>>> 18a6aba038ab44fe38a86fe92afb1f1533b86d40
             this.lbDate.TabIndex = 167;
             this.lbDate.Text = "Ngày tạo";
             // 

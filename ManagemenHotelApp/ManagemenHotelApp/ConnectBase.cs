@@ -14,7 +14,11 @@ namespace ManagemenHotelApp
         protected SqlConnection getConnection()
         {
             SqlConnection con = new SqlConnection();
+<<<<<<< HEAD
             con.ConnectionString = @"data source = DESKTOP-OA1P7JF;database = ManaHotelDB; Integrated Security=True";
+=======
+            con.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\OneDrive\Destop\git-hub\CDIO4\ManagemenHotelApp\ManagemenHotelApp\ManagemenHotelApp\QLKS.mdf;Integrated Security=True";
+>>>>>>> 18a6aba038ab44fe38a86fe92afb1f1533b86d40
             //data source = DESKTOP - OA1P7JF; database = ManaHotelDB; Integrated Security = True
             //Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = D:\OneDrive\Destop\git - hub\CDIO4\ManagemenHotelApp\ManagemenHotelApp\ManagemenHotelApp\QLKS.mdf; Integrated Security = True
             return con;
