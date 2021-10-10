@@ -119,12 +119,12 @@ namespace ManagemenHotelApp
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            //if (MessageBox.Show("Bạn có muốn đăng xuất không!", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            //{
+            if (MessageBox.Show("Bạn có muốn đăng xuất không!", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
                 this.Close();
                 frm_Login f = new frm_Login();
                 f.Show();
-            //}
+            }
         }
     }
 }

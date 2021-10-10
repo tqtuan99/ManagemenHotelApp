@@ -40,9 +40,7 @@
             this.lbSum = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.tbFood = new System.Windows.Forms.DataGridView();
-            this.stt2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbSer = new System.Windows.Forms.DataGridView();
-            this.stt1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbRoom = new System.Windows.Forms.DataGridView();
             this.label11 = new System.Windows.Forms.Label();
             this.tbCus = new System.Windows.Forms.DataGridView();
@@ -69,6 +67,19 @@
             this.dongia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mucgiamgia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tongtien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stt1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tendichvu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.thoigianyeucau = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.giadichvu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mucgiamgia1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tongtien1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stt2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenthucpham = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.thoigianyeucau1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soluong1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.giaban = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tongtien2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbBot)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbFood)).BeginInit();
@@ -223,17 +234,19 @@
             this.tbFood.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbFood.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tbFood.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.stt2});
+            this.stt2,
+            this.tenthucpham,
+            this.thoigianyeucau1,
+            this.soluong1,
+            this.giaban,
+            this.tongtien2});
             this.tbFood.Location = new System.Drawing.Point(16, 433);
             this.tbFood.Name = "tbFood";
+            this.tbFood.ReadOnly = true;
             this.tbFood.RowHeadersVisible = false;
+            this.tbFood.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.tbFood.Size = new System.Drawing.Size(630, 96);
             this.tbFood.TabIndex = 15;
-            // 
-            // stt2
-            // 
-            this.stt2.HeaderText = "STT";
-            this.stt2.Name = "stt2";
             // 
             // tbSer
             // 
@@ -242,17 +255,20 @@
             this.tbSer.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbSer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tbSer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.stt1});
+            this.stt1,
+            this.tendichvu,
+            this.thoigianyeucau,
+            this.soluong,
+            this.giadichvu,
+            this.mucgiamgia1,
+            this.tongtien1});
             this.tbSer.Location = new System.Drawing.Point(16, 323);
             this.tbSer.Name = "tbSer";
+            this.tbSer.ReadOnly = true;
             this.tbSer.RowHeadersVisible = false;
+            this.tbSer.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.tbSer.Size = new System.Drawing.Size(630, 95);
             this.tbSer.TabIndex = 14;
-            // 
-            // stt1
-            // 
-            this.stt1.HeaderText = "STT";
-            this.stt1.Name = "stt1";
             // 
             // tbRoom
             // 
@@ -268,6 +284,7 @@
             this.tongtien});
             this.tbRoom.Location = new System.Drawing.Point(15, 227);
             this.tbRoom.Name = "tbRoom";
+            this.tbRoom.ReadOnly = true;
             this.tbRoom.RowHeadersVisible = false;
             this.tbRoom.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.tbRoom.Size = new System.Drawing.Size(630, 90);
@@ -299,6 +316,7 @@
             this.ngaythanhtoan});
             this.tbCus.Location = new System.Drawing.Point(16, 143);
             this.tbCus.Name = "tbCus";
+            this.tbCus.ReadOnly = true;
             this.tbCus.RowHeadersVisible = false;
             this.tbCus.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.tbCus.Size = new System.Drawing.Size(630, 48);
@@ -310,30 +328,35 @@
             this.hotenkh.FillWeight = 150F;
             this.hotenkh.HeaderText = "Họ Tên";
             this.hotenkh.Name = "hotenkh";
+            this.hotenkh.ReadOnly = true;
             // 
             // socccd
             // 
             this.socccd.DataPropertyName = "socccd";
             this.socccd.HeaderText = "Số CCCD";
             this.socccd.Name = "socccd";
+            this.socccd.ReadOnly = true;
             // 
             // sodienthoai
             // 
             this.sodienthoai.DataPropertyName = "sodienthoai";
             this.sodienthoai.HeaderText = "Điện Thoại";
             this.sodienthoai.Name = "sodienthoai";
+            this.sodienthoai.ReadOnly = true;
             // 
             // ngaytao
             // 
             this.ngaytao.DataPropertyName = "ngaytao";
             this.ngaytao.HeaderText = "Ngày Đến";
             this.ngaytao.Name = "ngaytao";
+            this.ngaytao.ReadOnly = true;
             // 
             // ngaythanhtoan
             // 
             this.ngaythanhtoan.DataPropertyName = "ngaythanhtoan";
             this.ngaythanhtoan.HeaderText = "Ngày Đi";
             this.ngaythanhtoan.Name = "ngaythanhtoan";
+            this.ngaythanhtoan.ReadOnly = true;
             // 
             // label10
             // 
@@ -467,6 +490,7 @@
             this.stt.FillWeight = 40F;
             this.stt.HeaderText = "STT";
             this.stt.Name = "stt";
+            this.stt.ReadOnly = true;
             // 
             // tenphong
             // 
@@ -474,6 +498,7 @@
             this.tenphong.FillWeight = 250F;
             this.tenphong.HeaderText = "Tên Phòng";
             this.tenphong.Name = "tenphong";
+            this.tenphong.ReadOnly = true;
             // 
             // dongia
             // 
@@ -481,19 +506,125 @@
             this.dongia.FillWeight = 120F;
             this.dongia.HeaderText = "Đơn Giá";
             this.dongia.Name = "dongia";
+            this.dongia.ReadOnly = true;
             // 
             // mucgiamgia
             // 
             this.mucgiamgia.DataPropertyName = "mucgiamgia";
             this.mucgiamgia.HeaderText = "Giảm Giá";
             this.mucgiamgia.Name = "mucgiamgia";
+            this.mucgiamgia.ReadOnly = true;
             // 
             // tongtien
             // 
             this.tongtien.DataPropertyName = "tongtien";
-            this.tongtien.FillWeight = 105.9645F;
+            this.tongtien.FillWeight = 110F;
             this.tongtien.HeaderText = "Thành Tiền";
             this.tongtien.Name = "tongtien";
+            this.tongtien.ReadOnly = true;
+            // 
+            // stt1
+            // 
+            this.stt1.DataPropertyName = "stt";
+            this.stt1.FillWeight = 40F;
+            this.stt1.HeaderText = "STT";
+            this.stt1.Name = "stt1";
+            this.stt1.ReadOnly = true;
+            // 
+            // tendichvu
+            // 
+            this.tendichvu.DataPropertyName = "tendichvu";
+            this.tendichvu.FillWeight = 150F;
+            this.tendichvu.HeaderText = "Tên Dịch Vụ";
+            this.tendichvu.Name = "tendichvu";
+            this.tendichvu.ReadOnly = true;
+            // 
+            // thoigianyeucau
+            // 
+            this.thoigianyeucau.DataPropertyName = "thoigianyeucau";
+            this.thoigianyeucau.FillWeight = 150F;
+            this.thoigianyeucau.HeaderText = "Thời Gian Đặt";
+            this.thoigianyeucau.Name = "thoigianyeucau";
+            this.thoigianyeucau.ReadOnly = true;
+            // 
+            // soluong
+            // 
+            this.soluong.DataPropertyName = "soluong";
+            this.soluong.FillWeight = 30F;
+            this.soluong.HeaderText = "SL";
+            this.soluong.Name = "soluong";
+            this.soluong.ReadOnly = true;
+            // 
+            // giadichvu
+            // 
+            this.giadichvu.DataPropertyName = "giadichvu";
+            this.giadichvu.FillWeight = 80F;
+            this.giadichvu.HeaderText = "Đơn Giá";
+            this.giadichvu.Name = "giadichvu";
+            this.giadichvu.ReadOnly = true;
+            // 
+            // mucgiamgia1
+            // 
+            this.mucgiamgia1.DataPropertyName = "mucgiamgia";
+            this.mucgiamgia1.FillWeight = 80F;
+            this.mucgiamgia1.HeaderText = "Giảm Giá";
+            this.mucgiamgia1.Name = "mucgiamgia1";
+            this.mucgiamgia1.ReadOnly = true;
+            // 
+            // tongtien1
+            // 
+            this.tongtien1.DataPropertyName = "tongtien";
+            this.tongtien1.FillWeight = 120F;
+            this.tongtien1.HeaderText = "Thành Tiền";
+            this.tongtien1.Name = "tongtien1";
+            this.tongtien1.ReadOnly = true;
+            // 
+            // stt2
+            // 
+            this.stt2.DataPropertyName = "stt";
+            this.stt2.FillWeight = 35F;
+            this.stt2.HeaderText = "STT";
+            this.stt2.Name = "stt2";
+            this.stt2.ReadOnly = true;
+            // 
+            // tenthucpham
+            // 
+            this.tenthucpham.DataPropertyName = "tenthucpham";
+            this.tenthucpham.FillWeight = 150F;
+            this.tenthucpham.HeaderText = "Tên Thực Phẩm";
+            this.tenthucpham.Name = "tenthucpham";
+            this.tenthucpham.ReadOnly = true;
+            // 
+            // thoigianyeucau1
+            // 
+            this.thoigianyeucau1.DataPropertyName = "thoigianyeucau";
+            this.thoigianyeucau1.FillWeight = 150F;
+            this.thoigianyeucau1.HeaderText = "Thời Gian Đặt";
+            this.thoigianyeucau1.Name = "thoigianyeucau1";
+            this.thoigianyeucau1.ReadOnly = true;
+            // 
+            // soluong1
+            // 
+            this.soluong1.DataPropertyName = "soluong";
+            this.soluong1.FillWeight = 30F;
+            this.soluong1.HeaderText = "SL";
+            this.soluong1.Name = "soluong1";
+            this.soluong1.ReadOnly = true;
+            // 
+            // giaban
+            // 
+            this.giaban.DataPropertyName = "giaban";
+            this.giaban.HeaderText = "Đơn Giá";
+            this.giaban.Name = "giaban";
+            this.giaban.ReadOnly = true;
+            // 
+            // tongtien2
+            // 
+            this.tongtien2.DataPropertyName = "tongtien";
+            this.tongtien2.FillWeight = 105F;
+            this.tongtien2.HeaderText = "Thành Tiền";
+            this.tongtien2.Name = "tongtien2";
+            this.tongtien2.ReadOnly = true;
             // 
             // frm_PrintBill
             // 
@@ -548,8 +679,6 @@
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         public System.Windows.Forms.DataGridView tbBot;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stt2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stt1;
         private System.Windows.Forms.DataGridViewTextBoxColumn hotenkh;
         private System.Windows.Forms.DataGridViewTextBoxColumn socccd;
         private System.Windows.Forms.DataGridViewTextBoxColumn sodienthoai;
@@ -560,5 +689,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dongia;
         private System.Windows.Forms.DataGridViewTextBoxColumn mucgiamgia;
         private System.Windows.Forms.DataGridViewTextBoxColumn tongtien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stt2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenthucpham;
+        private System.Windows.Forms.DataGridViewTextBoxColumn thoigianyeucau1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn soluong1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn giaban;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tongtien2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stt1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tendichvu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn thoigianyeucau;
+        private System.Windows.Forms.DataGridViewTextBoxColumn soluong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn giadichvu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mucgiamgia1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tongtien1;
     }
 }

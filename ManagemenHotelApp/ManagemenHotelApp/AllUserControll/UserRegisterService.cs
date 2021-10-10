@@ -89,6 +89,8 @@ namespace ManagemenHotelApp.AllUserControll
 
         private void UserRegisterService_Load(object sender, EventArgs e)
         {
+            txtDayCreat.CustomFormat = "dd/MM/yyyy hh:mm tt";
+            txtDayCreat.Value = DateTime.Now;
             Clear();
             FillData(tbCustumer, "select * from KHACHHANG");
             FillData(tbService, "select iddichvu,tendichvu,giadichvu,soluong,(case trangthai when 'true' then N'Mở' else N'Đóng'end)as trangthai,mota,mucgiamgia,ghichu from DICHVU");
@@ -107,14 +109,16 @@ namespace ManagemenHotelApp.AllUserControll
                     String check = @"Select idhoadon from Khachhang, hoadondichvu where khachhang.idkhachhang = hoadondichvu.idkhachhang
                   and hoadondichvu.ngaythanhtoan IS NULL and khachhang.idkhachhang = '" + id + "'";
                     DataSet dsCheck = cn.getData(check);
-                    //Nếu tồn tại hóa đơn chưa thanh toán thì id hóa đơn thêm phòng sẽ là id hóa đơn chưa thanh toán
+                    //Nếu tồn tại hóa đơn chưa thanh toán thì id hóa đơn thêm dịch vụ sẽ là id hóa đơn chưa thanh toán
                     if (dsCheck.Tables[0].Rows.Count == 1)
                     {
                         lbIdhoadon.Text = dsCheck.Tables[0].Rows[0][0].ToString();
+                        lbDate.Text = "Thời gian yêu cầu";
                     }
                     else //Ngược lại thì id hóa đơn sẽ được thêm mới
                     {
                         lbIdhoadon.Text = getMaxIdServiceBill();
+                        lbDate.Text = "Ngày tạo";
                     }
                 }
                 catch (Exception ex)
@@ -168,8 +172,6 @@ namespace ManagemenHotelApp.AllUserControll
                 {
                     if (MessageBox.Show("Bạn có chắc muốn đặt dịch vụ này?", "Xác nhận", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                     {
-                        int SLcon = GetQuantyti(IDSe) - Quantyti;
-                        cn.setData("update DICHVU set soluong = " + SLcon + " where iddichvu = " + IDSe + "", "");
                         if (lbIdhoadon.Text == getMaxIdServiceBill())
                         {
                             //ngaythanhtoan mặc định là null khi tạo nên ko thêm
@@ -178,10 +180,11 @@ namespace ManagemenHotelApp.AllUserControll
                             values (N'" + idnv + "',N'" + txtIDCus.Text + "','" + txtDayCreat.Value + "',N'" + txtNote.Text + "')";
                             cn.setData(query, "");
                         }
-                        //Sau khi xác định được hóa đơn cần thêm phòng thì tiến hành thêm phòng vào bảng chi tiết của idhoadon
-                        query = @"insert into CT_HOADONDICHVU (idhoadon, iddichvu,thoigianyeucau,soluong) values (N'" + lbIdhoadon.Text + "', N'" + IDSe + "',N'" + txtDayCreat.Value + "', N'" + Quantyti + "')";
+                        //Sau khi xác định được hóa đơn cần thêm dịch vụ thì tiến hành thêm dịch vụ vào bảng chi tiết của idhoadon
+                        query = @"insert into CT_HOADONDICHVU (idhoadon, iddichvu, thoigianyeucau, soluong) values (N'" + lbIdhoadon.Text + "', N'" + IDSe + "',N'" + txtDayCreat.Value + "', N'" + Quantyti + "')";
                         cn.setData(query, "");
-                        MessageBox.Show("Đăng kí dịch vụ thành công!");
+                        int SLcon = GetQuantyti(IDSe) - Quantyti;
+                        cn.setData("update DICHVU set soluong = " + SLcon + " where iddichvu = " + IDSe + "", "Đã đăng kí dịch vụ thành công");
                         UserRegisterService_Load(sender, e);
                     }
 

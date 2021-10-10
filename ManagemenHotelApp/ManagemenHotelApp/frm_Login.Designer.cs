@@ -43,9 +43,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(587, 68);
+            this.label1.Location = new System.Drawing.Point(783, 84);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(273, 67);
+            this.label1.Size = new System.Drawing.Size(339, 84);
             this.label1.TabIndex = 0;
             this.label1.Text = "Đăng nhập";
             // 
@@ -69,14 +70,15 @@
             this.txtUsername.IconLeft = global::ManagemenHotelApp.Properties.Resources.profile_user__1_;
             this.txtUsername.IconLeftSize = new System.Drawing.Size(32, 32);
             this.txtUsername.IconRightSize = new System.Drawing.Size(32, 32);
-            this.txtUsername.Location = new System.Drawing.Point(554, 185);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(6);
+            this.txtUsername.Location = new System.Drawing.Point(739, 228);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
             this.txtUsername.PlaceholderText = "Tên đăng nhập";
             this.txtUsername.SelectedText = "";
+            this.txtUsername.SelectionStart = 7;
             this.txtUsername.ShadowDecoration.Parent = this.txtUsername;
-            this.txtUsername.Size = new System.Drawing.Size(331, 57);
+            this.txtUsername.Size = new System.Drawing.Size(441, 70);
             this.txtUsername.TabIndex = 1;
             // 
             // txtPassword
@@ -98,15 +100,17 @@
             this.txtPassword.HoverState.Parent = this.txtPassword;
             this.txtPassword.IconLeft = global::ManagemenHotelApp.Properties.Resources.padlock;
             this.txtPassword.IconLeftSize = new System.Drawing.Size(32, 32);
-            this.txtPassword.Location = new System.Drawing.Point(554, 254);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(6);
+            this.txtPassword.Location = new System.Drawing.Point(739, 313);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.PlaceholderText = "Mật khẩu";
             this.txtPassword.SelectedText = "";
+            this.txtPassword.SelectionStart = 3;
             this.txtPassword.ShadowDecoration.Parent = this.txtPassword;
-            this.txtPassword.Size = new System.Drawing.Size(331, 57);
+            this.txtPassword.Size = new System.Drawing.Size(441, 70);
             this.txtPassword.TabIndex = 2;
+            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
             // 
             // btnLogin
             // 
@@ -119,10 +123,11 @@
             this.btnLogin.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.HoverState.Parent = this.btnLogin;
-            this.btnLogin.Location = new System.Drawing.Point(608, 370);
+            this.btnLogin.Location = new System.Drawing.Point(811, 455);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.ShadowDecoration.Parent = this.btnLogin;
-            this.btnLogin.Size = new System.Drawing.Size(225, 56);
+            this.btnLogin.Size = new System.Drawing.Size(300, 69);
             this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
@@ -134,18 +139,20 @@
             this.lbWarning.BackColor = System.Drawing.Color.Transparent;
             this.lbWarning.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbWarning.ForeColor = System.Drawing.Color.Red;
-            this.lbWarning.Location = new System.Drawing.Point(578, 440);
+            this.lbWarning.Location = new System.Drawing.Point(771, 542);
+            this.lbWarning.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbWarning.Name = "lbWarning";
-            this.lbWarning.Size = new System.Drawing.Size(282, 22);
+            this.lbWarning.Size = new System.Drawing.Size(351, 26);
             this.lbWarning.TabIndex = 4;
             this.lbWarning.Text = "Sai tên đăng nhập hoặc mật khẩu";
             this.lbWarning.Visible = false;
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(917, 258);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(1223, 318);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 100);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(267, 123);
             this.flowLayoutPanel1.TabIndex = 5;
             // 
             // guna2Button1
@@ -162,22 +169,23 @@
             this.guna2Button1.HoverState.FillColor = System.Drawing.Color.Red;
             this.guna2Button1.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(884, 0);
+            this.guna2Button1.Location = new System.Drawing.Point(1179, 0);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(31, 27);
+            this.guna2Button1.Size = new System.Drawing.Size(41, 33);
             this.guna2Button1.TabIndex = 7;
             this.guna2Button1.Text = "X";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // frm_Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BackgroundImage = global::ManagemenHotelApp.Properties.Resources.Vinpearl_Halong_Bay_Resorts788;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(917, 519);
+            this.ClientSize = new System.Drawing.Size(1223, 639);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.lbWarning);
@@ -187,6 +195,7 @@
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frm_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_Login";
