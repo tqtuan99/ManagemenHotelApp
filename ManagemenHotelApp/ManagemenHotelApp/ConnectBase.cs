@@ -14,9 +14,8 @@ namespace ManagemenHotelApp
         protected SqlConnection getConnection()
         {
             SqlConnection con = new SqlConnection();
+            //con.ConnectionString = @"data source = DESKTOP-OA1P7JF;database = ManaHotelDB; Integrated Security=True";
             con.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\OneDrive\Destop\git-hub\CDIO4\ManagemenHotelApp\ManagemenHotelApp\ManagemenHotelApp\QLKS.mdf;Integrated Security=True";
-            //data source = DESKTOP - OA1P7JF; database = ManaHotelDB; Integrated Security = True
-            //Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = D:\OneDrive\Destop\git - hub\CDIO4\ManagemenHotelApp\ManagemenHotelApp\ManagemenHotelApp\QLKS.mdf; Integrated Security = True
             return con;
         }
         public DataSet getData(String query)
@@ -41,7 +40,7 @@ namespace ManagemenHotelApp
             con.Close();
             if (message != "")
             {
-                MessageBox.Show("'" + message + "'", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(message, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
         }

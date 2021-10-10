@@ -47,15 +47,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserPayBill));
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.tbCustumer = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.idhoadon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.makhachhang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hotenkh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gioitinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngaysinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.socccd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sodienthoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quoctich = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ghichu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNameSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
@@ -68,21 +59,40 @@
             this.ngaythanhtoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.tbBillRoom = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.tbBillSer = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.stt1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label5 = new System.Windows.Forms.Label();
-            this.tbBillFood = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.stt2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnViewBill = new Guna.UI2.WinForms.Guna2Button();
-            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.stt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenphong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dongia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mucgiamgia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tongtien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tbBillSer = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tbBillFood = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.btnViewBill = new Guna.UI2.WinForms.Guna2Button();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.makhachhang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hotenkh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gioitinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngaysinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.socccd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sodienthoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quoctich = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ghichu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stt1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tendichvu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.thoigianyeucau = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.giadichvu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mucgiamgia1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tongtien1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stt2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenthucpham = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.thoigianyeucau1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soluong1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.giaban = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tongtien2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tbCustumer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbInfCus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbBillRoom)).BeginInit();
@@ -114,7 +124,6 @@
             this.tbCustumer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.tbCustumer.ColumnHeadersHeight = 21;
             this.tbCustumer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idhoadon,
             this.makhachhang,
             this.hotenkh,
             this.gioitinh,
@@ -164,75 +173,6 @@
             this.tbCustumer.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.tbCustumer.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.tbCustumer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tbCustumer_CellContentClick);
-            // 
-            // idhoadon
-            // 
-            this.idhoadon.DataPropertyName = "idhoadon";
-            this.idhoadon.HeaderText = "ID Hóa Đơn";
-            this.idhoadon.Name = "idhoadon";
-            this.idhoadon.ReadOnly = true;
-            // 
-            // makhachhang
-            // 
-            this.makhachhang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.makhachhang.DataPropertyName = "idkhachhang";
-            this.makhachhang.FillWeight = 120F;
-            this.makhachhang.HeaderText = "ID Khách";
-            this.makhachhang.Name = "makhachhang";
-            this.makhachhang.ReadOnly = true;
-            this.makhachhang.Width = 92;
-            // 
-            // hotenkh
-            // 
-            this.hotenkh.DataPropertyName = "hotenkh";
-            this.hotenkh.FillWeight = 200F;
-            this.hotenkh.HeaderText = "Họ Tên";
-            this.hotenkh.Name = "hotenkh";
-            this.hotenkh.ReadOnly = true;
-            // 
-            // gioitinh
-            // 
-            this.gioitinh.DataPropertyName = "gioitinh";
-            this.gioitinh.HeaderText = "Giới Tính";
-            this.gioitinh.Name = "gioitinh";
-            this.gioitinh.ReadOnly = true;
-            // 
-            // ngaysinh
-            // 
-            this.ngaysinh.DataPropertyName = "ngaysinh";
-            this.ngaysinh.HeaderText = "Ngày Sinh";
-            this.ngaysinh.Name = "ngaysinh";
-            this.ngaysinh.ReadOnly = true;
-            // 
-            // socccd
-            // 
-            this.socccd.DataPropertyName = "socccd";
-            this.socccd.HeaderText = "Số CCCD";
-            this.socccd.Name = "socccd";
-            this.socccd.ReadOnly = true;
-            // 
-            // sodienthoai
-            // 
-            this.sodienthoai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.sodienthoai.DataPropertyName = "sodienthoai";
-            this.sodienthoai.HeaderText = "Số Điện Thoại";
-            this.sodienthoai.Name = "sodienthoai";
-            this.sodienthoai.ReadOnly = true;
-            this.sodienthoai.Width = 119;
-            // 
-            // quoctich
-            // 
-            this.quoctich.DataPropertyName = "quoctich";
-            this.quoctich.HeaderText = "Quốc Tịch";
-            this.quoctich.Name = "quoctich";
-            this.quoctich.ReadOnly = true;
-            // 
-            // ghichu
-            // 
-            this.ghichu.DataPropertyName = "ghichu";
-            this.ghichu.HeaderText = "Ghi Chú";
-            this.ghichu.Name = "ghichu";
-            this.ghichu.ReadOnly = true;
             // 
             // label1
             // 
@@ -449,6 +389,7 @@
             this.tbBillRoom.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.tbBillRoom.Location = new System.Drawing.Point(40, 292);
             this.tbBillRoom.Name = "tbBillRoom";
+            this.tbBillRoom.ReadOnly = true;
             this.tbBillRoom.RowHeadersVisible = false;
             this.tbBillRoom.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tbBillRoom.Size = new System.Drawing.Size(966, 83);
@@ -467,7 +408,7 @@
             this.tbBillRoom.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.tbBillRoom.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.tbBillRoom.ThemeStyle.HeaderStyle.Height = 21;
-            this.tbBillRoom.ThemeStyle.ReadOnly = false;
+            this.tbBillRoom.ThemeStyle.ReadOnly = true;
             this.tbBillRoom.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.tbBillRoom.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.tbBillRoom.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -475,6 +416,43 @@
             this.tbBillRoom.ThemeStyle.RowsStyle.Height = 22;
             this.tbBillRoom.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.tbBillRoom.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // stt
+            // 
+            this.stt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.stt.DataPropertyName = "stt";
+            this.stt.HeaderText = "STT";
+            this.stt.Name = "stt";
+            this.stt.ReadOnly = true;
+            this.stt.Width = 59;
+            // 
+            // tenphong
+            // 
+            this.tenphong.DataPropertyName = "tenphong";
+            this.tenphong.HeaderText = "Tên Phòng";
+            this.tenphong.Name = "tenphong";
+            this.tenphong.ReadOnly = true;
+            // 
+            // dongia
+            // 
+            this.dongia.DataPropertyName = "dongia";
+            this.dongia.HeaderText = "Đơn Giá";
+            this.dongia.Name = "dongia";
+            this.dongia.ReadOnly = true;
+            // 
+            // mucgiamgia
+            // 
+            this.mucgiamgia.DataPropertyName = "mucgiamgia";
+            this.mucgiamgia.HeaderText = "Mức Giảm Giá";
+            this.mucgiamgia.Name = "mucgiamgia";
+            this.mucgiamgia.ReadOnly = true;
+            // 
+            // tongtien
+            // 
+            this.tongtien.DataPropertyName = "tongtien";
+            this.tongtien.HeaderText = "Thành tiền";
+            this.tongtien.Name = "tongtien";
+            this.tongtien.ReadOnly = true;
             // 
             // label3
             // 
@@ -513,7 +491,13 @@
             this.tbBillSer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.tbBillSer.ColumnHeadersHeight = 21;
             this.tbBillSer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.stt1});
+            this.stt1,
+            this.tendichvu,
+            this.thoigianyeucau,
+            this.soluong,
+            this.giadichvu,
+            this.mucgiamgia1,
+            this.tongtien1});
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -526,6 +510,7 @@
             this.tbBillSer.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.tbBillSer.Location = new System.Drawing.Point(40, 409);
             this.tbBillSer.Name = "tbBillSer";
+            this.tbBillSer.ReadOnly = true;
             this.tbBillSer.RowHeadersVisible = false;
             this.tbBillSer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tbBillSer.Size = new System.Drawing.Size(966, 83);
@@ -544,7 +529,7 @@
             this.tbBillSer.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.tbBillSer.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.tbBillSer.ThemeStyle.HeaderStyle.Height = 21;
-            this.tbBillSer.ThemeStyle.ReadOnly = false;
+            this.tbBillSer.ThemeStyle.ReadOnly = true;
             this.tbBillSer.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.tbBillSer.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.tbBillSer.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -552,12 +537,6 @@
             this.tbBillSer.ThemeStyle.RowsStyle.Height = 22;
             this.tbBillSer.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.tbBillSer.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // stt1
-            // 
-            this.stt1.DataPropertyName = "stt";
-            this.stt1.HeaderText = "STT";
-            this.stt1.Name = "stt1";
             // 
             // label5
             // 
@@ -587,7 +566,12 @@
             this.tbBillFood.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.tbBillFood.ColumnHeadersHeight = 21;
             this.tbBillFood.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.stt2});
+            this.stt2,
+            this.tenthucpham,
+            this.thoigianyeucau1,
+            this.soluong1,
+            this.giaban,
+            this.tongtien2});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -600,6 +584,7 @@
             this.tbBillFood.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.tbBillFood.Location = new System.Drawing.Point(40, 527);
             this.tbBillFood.Name = "tbBillFood";
+            this.tbBillFood.ReadOnly = true;
             this.tbBillFood.RowHeadersVisible = false;
             this.tbBillFood.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tbBillFood.Size = new System.Drawing.Size(966, 83);
@@ -618,7 +603,7 @@
             this.tbBillFood.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.tbBillFood.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.tbBillFood.ThemeStyle.HeaderStyle.Height = 21;
-            this.tbBillFood.ThemeStyle.ReadOnly = false;
+            this.tbBillFood.ThemeStyle.ReadOnly = true;
             this.tbBillFood.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.tbBillFood.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.tbBillFood.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -626,12 +611,6 @@
             this.tbBillFood.ThemeStyle.RowsStyle.Height = 22;
             this.tbBillFood.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.tbBillFood.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // stt2
-            // 
-            this.stt2.DataPropertyName = "stt";
-            this.stt2.HeaderText = "STT";
-            this.stt2.Name = "stt2";
             // 
             // btnViewBill
             // 
@@ -662,37 +641,158 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
-            // stt
+            // makhachhang
             // 
-            this.stt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.stt.DataPropertyName = "stt";
-            this.stt.HeaderText = "STT";
-            this.stt.Name = "stt";
-            this.stt.Width = 59;
+            this.makhachhang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.makhachhang.DataPropertyName = "idkhachhang";
+            this.makhachhang.FillWeight = 120F;
+            this.makhachhang.HeaderText = "ID Khách";
+            this.makhachhang.Name = "makhachhang";
+            this.makhachhang.ReadOnly = true;
+            this.makhachhang.Width = 92;
             // 
-            // tenphong
+            // hotenkh
             // 
-            this.tenphong.DataPropertyName = "tenphong";
-            this.tenphong.HeaderText = "Tên Phòng";
-            this.tenphong.Name = "tenphong";
+            this.hotenkh.DataPropertyName = "hotenkh";
+            this.hotenkh.FillWeight = 200F;
+            this.hotenkh.HeaderText = "Họ Tên";
+            this.hotenkh.Name = "hotenkh";
+            this.hotenkh.ReadOnly = true;
             // 
-            // dongia
+            // gioitinh
             // 
-            this.dongia.DataPropertyName = "dongia";
-            this.dongia.HeaderText = "Đơn Giá";
-            this.dongia.Name = "dongia";
+            this.gioitinh.DataPropertyName = "gioitinh";
+            this.gioitinh.HeaderText = "Giới Tính";
+            this.gioitinh.Name = "gioitinh";
+            this.gioitinh.ReadOnly = true;
             // 
-            // mucgiamgia
+            // ngaysinh
             // 
-            this.mucgiamgia.DataPropertyName = "mucgiamgia";
-            this.mucgiamgia.HeaderText = "Mức Giảm Giá";
-            this.mucgiamgia.Name = "mucgiamgia";
+            this.ngaysinh.DataPropertyName = "ngaysinh";
+            this.ngaysinh.HeaderText = "Ngày Sinh";
+            this.ngaysinh.Name = "ngaysinh";
+            this.ngaysinh.ReadOnly = true;
             // 
-            // tongtien
+            // socccd
             // 
-            this.tongtien.DataPropertyName = "tongtien";
-            this.tongtien.HeaderText = "Thành tiền";
-            this.tongtien.Name = "tongtien";
+            this.socccd.DataPropertyName = "socccd";
+            this.socccd.HeaderText = "Số CCCD";
+            this.socccd.Name = "socccd";
+            this.socccd.ReadOnly = true;
+            // 
+            // sodienthoai
+            // 
+            this.sodienthoai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.sodienthoai.DataPropertyName = "sodienthoai";
+            this.sodienthoai.HeaderText = "Số Điện Thoại";
+            this.sodienthoai.Name = "sodienthoai";
+            this.sodienthoai.ReadOnly = true;
+            this.sodienthoai.Width = 119;
+            // 
+            // quoctich
+            // 
+            this.quoctich.DataPropertyName = "quoctich";
+            this.quoctich.HeaderText = "Quốc Tịch";
+            this.quoctich.Name = "quoctich";
+            this.quoctich.ReadOnly = true;
+            // 
+            // ghichu
+            // 
+            this.ghichu.DataPropertyName = "ghichu";
+            this.ghichu.HeaderText = "Ghi Chú";
+            this.ghichu.Name = "ghichu";
+            this.ghichu.ReadOnly = true;
+            // 
+            // stt1
+            // 
+            this.stt1.DataPropertyName = "stt";
+            this.stt1.HeaderText = "STT";
+            this.stt1.Name = "stt1";
+            this.stt1.ReadOnly = true;
+            // 
+            // tendichvu
+            // 
+            this.tendichvu.DataPropertyName = "tendichvu";
+            this.tendichvu.HeaderText = "Tên Dịch Vụ";
+            this.tendichvu.Name = "tendichvu";
+            this.tendichvu.ReadOnly = true;
+            // 
+            // thoigianyeucau
+            // 
+            this.thoigianyeucau.DataPropertyName = "thoigianyeucau";
+            this.thoigianyeucau.HeaderText = "Thời Gian Đặt";
+            this.thoigianyeucau.Name = "thoigianyeucau";
+            this.thoigianyeucau.ReadOnly = true;
+            // 
+            // soluong
+            // 
+            this.soluong.DataPropertyName = "soluong";
+            this.soluong.HeaderText = "Số Lượng";
+            this.soluong.Name = "soluong";
+            this.soluong.ReadOnly = true;
+            // 
+            // giadichvu
+            // 
+            this.giadichvu.DataPropertyName = "giadichvu";
+            this.giadichvu.HeaderText = "Giá Dịch Vụ";
+            this.giadichvu.Name = "giadichvu";
+            this.giadichvu.ReadOnly = true;
+            // 
+            // mucgiamgia1
+            // 
+            this.mucgiamgia1.DataPropertyName = "mucgiamgia";
+            this.mucgiamgia1.HeaderText = "Giảm Giá";
+            this.mucgiamgia1.Name = "mucgiamgia1";
+            this.mucgiamgia1.ReadOnly = true;
+            // 
+            // tongtien1
+            // 
+            this.tongtien1.DataPropertyName = "tongtien";
+            this.tongtien1.HeaderText = "Thành Tiền";
+            this.tongtien1.Name = "tongtien1";
+            this.tongtien1.ReadOnly = true;
+            // 
+            // stt2
+            // 
+            this.stt2.DataPropertyName = "stt";
+            this.stt2.HeaderText = "STT";
+            this.stt2.Name = "stt2";
+            this.stt2.ReadOnly = true;
+            // 
+            // tenthucpham
+            // 
+            this.tenthucpham.DataPropertyName = "tenthucpham";
+            this.tenthucpham.HeaderText = "Tên Thực Phẩm";
+            this.tenthucpham.Name = "tenthucpham";
+            this.tenthucpham.ReadOnly = true;
+            // 
+            // thoigianyeucau1
+            // 
+            this.thoigianyeucau1.DataPropertyName = "thoigianyeucau";
+            this.thoigianyeucau1.HeaderText = "Thời Gian Đặt";
+            this.thoigianyeucau1.Name = "thoigianyeucau1";
+            this.thoigianyeucau1.ReadOnly = true;
+            // 
+            // soluong1
+            // 
+            this.soluong1.DataPropertyName = "soluong";
+            this.soluong1.HeaderText = "Số Lượng";
+            this.soluong1.Name = "soluong1";
+            this.soluong1.ReadOnly = true;
+            // 
+            // giaban
+            // 
+            this.giaban.DataPropertyName = "giaban";
+            this.giaban.HeaderText = "Giá Bán";
+            this.giaban.Name = "giaban";
+            this.giaban.ReadOnly = true;
+            // 
+            // tongtien2
+            // 
+            this.tongtien2.DataPropertyName = "tongtien";
+            this.tongtien2.HeaderText = "Thành Tiền";
+            this.tongtien2.Name = "tongtien2";
+            this.tongtien2.ReadOnly = true;
             // 
             // UserPayBill
             // 
@@ -749,14 +849,16 @@
         private Guna.UI2.WinForms.Guna2DataGridView tbBillRoom;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stt2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stt1;
         private System.Windows.Forms.DataGridViewTextBoxColumn hotenkh1;
         private System.Windows.Forms.DataGridViewTextBoxColumn socccd1;
         private System.Windows.Forms.DataGridViewTextBoxColumn sodienthoai1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ngaytao;
         private System.Windows.Forms.DataGridViewTextBoxColumn ngaythanhtoan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idhoadon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenphong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dongia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mucgiamgia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tongtien;
         private System.Windows.Forms.DataGridViewTextBoxColumn makhachhang;
         private System.Windows.Forms.DataGridViewTextBoxColumn hotenkh;
         private System.Windows.Forms.DataGridViewTextBoxColumn gioitinh;
@@ -765,10 +867,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn sodienthoai;
         private System.Windows.Forms.DataGridViewTextBoxColumn quoctich;
         private System.Windows.Forms.DataGridViewTextBoxColumn ghichu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stt;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tenphong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dongia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mucgiamgia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tongtien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stt1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tendichvu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn thoigianyeucau;
+        private System.Windows.Forms.DataGridViewTextBoxColumn soluong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn giadichvu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mucgiamgia1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tongtien1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stt2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenthucpham;
+        private System.Windows.Forms.DataGridViewTextBoxColumn thoigianyeucau1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn soluong1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn giaban;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tongtien2;
     }
 }

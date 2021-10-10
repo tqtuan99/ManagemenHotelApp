@@ -99,6 +99,8 @@ namespace ManagemenHotelApp.AllUserControll
 
         private void UserRegisterFood_Load(object sender, EventArgs e)
         {
+            txtDayCreat.CustomFormat = "dd/MM/yyyy hh:mm tt";
+            txtDayCreat.Value = DateTime.Now;
             Clear();
             FillData(tbCustumer, "select * from KHACHHANG");
             FillData(tbFood, "select idthucpham,loaithucpham.tenloai,tenthucpham,giaban,soluong,ghichu " +
@@ -172,7 +174,7 @@ namespace ManagemenHotelApp.AllUserControll
                             cn.setData(query, "");
                         }
                         //Sau khi xác định được hóa đơn cần thêm phòng thì tiến hành thêm phòng vào bảng chi tiết của idhoadon
-                        query = @"insert into ct_hoadonthucpham (idhoadon, idthucpham,soluong) values (N'" + lbIdhoadon.Text + "', N'" + IDFood + "', N'" + Quantyti + "')";
+                        query = @"insert into ct_hoadonthucpham (idhoadon, idthucpham,soluong,thoigianyeucau) values (N'" + lbIdhoadon.Text + "', N'" + IDFood + "', N'" + Quantyti + "', '"+txtDayCreat.Value+"')";
                         cn.setData(query, "");
                         MessageBox.Show("Đặt thực phẩm thành công!");
                         UserRegisterFood_Load(sender, e);

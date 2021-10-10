@@ -37,8 +37,7 @@ namespace ManagemenHotelApp.AllUserControll
             FillData(tbCustumer, getCus);
             txtDayCrea.CustomFormat = "dd/MM/yyyy hh:mm tt";
             txtDayCrea.Value = DateTime.Now;
-            clearRegisRoom(); //Hàm reset form
-            
+            clearRegisRoom(); //Hàm reset form      
         }
 
         private void txtNameSearch_TextChanged(object sender, EventArgs e)
@@ -74,7 +73,7 @@ namespace ManagemenHotelApp.AllUserControll
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("" + ex);
+                    MessageBox.Show("Lỗi kết nối với cơ sở dữ liệu!");
                 }
             }
             catch
@@ -107,21 +106,23 @@ namespace ManagemenHotelApp.AllUserControll
                 try
                 {
                     //Kiểm tra nếu hóa đơn phòng sau khi lựa chọn khách hàng, nếu bằng max id hóa đơn thì insert một hóa đơn mới
-                    if(lbIdhoadon.Text == getMaxIdRoomBill())
-                    {
-                        //ngaythanhtoan mặc định là null khi tạo nên ko thêm
-                        String idnv = this.Tag.ToString();
-                        query = @"insert into hoadonphong (idkhachhang, idnhanvien, ngaytao, ghichu) 
+                    if(MessageBox.Show("Bạn có chắc muốn đặt phòng không?", "Xác nhận", MessageBoxButtons.OKCancel,MessageBoxIcon.Question) == DialogResult.OK){
+                        if (lbIdhoadon.Text == getMaxIdRoomBill())
+                        {
+                            //ngaythanhtoan mặc định là null khi tạo nên ko thêm
+                            String idnv = this.Tag.ToString();
+                            query = @"insert into hoadonphong (idkhachhang, idnhanvien, ngaytao, ghichu) 
                             values (N'" + txtIDCus.Text + "',N'" + idnv + "','" + txtDayCrea.Value + "',N'" + txtNote.Text + "')";
-                        cn.setData(query, "Tạo hóa đơn cho khách hàng thành công thành công");
+                            cn.setData(query, "");
+                        }
+                        //Sau khi xác định được hóa đơn cần thêm phòng thì tiến hành thêm phòng vào bảng chi tiết của idhoadon
+                        query = @"insert into ct_hoadonphong (idhoadon, idphong) values (N'" + lbIdhoadon.Text + "', N'" + txtIDRoom.Text + "')";
+                        cn.setData(query, "");
+                        //Cập nhật lại trạng thái của phòng vừa được đặt
+                        query = @"update Phong set trangthai = '0' where idphong = '" + txtIDRoom.Text + "'";
+                        cn.setData(query, "Đã hoàn tất đặt phòng! Tiếp tục thêm đặt thêm phòng cho khách hàng này nếu có yêu cầu. ");
+                        UserRegisterRoom_Load(sender, e);
                     }
-                    //Sau khi xác định được hóa đơn cần thêm phòng thì tiến hành thêm phòng vào bảng chi tiết của idhoadon
-                    query = @"insert into ct_hoadonphong (idhoadon, idphong) values (N'" + lbIdhoadon.Text + "', N'" + txtIDRoom.Text + "')";
-                    cn.setData(query, "Đã thêm phòng vừa chọn vào hóa đơn!");
-                    //Cập nhật lại trạng thái của phòng vừa được đặt
-                    query = @"update Phong set trangthai = '0' where idphong = '" + txtIDRoom.Text + "'";
-                    cn.setData(query, "Đã hoàn tất đặt phòng! Tiếp tục thêm đặt thêm phòng cho khách hàng này nếu có yêu cầu. ");
-                    clearRegisRoom();
                 }
                 catch(Exception ex)
                 {
@@ -144,7 +145,7 @@ namespace ManagemenHotelApp.AllUserControll
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Không kết nối được với database" + ex, "Waning!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Không kết nối được với database" + ex, "Warning!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         //Hàm lấy ra max id + 1 trong bảng hóa đơn phòng để tạo mới hóa đơn
@@ -176,6 +177,5 @@ namespace ManagemenHotelApp.AllUserControll
             String getRoomNull = "Select ROW_NUMBER() OVER (ORDER BY idphong) as stt, idphong, tenphong, tang, tenloaiphong, dongia, mucgiamgia, sogiuong, songuoi, phong.ghichu as ghichu1 from PHONG,LOAIPHONG where trangthai = '1' and phong.idloaiphong = loaiphong.idloaiphong";
             FillData(tbRoomNull, getRoomNull);
         }
-
     }
 }

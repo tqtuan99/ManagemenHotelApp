@@ -56,11 +56,12 @@ namespace ManagemenHotelApp.AllUserControll
             try
             {
                 //Lấy danh sách những khách hàng có hóa đơn chưa thanh toán
-                String idCus = tbCustumer.Rows[e.RowIndex].Cells[1].Value.ToString();//Lấy ra id khách hàng cần thanh toán khi click vào bảng
+                String idCus = tbCustumer.Rows[e.RowIndex].Cells[0].Value.ToString();//Lấy ra id khách hàng cần thanh toán khi click vào bảng
                 FillDataTbInfCus(idCus);
-                String idBill = tbCustumer.Rows[e.RowIndex].Cells[0].Value.ToString();
                 //Lấy ngày đến và ngày đi ở bảng thông tin khách hàng để tính thành tiền
-                FillDataTbBillRoom(idBill, DateTime.ParseExact(tbInfCus.Rows[0].Cells[3].Value.ToString(), "dd/MM/yyyy h:mm tt", CultureInfo.InvariantCulture), DateTime.ParseExact(tbInfCus.Rows[0].Cells[4].Value.ToString(), "dd/MM/yyyy h:mm tt", CultureInfo.InvariantCulture));
+                FillDataTbBillRoom(idCus, DateTime.ParseExact(tbInfCus.Rows[0].Cells[3].Value.ToString(), "dd/MM/yyyy h:mm tt", CultureInfo.InvariantCulture), DateTime.ParseExact(tbInfCus.Rows[0].Cells[4].Value.ToString(), "dd/MM/yyyy h:mm tt", CultureInfo.InvariantCulture));
+                FillDataTbBillService(idCus);
+                FillDataTbBillFood(idCus);
             }
             catch(Exception ex)
             {
@@ -68,13 +69,14 @@ namespace ManagemenHotelApp.AllUserControll
             }
         }
 
-        public void FillDataTbBillRoom( String idBill, DateTime checkIn, DateTime checkOut)
+        public void FillDataTbBillRoom( String idCus, DateTime checkIn, DateTime checkOut)
         {
             try
             {
            
                 query = @"select ROW_NUMBER() OVER (ORDER BY ct_hoadonphong.idphong) AS stt, tenphong, dongia, mucgiamgia, "+CalSum(checkIn,checkOut)+"*(dongia-mucgiamgia*dongia) as tongtien " +
-                        "from ct_hoadonphong,phong where ct_hoadonphong.idphong = phong.idphong and ct_hoadonphong.idhoadon = '" + idBill + "' ";
+                        "from hoadonphong, ct_hoadonphong, phong where hoadonphong.idkhachhang = "+idCus+" and ngaythanhtoan IS NULL" +
+                        " and hoadonphong.idhoadon = ct_hoadonphong.idhoadon and ct_hoadonphong.idphong = phong.idphong ";
                 DataSet dsBillRoom = cn.getData(query);
                 tbBillRoom.DataSource = dsBillRoom.Tables[0];
             }
@@ -83,6 +85,42 @@ namespace ManagemenHotelApp.AllUserControll
                 MessageBox.Show("Không tìm thấy thông tin khách hàng vừa chọn","Cảnh Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+        public void FillDataTbBillService(String idCus)
+        {
+            try
+            {
+
+                query = @"select ROW_NUMBER() OVER (ORDER BY ct_hoadondichvu.iddichvu) AS stt, tendichvu, FORMAT(thoigianyeucau,'dd/MM/yyyy hh:mm tt') as thoigianyeucau, CT_HOADONDICHVU.soluong, giadichvu, mucgiamgia, (giadichvu-mucgiamgia*giadichvu)*CT_HOADONDICHVU.soluong as tongtien
+                            from hoadondichvu, ct_hoadondichvu, dichvu
+                            where HOADONDICHVU.idkhachhang = "+idCus+@" and ngaythanhtoan IS NULL
+		                    and HOADONDICHVU.idhoadon = CT_HOADONDICHVU.idhoadon and CT_HOADONDICHVU.iddichvu = DICHVU.iddichvu";
+                DataSet dsBillService = cn.getData(query);
+                tbBillSer.DataSource = dsBillService.Tables[0];
+            }
+            catch
+            {
+                MessageBox.Show("Không tìm thấy thông tin khách hàng vừa chọn", "Cảnh Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        public void FillDataTbBillFood(String idCus)
+        {
+            try
+            {
+
+                query = @"select ROW_NUMBER() OVER (ORDER BY ct_hoadonthucpham.idthucpham) AS stt, tenthucpham, FORMAT(thoigianyeucau,'dd/MM/yyyy hh:mm tt') as thoigianyeucau, CT_HOADONTHUCPHAM.soluong, giaban, CT_HOADONTHUCPHAM.soluong*giaban as tongtien
+                        from hoadonthucpham, CT_HOADONTHUCPHAM, THUCPHAM
+                        where HOADONTHUCPHAM.idkhachhang = "+idCus+@" and ngaythanhtoan IS NULL
+		                and HOADONTHUCPHAM.idhoadon = CT_HOADONTHUCPHAM.idhoadon and CT_HOADONTHUCPHAM.idthucpham = THUCPHAM.idthucpham";
+                DataSet dsBillFood = cn.getData(query);
+                tbBillFood.DataSource = dsBillFood.Tables[0];
+            }
+            catch
+            {
+                MessageBox.Show("Không tìm thấy thông tin khách hàng vừa chọn", "Cảnh Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
 
         public void FillDataTbInfCus(String idCus)
         {
@@ -115,6 +153,17 @@ namespace ManagemenHotelApp.AllUserControll
                 frm_PrintBill frm = new frm_PrintBill();
                 frm.tbCus.DataSource = tbInfCus.DataSource;
                 frm.tbRoom.DataSource = tbBillRoom.DataSource;
+                if (tbBillSer.Rows.Count > 1)
+                {
+                    frm.tbSer.DataSource = tbBillSer.DataSource;
+                }
+                else frm.tbSer.Visible = false;
+                if (tbBillFood.Rows.Count > 1)
+                {
+                    frm.tbFood.DataSource = tbBillFood.DataSource;
+                }
+                else frm.tbFood.Visible = false;
+
                 setAutoHeight(frm.tbRoom, frm.tbSer);
                 //.....Filldata to tbSer
                 setAutoHeight(frm.tbSer, frm.tbFood);
@@ -150,7 +199,7 @@ namespace ManagemenHotelApp.AllUserControll
         {
             try
             {
-                query = @"select hoadonphong.idhoadon, khachhang.idkhachhang, hotenkh, gioitinh, FORMAT (ngaysinh, 'dd/MM/yyyy') as ngaysinh, socccd, sodienthoai, quoctich, khachhang.ghichu 
+                query = @"select khachhang.idkhachhang, hotenkh, gioitinh, FORMAT (ngaysinh, 'dd/MM/yyyy') as ngaysinh, socccd, sodienthoai, quoctich, khachhang.ghichu 
                             from khachhang, hoadonphong where khachhang.idkhachhang = hoadonphong.idkhachhang and ngaythanhtoan IS NULL " + s ;
                 DataSet ds = cn.getData(query);
                 tbCustumer.DataSource = ds.Tables[0];
