@@ -140,10 +140,10 @@
             this.tabPage1.Controls.Add(this.lbIDService);
             this.tabPage1.Controls.Add(this.label7);
             this.tabPage1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage1.Location = new System.Drawing.Point(4, 41);
+            this.tabPage1.Location = new System.Drawing.Point(4, 33);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1463, 545);
+            this.tabPage1.Size = new System.Drawing.Size(1463, 553);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Thêm dịch vụ";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -155,7 +155,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label1.Location = new System.Drawing.Point(974, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(382, 30);
+            this.label1.Size = new System.Drawing.Size(289, 22);
             this.label1.TabIndex = 53;
             this.label1.Text = "Danh sách các dịch vụ hiện tại";
             // 
@@ -170,13 +170,13 @@
             this.dtgService.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtgService.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dtgService.ColumnHeadersHeight = 19;
+            this.dtgService.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgService.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
@@ -188,7 +188,7 @@
             this.dataGridViewTextBoxColumn10});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
@@ -215,14 +215,14 @@
             this.dtgService.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtgService.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.dtgService.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dtgService.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtgService.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtgService.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dtgService.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dtgService.ThemeStyle.HeaderStyle.Height = 19;
+            this.dtgService.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgService.ThemeStyle.HeaderStyle.Height = 40;
             this.dtgService.ThemeStyle.ReadOnly = true;
             this.dtgService.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dtgService.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dtgService.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtgService.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtgService.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dtgService.ThemeStyle.RowsStyle.Height = 24;
             this.dtgService.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
@@ -317,7 +317,7 @@
             this.label10.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(86, 61);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(150, 30);
+            this.label10.Size = new System.Drawing.Size(114, 22);
             this.label10.TabIndex = 50;
             this.label10.Text = "Tên dịch vụ";
             // 
@@ -354,7 +354,7 @@
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(86, 280);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 30);
+            this.label2.Size = new System.Drawing.Size(79, 22);
             this.label2.TabIndex = 48;
             this.label2.Text = "Số lượng";
             // 
@@ -374,7 +374,7 @@
             this.txtDiscount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDiscount.HoverState.Parent = this.txtDiscount;
             this.txtDiscount.Location = new System.Drawing.Point(431, 197);
-            this.txtDiscount.Margin = new System.Windows.Forms.Padding(5);
+            this.txtDiscount.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtDiscount.Name = "txtDiscount";
             this.txtDiscount.PasswordChar = '\0';
             this.txtDiscount.PlaceholderText = "";
@@ -401,7 +401,7 @@
             this.txtDescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDescription.HoverState.Parent = this.txtDescription;
             this.txtDescription.Location = new System.Drawing.Point(90, 197);
-            this.txtDescription.Margin = new System.Windows.Forms.Padding(5);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.PasswordChar = '\0';
             this.txtDescription.PlaceholderText = "";
@@ -463,7 +463,7 @@
             this.label9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(428, 63);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(151, 30);
+            this.label9.Size = new System.Drawing.Size(115, 22);
             this.label9.TabIndex = 35;
             this.label9.Text = "Giá dịch vụ";
             // 
@@ -473,7 +473,7 @@
             this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(86, 167);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(80, 30);
+            this.label6.Size = new System.Drawing.Size(60, 22);
             this.label6.TabIndex = 31;
             this.label6.Text = "Mô tả";
             // 
@@ -509,7 +509,7 @@
             this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(428, 280);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(112, 30);
+            this.label5.Size = new System.Drawing.Size(86, 22);
             this.label5.TabIndex = 28;
             this.label5.Text = "Ghi Chú";
             // 
@@ -519,7 +519,7 @@
             this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(428, 171);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(176, 30);
+            this.label4.Size = new System.Drawing.Size(129, 22);
             this.label4.TabIndex = 26;
             this.label4.Text = "Mức giảm giá";
             // 
@@ -529,7 +529,7 @@
             this.lbIDService.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbIDService.Location = new System.Drawing.Point(83, 12);
             this.lbIDService.Name = "lbIDService";
-            this.lbIDService.Size = new System.Drawing.Size(88, 49);
+            this.lbIDService.Size = new System.Drawing.Size(71, 39);
             this.lbIDService.TabIndex = 23;
             this.lbIDService.Text = "123";
             // 
@@ -539,7 +539,7 @@
             this.label7.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(15, 12);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(98, 49);
+            this.label7.Size = new System.Drawing.Size(78, 39);
             this.label7.TabIndex = 21;
             this.label7.Text = "ID - ";
             // 
@@ -553,10 +553,10 @@
             this.tabPage2.Controls.Add(this.txtNameSearch);
             this.tabPage2.Controls.Add(this.btnSearch);
             this.tabPage2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage2.Location = new System.Drawing.Point(4, 41);
+            this.tabPage2.Location = new System.Drawing.Point(4, 33);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1463, 545);
+            this.tabPage2.Size = new System.Drawing.Size(1463, 553);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Tra Cứu Dịch Vụ";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -661,7 +661,7 @@
             this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(36, 71);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(150, 30);
+            this.label3.Size = new System.Drawing.Size(114, 22);
             this.label3.TabIndex = 104;
             this.label3.Text = "Tên dịch vụ";
             // 
@@ -698,7 +698,7 @@
             this.label8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(526, 73);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(110, 30);
+            this.label8.Size = new System.Drawing.Size(79, 22);
             this.label8.TabIndex = 102;
             this.label8.Text = "Số lượng";
             // 
@@ -718,7 +718,7 @@
             this.txtNewDiscount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNewDiscount.HoverState.Parent = this.txtNewDiscount;
             this.txtNewDiscount.Location = new System.Drawing.Point(279, 225);
-            this.txtNewDiscount.Margin = new System.Windows.Forms.Padding(5);
+            this.txtNewDiscount.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtNewDiscount.Name = "txtNewDiscount";
             this.txtNewDiscount.PasswordChar = '\0';
             this.txtNewDiscount.PlaceholderText = "";
@@ -745,7 +745,7 @@
             this.txtNewDescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNewDescription.HoverState.Parent = this.txtNewDescription;
             this.txtNewDescription.Location = new System.Drawing.Point(40, 225);
-            this.txtNewDescription.Margin = new System.Windows.Forms.Padding(5);
+            this.txtNewDescription.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtNewDescription.Name = "txtNewDescription";
             this.txtNewDescription.PasswordChar = '\0';
             this.txtNewDescription.PlaceholderText = "";
@@ -788,7 +788,7 @@
             this.label11.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(274, 73);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(151, 30);
+            this.label11.Size = new System.Drawing.Size(115, 22);
             this.label11.TabIndex = 98;
             this.label11.Text = "Giá dịch vụ";
             // 
@@ -798,7 +798,7 @@
             this.label12.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(36, 196);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(80, 30);
+            this.label12.Size = new System.Drawing.Size(60, 22);
             this.label12.TabIndex = 97;
             this.label12.Text = "Mô tả";
             // 
@@ -834,7 +834,7 @@
             this.label13.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(136, 312);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(112, 30);
+            this.label13.Size = new System.Drawing.Size(86, 22);
             this.label13.TabIndex = 95;
             this.label13.Text = "Ghi Chú";
             // 
@@ -844,7 +844,7 @@
             this.label14.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(275, 199);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(176, 30);
+            this.label14.Size = new System.Drawing.Size(129, 22);
             this.label14.TabIndex = 94;
             this.label14.Text = "Mức giảm giá";
             // 
@@ -855,7 +855,7 @@
             this.lbNewID.ForeColor = System.Drawing.Color.OrangeRed;
             this.lbNewID.Location = new System.Drawing.Point(83, 17);
             this.lbNewID.Name = "lbNewID";
-            this.lbNewID.Size = new System.Drawing.Size(63, 36);
+            this.lbNewID.Size = new System.Drawing.Size(52, 29);
             this.lbNewID.TabIndex = 93;
             this.lbNewID.Text = "___";
             // 
@@ -866,7 +866,7 @@
             this.label29.ForeColor = System.Drawing.Color.OrangeRed;
             this.label29.Location = new System.Drawing.Point(35, 17);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(75, 36);
+            this.label29.Size = new System.Drawing.Size(63, 29);
             this.label29.TabIndex = 92;
             this.label29.Text = "ID - ";
             // 
@@ -899,7 +899,7 @@
             this.label32.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.Location = new System.Drawing.Point(530, 196);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(127, 30);
+            this.label32.Size = new System.Drawing.Size(98, 22);
             this.label32.TabIndex = 88;
             this.label32.Text = "Trạng thái";
             // 
@@ -909,7 +909,7 @@
             this.lbNoti1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.lbNoti1.Location = new System.Drawing.Point(220, 82);
             this.lbNoti1.Name = "lbNoti1";
-            this.lbNoti1.Size = new System.Drawing.Size(345, 22);
+            this.lbNoti1.Size = new System.Drawing.Size(265, 19);
             this.lbNoti1.TabIndex = 9;
             this.lbNoti1.Text = "Click vào dịch vụ để sửa hoặc xóa dịch vụ";
             // 
@@ -924,13 +924,13 @@
             this.dtgNewService.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtgNewService.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dtgNewService.ColumnHeadersHeight = 46;
+            this.dtgNewService.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgNewService.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iddichvu,
             this.tendichvu,
@@ -942,7 +942,7 @@
             this.ghichu});
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
@@ -969,14 +969,14 @@
             this.dtgNewService.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtgNewService.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.dtgNewService.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dtgNewService.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtgNewService.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtgNewService.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dtgNewService.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dtgNewService.ThemeStyle.HeaderStyle.Height = 46;
+            this.dtgNewService.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgNewService.ThemeStyle.HeaderStyle.Height = 40;
             this.dtgNewService.ThemeStyle.ReadOnly = true;
             this.dtgNewService.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dtgNewService.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dtgNewService.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtgNewService.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtgNewService.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dtgNewService.ThemeStyle.RowsStyle.Height = 24;
             this.dtgNewService.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
@@ -1089,7 +1089,7 @@
             // 
             // UserService
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.tabControl1);

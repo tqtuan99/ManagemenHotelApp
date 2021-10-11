@@ -100,13 +100,13 @@
             this.tbCustumer.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.tbCustumer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.tbCustumer.ColumnHeadersHeight = 27;
+            this.tbCustumer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tbCustumer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.makhachhang,
             this.hotenkh,
@@ -118,7 +118,7 @@
             this.Column1});
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
@@ -144,14 +144,14 @@
             this.tbCustumer.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.tbCustumer.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.tbCustumer.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.tbCustumer.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCustumer.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCustumer.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.tbCustumer.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.tbCustumer.ThemeStyle.HeaderStyle.Height = 27;
+            this.tbCustumer.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tbCustumer.ThemeStyle.HeaderStyle.Height = 40;
             this.tbCustumer.ThemeStyle.ReadOnly = true;
             this.tbCustumer.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.tbCustumer.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.tbCustumer.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCustumer.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCustumer.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.tbCustumer.ThemeStyle.RowsStyle.Height = 22;
             this.tbCustumer.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
@@ -166,7 +166,7 @@
             this.makhachhang.HeaderText = "ID";
             this.makhachhang.Name = "makhachhang";
             this.makhachhang.ReadOnly = true;
-            this.makhachhang.Width = 41;
+            this.makhachhang.Width = 46;
             // 
             // hotenkh
             // 
@@ -176,7 +176,7 @@
             this.hotenkh.HeaderText = "Họ Tên";
             this.hotenkh.Name = "hotenkh";
             this.hotenkh.ReadOnly = true;
-            this.hotenkh.Width = 66;
+            this.hotenkh.Width = 75;
             // 
             // gioitinh
             // 
@@ -195,7 +195,7 @@
             this.ngaysinh.HeaderText = "Ngày Sinh";
             this.ngaysinh.Name = "ngaysinh";
             this.ngaysinh.ReadOnly = true;
-            this.ngaysinh.Width = 79;
+            this.ngaysinh.Width = 94;
             // 
             // socmnd
             // 
@@ -205,7 +205,7 @@
             this.socmnd.HeaderText = "Số CCCD";
             this.socmnd.Name = "socmnd";
             this.socmnd.ReadOnly = true;
-            this.socmnd.Width = 75;
+            this.socmnd.Width = 88;
             // 
             // sodienthoai
             // 
@@ -215,7 +215,7 @@
             this.sodienthoai.HeaderText = "SDT";
             this.sodienthoai.Name = "sodienthoai";
             this.sodienthoai.ReadOnly = true;
-            this.sodienthoai.Width = 52;
+            this.sodienthoai.Width = 55;
             // 
             // quoctich
             // 
@@ -225,7 +225,7 @@
             this.quoctich.HeaderText = "Quốc Tịch";
             this.quoctich.Name = "quoctich";
             this.quoctich.ReadOnly = true;
-            this.quoctich.Width = 80;
+            this.quoctich.Width = 93;
             // 
             // Column1
             // 
@@ -273,7 +273,7 @@
             this.txtNameSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNameSearch.HoverState.Parent = this.txtNameSearch;
             this.txtNameSearch.Location = new System.Drawing.Point(206, 28);
-            this.txtNameSearch.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.txtNameSearch.Margin = new System.Windows.Forms.Padding(7);
             this.txtNameSearch.Name = "txtNameSearch";
             this.txtNameSearch.PasswordChar = '\0';
             this.txtNameSearch.PlaceholderText = "Nhập ID hoặc tên khách hàng để tìm kiếm";
@@ -669,7 +669,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.tbFood.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.tbFood.ColumnHeadersHeight = 27;
+            this.tbFood.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tbFood.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idloaithucpham,
             this.Column2,
@@ -707,8 +707,8 @@
             this.tbFood.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.tbFood.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.tbFood.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.tbFood.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.tbFood.ThemeStyle.HeaderStyle.Height = 27;
+            this.tbFood.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tbFood.ThemeStyle.HeaderStyle.Height = 21;
             this.tbFood.ThemeStyle.ReadOnly = true;
             this.tbFood.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.tbFood.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -813,7 +813,7 @@
             this.btnSearch.Image = global::ManagemenHotelApp.Properties.Resources.search;
             this.btnSearch.ImageSize = new System.Drawing.Size(32, 32);
             this.btnSearch.Location = new System.Drawing.Point(30, 28);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.ShadowDecoration.Parent = this.btnSearch;
             this.btnSearch.Size = new System.Drawing.Size(167, 37);

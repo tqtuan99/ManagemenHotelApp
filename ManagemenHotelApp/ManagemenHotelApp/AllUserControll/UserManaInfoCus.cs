@@ -95,18 +95,35 @@ namespace ManagemenHotelApp.AllUserControll
             }
             
         }
+        //check khách hàng đã lập hóa đơn chưa
+        public int checkBill(String id)
+        {
+            query = "select hoadondichvu.idhoadon,hoadonphong.idhoadon,hoadonthucpham.idhoadon from hoadondichvu,hoadonphong,hoadonthucpham" +
+                " where hoadondichvu.idkhachhang = '" + id + "' or hoadonphong.idkhachhang = '" + id + "' or hoadonthucpham.idkhachhang = '" + id + "'";
+            DataSet ds = cn.getData(query);
+            if(ds.Tables[0] == null)
+            {
+                return 1;
+            }else
+                return 0;
+        }
 
         private void btnDeleteCus_Click(object sender, EventArgs e)
         {
             try
             {
-                if(MessageBox.Show("Bạn có chắc chắn muốn xóa không?","Thông báo",MessageBoxButtons.YesNo,MessageBoxIcon.Warning) == DialogResult.Yes)
+                if(checkBill(lbIDCus.Text) == 1)
+                {
+                    MessageBox.Show("Không thể xóa vì khách hàng đã tạo hóa đơn!");
+                }
+                else if(MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
                     query = "Delete from KHACHHANG where idkhachhang = N'" + lbIDCus.Text + "'";
-                    cn.setData(query,"Xóa thành công");
+                    cn.setData(query, "Xóa thành công");
                     UserManaInfoCus_Load(sender, e);
 
                 }
+
 
             }
             catch (Exception ex)
@@ -144,6 +161,26 @@ namespace ManagemenHotelApp.AllUserControll
             {
                 MessageBox.Show("Vui lòng nhập thông tin đúng định dạng!" + ex);
             }
+        }
+
+        private void txtNote_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbHDCus_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbIDCus_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSex_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

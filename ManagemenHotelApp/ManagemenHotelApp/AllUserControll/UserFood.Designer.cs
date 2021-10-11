@@ -138,11 +138,10 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(25, 23);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.tabControl1.Location = new System.Drawing.Point(19, 19);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1961, 726);
+            this.tabControl1.Size = new System.Drawing.Size(1471, 590);
             this.tabControl1.TabIndex = 3;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
@@ -168,11 +167,10 @@
             this.tabPage1.Controls.Add(this.txtPriceFood);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage1.Location = new System.Drawing.Point(4, 41);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage1.Location = new System.Drawing.Point(4, 33);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage1.Size = new System.Drawing.Size(1953, 681);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Size = new System.Drawing.Size(1463, 553);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Thêm thực phẩm";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -192,14 +190,14 @@
             this.txtUnit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtUnit.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUnit.HoverState.Parent = this.txtUnit;
-            this.txtUnit.Location = new System.Drawing.Point(565, 220);
-            this.txtUnit.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.txtUnit.Location = new System.Drawing.Point(424, 179);
+            this.txtUnit.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtUnit.Name = "txtUnit";
             this.txtUnit.PasswordChar = '\0';
             this.txtUnit.PlaceholderText = "";
             this.txtUnit.SelectedText = "";
             this.txtUnit.ShadowDecoration.Parent = this.txtUnit;
-            this.txtUnit.Size = new System.Drawing.Size(284, 48);
+            this.txtUnit.Size = new System.Drawing.Size(213, 39);
             this.txtUnit.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtUnit.TabIndex = 60;
             // 
@@ -207,10 +205,9 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(560, 189);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(420, 154);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(140, 30);
+            this.label12.Size = new System.Drawing.Size(106, 22);
             this.label12.TabIndex = 59;
             this.label12.Text = "Đơn vị tính";
             // 
@@ -229,14 +226,14 @@
             this.txtSale.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtSale.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSale.HoverState.Parent = this.txtSale;
-            this.txtSale.Location = new System.Drawing.Point(565, 346);
-            this.txtSale.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.txtSale.Location = new System.Drawing.Point(424, 281);
+            this.txtSale.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtSale.Name = "txtSale";
             this.txtSale.PasswordChar = '\0';
             this.txtSale.PlaceholderText = "";
             this.txtSale.SelectedText = "";
             this.txtSale.ShadowDecoration.Parent = this.txtSale;
-            this.txtSale.Size = new System.Drawing.Size(284, 48);
+            this.txtSale.Size = new System.Drawing.Size(213, 39);
             this.txtSale.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtSale.TabIndex = 58;
             // 
@@ -244,10 +241,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(560, 315);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(420, 256);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(110, 30);
+            this.label4.Size = new System.Drawing.Size(86, 22);
             this.label4.TabIndex = 57;
             this.label4.Text = "Giá bán";
             // 
@@ -262,13 +258,13 @@
             this.dtgFood.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtgFood.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dtgFood.ColumnHeadersHeight = 24;
+            this.dtgFood.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgFood.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.Column2,
@@ -281,7 +277,7 @@
             this.dataGridViewTextBoxColumn10});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
@@ -289,14 +285,14 @@
             this.dtgFood.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtgFood.EnableHeadersVisualStyles = false;
             this.dtgFood.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgFood.Location = new System.Drawing.Point(984, 57);
-            this.dtgFood.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtgFood.Location = new System.Drawing.Point(738, 46);
+            this.dtgFood.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtgFood.Name = "dtgFood";
             this.dtgFood.ReadOnly = true;
             this.dtgFood.RowHeadersVisible = false;
             this.dtgFood.RowTemplate.Height = 24;
             this.dtgFood.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgFood.Size = new System.Drawing.Size(937, 549);
+            this.dtgFood.Size = new System.Drawing.Size(703, 446);
             this.dtgFood.TabIndex = 55;
             this.dtgFood.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.dtgFood.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -308,14 +304,14 @@
             this.dtgFood.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtgFood.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.dtgFood.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dtgFood.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtgFood.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtgFood.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dtgFood.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dtgFood.ThemeStyle.HeaderStyle.Height = 24;
+            this.dtgFood.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgFood.ThemeStyle.HeaderStyle.Height = 59;
             this.dtgFood.ThemeStyle.ReadOnly = true;
             this.dtgFood.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dtgFood.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dtgFood.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtgFood.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtgFood.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dtgFood.ThemeStyle.RowsStyle.Height = 24;
             this.dtgFood.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
@@ -389,10 +385,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label2.Location = new System.Drawing.Point(1267, 15);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(950, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(421, 30);
+            this.label2.Size = new System.Drawing.Size(318, 22);
             this.label2.TabIndex = 54;
             this.label2.Text = "Danh sách các thực phẩm hiện tại";
             // 
@@ -411,14 +406,14 @@
             this.txtQuantity.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtQuantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtQuantity.HoverState.Parent = this.txtQuantity;
-            this.txtQuantity.Location = new System.Drawing.Point(120, 220);
-            this.txtQuantity.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.txtQuantity.Location = new System.Drawing.Point(90, 179);
+            this.txtQuantity.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.PasswordChar = '\0';
             this.txtQuantity.PlaceholderText = "";
             this.txtQuantity.SelectedText = "";
             this.txtQuantity.ShadowDecoration.Parent = this.txtQuantity;
-            this.txtQuantity.Size = new System.Drawing.Size(284, 48);
+            this.txtQuantity.Size = new System.Drawing.Size(213, 39);
             this.txtQuantity.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtQuantity.TabIndex = 45;
             // 
@@ -435,11 +430,10 @@
             this.cbTypeFood.HoverState.Parent = this.cbTypeFood;
             this.cbTypeFood.ItemHeight = 30;
             this.cbTypeFood.ItemsAppearance.Parent = this.cbTypeFood;
-            this.cbTypeFood.Location = new System.Drawing.Point(120, 111);
-            this.cbTypeFood.Margin = new System.Windows.Forms.Padding(4);
+            this.cbTypeFood.Location = new System.Drawing.Point(90, 90);
             this.cbTypeFood.Name = "cbTypeFood";
             this.cbTypeFood.ShadowDecoration.Parent = this.cbTypeFood;
-            this.cbTypeFood.Size = new System.Drawing.Size(283, 36);
+            this.cbTypeFood.Size = new System.Drawing.Size(213, 36);
             this.cbTypeFood.TabIndex = 38;
             // 
             // btnAddRom
@@ -453,11 +447,10 @@
             this.btnAddRom.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddRom.ForeColor = System.Drawing.Color.White;
             this.btnAddRom.HoverState.Parent = this.btnAddRom;
-            this.btnAddRom.Location = new System.Drawing.Point(503, 542);
-            this.btnAddRom.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddRom.Location = new System.Drawing.Point(377, 440);
             this.btnAddRom.Name = "btnAddRom";
             this.btnAddRom.ShadowDecoration.Parent = this.btnAddRom;
-            this.btnAddRom.Size = new System.Drawing.Size(347, 64);
+            this.btnAddRom.Size = new System.Drawing.Size(260, 52);
             this.btnAddRom.TabIndex = 41;
             this.btnAddRom.Text = "Hoàn Tất";
             this.btnAddRom.Click += new System.EventHandler(this.btnAddRom_Click);
@@ -465,10 +458,9 @@
             // label10
             // 
             this.label10.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(115, 76);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(86, 62);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(192, 27);
+            this.label10.Size = new System.Drawing.Size(144, 22);
             this.label10.TabIndex = 37;
             this.label10.Text = "Loại thực phẩm";
             // 
@@ -487,35 +479,33 @@
             this.txtNameFood.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtNameFood.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNameFood.HoverState.Parent = this.txtNameFood;
-            this.txtNameFood.Location = new System.Drawing.Point(565, 110);
-            this.txtNameFood.Margin = new System.Windows.Forms.Padding(5);
+            this.txtNameFood.Location = new System.Drawing.Point(424, 89);
+            this.txtNameFood.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNameFood.Name = "txtNameFood";
             this.txtNameFood.PasswordChar = '\0';
             this.txtNameFood.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txtNameFood.PlaceholderText = "";
             this.txtNameFood.SelectedText = "";
             this.txtNameFood.ShadowDecoration.Parent = this.txtNameFood;
-            this.txtNameFood.Size = new System.Drawing.Size(284, 44);
+            this.txtNameFood.Size = new System.Drawing.Size(213, 36);
             this.txtNameFood.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtNameFood.TabIndex = 36;
             // 
             // label9
             // 
             this.label9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(560, 78);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(420, 63);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(191, 27);
+            this.label9.Size = new System.Drawing.Size(143, 22);
             this.label9.TabIndex = 35;
             this.label9.Text = "Tên thực phẩm";
             // 
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(115, 177);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(86, 144);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(131, 37);
+            this.label6.Size = new System.Drawing.Size(98, 30);
             this.label6.TabIndex = 31;
             this.label6.Text = "Số lượng";
             // 
@@ -534,24 +524,23 @@
             this.txtNoteF.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtNoteF.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNoteF.HoverState.Parent = this.txtNoteF;
-            this.txtNoteF.Location = new System.Drawing.Point(120, 457);
-            this.txtNoteF.Margin = new System.Windows.Forms.Padding(5);
+            this.txtNoteF.Location = new System.Drawing.Point(90, 371);
+            this.txtNoteF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNoteF.Name = "txtNoteF";
             this.txtNoteF.PasswordChar = '\0';
             this.txtNoteF.PlaceholderText = "";
             this.txtNoteF.SelectedText = "";
             this.txtNoteF.ShadowDecoration.Parent = this.txtNoteF;
-            this.txtNoteF.Size = new System.Drawing.Size(729, 44);
+            this.txtNoteF.Size = new System.Drawing.Size(547, 36);
             this.txtNoteF.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtNoteF.TabIndex = 29;
             // 
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(115, 425);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(86, 345);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(192, 27);
+            this.label5.Size = new System.Drawing.Size(144, 22);
             this.label5.TabIndex = 28;
             this.label5.Text = "Ghi Chú";
             // 
@@ -559,10 +548,9 @@
             // 
             this.lbIDFood.AutoSize = true;
             this.lbIDFood.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbIDFood.Location = new System.Drawing.Point(111, 15);
-            this.lbIDFood.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbIDFood.Location = new System.Drawing.Point(83, 12);
             this.lbIDFood.Name = "lbIDFood";
-            this.lbIDFood.Size = new System.Drawing.Size(88, 49);
+            this.lbIDFood.Size = new System.Drawing.Size(71, 39);
             this.lbIDFood.TabIndex = 23;
             this.lbIDFood.Text = "123";
             // 
@@ -570,10 +558,9 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(20, 15);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(15, 12);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(98, 49);
+            this.label7.Size = new System.Drawing.Size(78, 39);
             this.label7.TabIndex = 21;
             this.label7.Text = "ID - ";
             // 
@@ -592,24 +579,23 @@
             this.txtPriceFood.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtPriceFood.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPriceFood.HoverState.Parent = this.txtPriceFood;
-            this.txtPriceFood.Location = new System.Drawing.Point(120, 346);
-            this.txtPriceFood.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.txtPriceFood.Location = new System.Drawing.Point(90, 281);
+            this.txtPriceFood.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtPriceFood.Name = "txtPriceFood";
             this.txtPriceFood.PasswordChar = '\0';
             this.txtPriceFood.PlaceholderText = "";
             this.txtPriceFood.SelectedText = "";
             this.txtPriceFood.ShadowDecoration.Parent = this.txtPriceFood;
-            this.txtPriceFood.Size = new System.Drawing.Size(284, 48);
+            this.txtPriceFood.Size = new System.Drawing.Size(213, 39);
             this.txtPriceFood.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtPriceFood.TabIndex = 19;
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(115, 316);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(86, 257);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 27);
+            this.label1.Size = new System.Drawing.Size(94, 22);
             this.label1.TabIndex = 18;
             this.label1.Text = "Giá nhập";
             // 
@@ -623,11 +609,10 @@
             this.tabPage2.Controls.Add(this.txtNameSearch);
             this.tabPage2.Controls.Add(this.btnSearch);
             this.tabPage2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage2.Location = new System.Drawing.Point(4, 41);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage2.Location = new System.Drawing.Point(4, 33);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage2.Size = new System.Drawing.Size(1953, 681);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Size = new System.Drawing.Size(1463, 553);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Tra Cứu Thông Tin";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -643,13 +628,13 @@
             this.dtgNewFood.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtgNewFood.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dtgNewFood.ColumnHeadersHeight = 46;
+            this.dtgNewFood.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgNewFood.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idphong,
             this.tenloaiphong,
@@ -662,7 +647,7 @@
             this.ghichu});
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
@@ -670,14 +655,14 @@
             this.dtgNewFood.DefaultCellStyle = dataGridViewCellStyle6;
             this.dtgNewFood.EnableHeadersVisualStyles = false;
             this.dtgNewFood.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgNewFood.Location = new System.Drawing.Point(21, 135);
-            this.dtgNewFood.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtgNewFood.Location = new System.Drawing.Point(16, 110);
+            this.dtgNewFood.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtgNewFood.Name = "dtgNewFood";
             this.dtgNewFood.ReadOnly = true;
             this.dtgNewFood.RowHeadersVisible = false;
             this.dtgNewFood.RowTemplate.Height = 24;
             this.dtgNewFood.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgNewFood.Size = new System.Drawing.Size(966, 527);
+            this.dtgNewFood.Size = new System.Drawing.Size(724, 428);
             this.dtgNewFood.TabIndex = 94;
             this.dtgNewFood.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.dtgNewFood.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -689,14 +674,14 @@
             this.dtgNewFood.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtgNewFood.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.dtgNewFood.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dtgNewFood.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtgNewFood.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtgNewFood.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dtgNewFood.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dtgNewFood.ThemeStyle.HeaderStyle.Height = 46;
+            this.dtgNewFood.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgNewFood.ThemeStyle.HeaderStyle.Height = 59;
             this.dtgNewFood.ThemeStyle.ReadOnly = true;
             this.dtgNewFood.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dtgNewFood.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dtgNewFood.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtgNewFood.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtgNewFood.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dtgNewFood.ThemeStyle.RowsStyle.Height = 24;
             this.dtgNewFood.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
@@ -779,11 +764,11 @@
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.HoverState.Parent = this.btnDelete;
             this.btnDelete.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnDelete.Location = new System.Drawing.Point(1653, 558);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDelete.Location = new System.Drawing.Point(1240, 453);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.ShadowDecoration.Parent = this.btnDelete;
-            this.btnDelete.Size = new System.Drawing.Size(211, 57);
+            this.btnDelete.Size = new System.Drawing.Size(158, 46);
             this.btnDelete.TabIndex = 93;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -801,11 +786,11 @@
             this.btnEdit.ForeColor = System.Drawing.Color.White;
             this.btnEdit.HoverState.Parent = this.btnEdit;
             this.btnEdit.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnEdit.Location = new System.Drawing.Point(1327, 558);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEdit.Location = new System.Drawing.Point(995, 453);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.ShadowDecoration.Parent = this.btnEdit;
-            this.btnEdit.Size = new System.Drawing.Size(211, 57);
+            this.btnEdit.Size = new System.Drawing.Size(158, 46);
             this.btnEdit.TabIndex = 92;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
@@ -828,19 +813,18 @@
             this.pnUpdate.Controls.Add(this.label26);
             this.pnUpdate.Controls.Add(this.txtNewPrice);
             this.pnUpdate.Controls.Add(this.label31);
-            this.pnUpdate.Location = new System.Drawing.Point(1013, 6);
-            this.pnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnUpdate.Location = new System.Drawing.Point(760, 5);
+            this.pnUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnUpdate.Name = "pnUpdate";
-            this.pnUpdate.Size = new System.Drawing.Size(917, 532);
+            this.pnUpdate.Size = new System.Drawing.Size(688, 432);
             this.pnUpdate.TabIndex = 72;
             // 
             // label13
             // 
             this.label13.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(513, 159);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Location = new System.Drawing.Point(385, 129);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(180, 35);
+            this.label13.Size = new System.Drawing.Size(135, 28);
             this.label13.TabIndex = 100;
             this.label13.Text = "Đơn vị tính";
             // 
@@ -859,14 +843,14 @@
             this.txtNewUnit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtNewUnit.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNewUnit.HoverState.Parent = this.txtNewUnit;
-            this.txtNewUnit.Location = new System.Drawing.Point(518, 200);
-            this.txtNewUnit.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.txtNewUnit.Location = new System.Drawing.Point(388, 162);
+            this.txtNewUnit.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtNewUnit.Name = "txtNewUnit";
             this.txtNewUnit.PasswordChar = '\0';
             this.txtNewUnit.PlaceholderText = "";
             this.txtNewUnit.SelectedText = "";
             this.txtNewUnit.ShadowDecoration.Parent = this.txtNewUnit;
-            this.txtNewUnit.Size = new System.Drawing.Size(281, 48);
+            this.txtNewUnit.Size = new System.Drawing.Size(211, 39);
             this.txtNewUnit.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtNewUnit.TabIndex = 99;
             // 
@@ -885,14 +869,14 @@
             this.txtNewSale.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtNewSale.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNewSale.HoverState.Parent = this.txtNewSale;
-            this.txtNewSale.Location = new System.Drawing.Point(518, 310);
-            this.txtNewSale.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.txtNewSale.Location = new System.Drawing.Point(388, 252);
+            this.txtNewSale.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtNewSale.Name = "txtNewSale";
             this.txtNewSale.PasswordChar = '\0';
             this.txtNewSale.PlaceholderText = "";
             this.txtNewSale.SelectedText = "";
             this.txtNewSale.ShadowDecoration.Parent = this.txtNewSale;
-            this.txtNewSale.Size = new System.Drawing.Size(281, 48);
+            this.txtNewSale.Size = new System.Drawing.Size(211, 39);
             this.txtNewSale.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtNewSale.TabIndex = 97;
             // 
@@ -900,10 +884,9 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(510, 279);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(382, 227);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(110, 30);
+            this.label8.Size = new System.Drawing.Size(86, 22);
             this.label8.TabIndex = 96;
             this.label8.Text = "Giá bán";
             // 
@@ -912,10 +895,9 @@
             this.lbNewID.AutoSize = true;
             this.lbNewID.Font = new System.Drawing.Font("Tahoma", 18F);
             this.lbNewID.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lbNewID.Location = new System.Drawing.Point(81, 9);
-            this.lbNewID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbNewID.Location = new System.Drawing.Point(61, 7);
             this.lbNewID.Name = "lbNewID";
-            this.lbNewID.Size = new System.Drawing.Size(63, 36);
+            this.lbNewID.Size = new System.Drawing.Size(52, 29);
             this.lbNewID.TabIndex = 93;
             this.lbNewID.Text = "___";
             // 
@@ -924,10 +906,9 @@
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Tahoma", 18F);
             this.label29.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label29.Location = new System.Drawing.Point(17, 9);
-            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label29.Location = new System.Drawing.Point(13, 7);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(75, 36);
+            this.label29.Size = new System.Drawing.Size(63, 29);
             this.label29.TabIndex = 92;
             this.label29.Text = "ID - ";
             // 
@@ -946,14 +927,14 @@
             this.txtNewQuantity.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtNewQuantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNewQuantity.HoverState.Parent = this.txtNewQuantity;
-            this.txtNewQuantity.Location = new System.Drawing.Point(55, 200);
-            this.txtNewQuantity.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.txtNewQuantity.Location = new System.Drawing.Point(41, 162);
+            this.txtNewQuantity.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtNewQuantity.Name = "txtNewQuantity";
             this.txtNewQuantity.PasswordChar = '\0';
             this.txtNewQuantity.PlaceholderText = "";
             this.txtNewQuantity.SelectedText = "";
             this.txtNewQuantity.ShadowDecoration.Parent = this.txtNewQuantity;
-            this.txtNewQuantity.Size = new System.Drawing.Size(281, 48);
+            this.txtNewQuantity.Size = new System.Drawing.Size(211, 39);
             this.txtNewQuantity.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtNewQuantity.TabIndex = 85;
             // 
@@ -970,20 +951,18 @@
             this.cbNewTypeFood.HoverState.Parent = this.cbNewTypeFood;
             this.cbNewTypeFood.ItemHeight = 30;
             this.cbNewTypeFood.ItemsAppearance.Parent = this.cbNewTypeFood;
-            this.cbNewTypeFood.Location = new System.Drawing.Point(58, 103);
-            this.cbNewTypeFood.Margin = new System.Windows.Forms.Padding(4);
+            this.cbNewTypeFood.Location = new System.Drawing.Point(44, 84);
             this.cbNewTypeFood.Name = "cbNewTypeFood";
             this.cbNewTypeFood.ShadowDecoration.Parent = this.cbNewTypeFood;
-            this.cbNewTypeFood.Size = new System.Drawing.Size(280, 36);
+            this.cbNewTypeFood.Size = new System.Drawing.Size(211, 36);
             this.cbNewTypeFood.TabIndex = 83;
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(52, 67);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(39, 54);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(192, 27);
+            this.label3.Size = new System.Drawing.Size(144, 22);
             this.label3.TabIndex = 82;
             this.label3.Text = "Loại thực phẩm";
             // 
@@ -1002,35 +981,33 @@
             this.txtNewNameFood.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtNewNameFood.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNewNameFood.HoverState.Parent = this.txtNewNameFood;
-            this.txtNewNameFood.Location = new System.Drawing.Point(518, 94);
-            this.txtNewNameFood.Margin = new System.Windows.Forms.Padding(5);
+            this.txtNewNameFood.Location = new System.Drawing.Point(388, 76);
+            this.txtNewNameFood.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNewNameFood.Name = "txtNewNameFood";
             this.txtNewNameFood.PasswordChar = '\0';
             this.txtNewNameFood.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txtNewNameFood.PlaceholderText = "";
             this.txtNewNameFood.SelectedText = "";
             this.txtNewNameFood.ShadowDecoration.Parent = this.txtNewNameFood;
-            this.txtNewNameFood.Size = new System.Drawing.Size(281, 44);
+            this.txtNewNameFood.Size = new System.Drawing.Size(211, 36);
             this.txtNewNameFood.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtNewNameFood.TabIndex = 81;
             // 
             // label11
             // 
             this.label11.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(513, 62);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(385, 50);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(191, 27);
+            this.label11.Size = new System.Drawing.Size(143, 22);
             this.label11.TabIndex = 80;
             this.label11.Text = "Tên thực phẩm";
             // 
             // label16
             // 
             this.label16.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(53, 159);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Location = new System.Drawing.Point(40, 129);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(180, 35);
+            this.label16.Size = new System.Drawing.Size(135, 28);
             this.label16.TabIndex = 78;
             this.label16.Text = "Số lượng";
             // 
@@ -1049,24 +1026,23 @@
             this.txtNewNote.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtNewNote.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNewNote.HoverState.Parent = this.txtNewNote;
-            this.txtNewNote.Location = new System.Drawing.Point(54, 440);
-            this.txtNewNote.Margin = new System.Windows.Forms.Padding(5);
+            this.txtNewNote.Location = new System.Drawing.Point(40, 358);
+            this.txtNewNote.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNewNote.Name = "txtNewNote";
             this.txtNewNote.PasswordChar = '\0';
             this.txtNewNote.PlaceholderText = "";
             this.txtNewNote.SelectedText = "";
             this.txtNewNote.ShadowDecoration.Parent = this.txtNewNote;
-            this.txtNewNote.Size = new System.Drawing.Size(761, 44);
+            this.txtNewNote.Size = new System.Drawing.Size(571, 36);
             this.txtNewNote.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtNewNote.TabIndex = 77;
             // 
             // label26
             // 
             this.label26.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(49, 408);
-            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label26.Location = new System.Drawing.Point(37, 332);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(184, 27);
+            this.label26.Size = new System.Drawing.Size(138, 22);
             this.label26.TabIndex = 76;
             this.label26.Text = "Ghi Chú";
             // 
@@ -1085,24 +1061,23 @@
             this.txtNewPrice.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtNewPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNewPrice.HoverState.Parent = this.txtNewPrice;
-            this.txtNewPrice.Location = new System.Drawing.Point(54, 319);
-            this.txtNewPrice.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.txtNewPrice.Location = new System.Drawing.Point(40, 259);
+            this.txtNewPrice.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtNewPrice.Name = "txtNewPrice";
             this.txtNewPrice.PasswordChar = '\0';
             this.txtNewPrice.PlaceholderText = "";
             this.txtNewPrice.SelectedText = "";
             this.txtNewPrice.ShadowDecoration.Parent = this.txtNewPrice;
-            this.txtNewPrice.Size = new System.Drawing.Size(281, 48);
+            this.txtNewPrice.Size = new System.Drawing.Size(211, 39);
             this.txtNewPrice.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtNewPrice.TabIndex = 73;
             // 
             // label31
             // 
             this.label31.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(49, 286);
-            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label31.Location = new System.Drawing.Point(37, 232);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(125, 27);
+            this.label31.Size = new System.Drawing.Size(94, 22);
             this.label31.TabIndex = 72;
             this.label31.Text = "Giá nhập";
             // 
@@ -1110,10 +1085,9 @@
             // 
             this.lbNoti1.AutoSize = true;
             this.lbNoti1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.lbNoti1.Location = new System.Drawing.Point(311, 111);
-            this.lbNoti1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbNoti1.Location = new System.Drawing.Point(233, 90);
             this.lbNoti1.Name = "lbNoti1";
-            this.lbNoti1.Size = new System.Drawing.Size(391, 22);
+            this.lbNoti1.Size = new System.Drawing.Size(307, 19);
             this.lbNoti1.TabIndex = 9;
             this.lbNoti1.Text = "Click vào thực phẩm để sửa hoặc xóa thực phẩm";
             // 
@@ -1132,14 +1106,14 @@
             this.txtNameSearch.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNameSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNameSearch.HoverState.Parent = this.txtNameSearch;
-            this.txtNameSearch.Location = new System.Drawing.Point(256, 25);
-            this.txtNameSearch.Margin = new System.Windows.Forms.Padding(9);
+            this.txtNameSearch.Location = new System.Drawing.Point(192, 20);
+            this.txtNameSearch.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.txtNameSearch.Name = "txtNameSearch";
             this.txtNameSearch.PasswordChar = '\0';
             this.txtNameSearch.PlaceholderText = "Nhập tên hoặc ID thực phẩm";
             this.txtNameSearch.SelectedText = "";
             this.txtNameSearch.ShadowDecoration.Parent = this.txtNameSearch;
-            this.txtNameSearch.Size = new System.Drawing.Size(568, 57);
+            this.txtNameSearch.Size = new System.Drawing.Size(426, 46);
             this.txtNameSearch.TabIndex = 1;
             this.txtNameSearch.TextChanged += new System.EventHandler(this.txtNameSearch_TextChanged);
             // 
@@ -1157,11 +1131,11 @@
             this.btnSearch.HoverState.Parent = this.btnSearch;
             this.btnSearch.Image = global::ManagemenHotelApp.Properties.Resources.search;
             this.btnSearch.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnSearch.Location = new System.Drawing.Point(21, 25);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSearch.Location = new System.Drawing.Point(16, 20);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.ShadowDecoration.Parent = this.btnSearch;
-            this.btnSearch.Size = new System.Drawing.Size(211, 57);
+            this.btnSearch.Size = new System.Drawing.Size(158, 46);
             this.btnSearch.TabIndex = 0;
             this.btnSearch.Text = "Tìm Kiếm";
             // 
@@ -1178,9 +1152,10 @@
             this.tabPage3.Controls.Add(this.lbIDTypeFood);
             this.tabPage3.Controls.Add(this.lbIdtf);
             this.tabPage3.Controls.Add(this.dtgTypeFood);
-            this.tabPage3.Location = new System.Drawing.Point(4, 41);
+            this.tabPage3.Location = new System.Drawing.Point(4, 33);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1953, 681);
+            this.tabPage3.Size = new System.Drawing.Size(1463, 553);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Quản lý loại thực phẩm";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -1196,11 +1171,10 @@
             this.btnDeleteTypeFood.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteTypeFood.ForeColor = System.Drawing.Color.White;
             this.btnDeleteTypeFood.HoverState.Parent = this.btnDeleteTypeFood;
-            this.btnDeleteTypeFood.Location = new System.Drawing.Point(1624, 541);
-            this.btnDeleteTypeFood.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDeleteTypeFood.Location = new System.Drawing.Point(1218, 440);
             this.btnDeleteTypeFood.Name = "btnDeleteTypeFood";
             this.btnDeleteTypeFood.ShadowDecoration.Parent = this.btnDeleteTypeFood;
-            this.btnDeleteTypeFood.Size = new System.Drawing.Size(212, 64);
+            this.btnDeleteTypeFood.Size = new System.Drawing.Size(159, 52);
             this.btnDeleteTypeFood.TabIndex = 70;
             this.btnDeleteTypeFood.Text = "Xóa";
             this.btnDeleteTypeFood.Click += new System.EventHandler(this.btnDeleteTypeFood_Click);
@@ -1216,11 +1190,10 @@
             this.btnEditTypeFood.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditTypeFood.ForeColor = System.Drawing.Color.White;
             this.btnEditTypeFood.HoverState.Parent = this.btnEditTypeFood;
-            this.btnEditTypeFood.Location = new System.Drawing.Point(1338, 541);
-            this.btnEditTypeFood.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEditTypeFood.Location = new System.Drawing.Point(1004, 440);
             this.btnEditTypeFood.Name = "btnEditTypeFood";
             this.btnEditTypeFood.ShadowDecoration.Parent = this.btnEditTypeFood;
-            this.btnEditTypeFood.Size = new System.Drawing.Size(212, 64);
+            this.btnEditTypeFood.Size = new System.Drawing.Size(159, 52);
             this.btnEditTypeFood.TabIndex = 69;
             this.btnEditTypeFood.Text = "Sửa";
             this.btnEditTypeFood.Click += new System.EventHandler(this.btnEditTypeFood_Click);
@@ -1236,11 +1209,10 @@
             this.btnAddTypeFood.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddTypeFood.ForeColor = System.Drawing.Color.White;
             this.btnAddTypeFood.HoverState.Parent = this.btnAddTypeFood;
-            this.btnAddTypeFood.Location = new System.Drawing.Point(1032, 541);
-            this.btnAddTypeFood.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddTypeFood.Location = new System.Drawing.Point(774, 440);
             this.btnAddTypeFood.Name = "btnAddTypeFood";
             this.btnAddTypeFood.ShadowDecoration.Parent = this.btnAddTypeFood;
-            this.btnAddTypeFood.Size = new System.Drawing.Size(212, 64);
+            this.btnAddTypeFood.Size = new System.Drawing.Size(159, 52);
             this.btnAddTypeFood.TabIndex = 68;
             this.btnAddTypeFood.Text = "Thêm";
             this.btnAddTypeFood.Click += new System.EventHandler(this.btnAddTypeFood_Click);
@@ -1249,10 +1221,9 @@
             // 
             this.lbHDTypeFood.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbHDTypeFood.ForeColor = System.Drawing.Color.Red;
-            this.lbHDTypeFood.Location = new System.Drawing.Point(272, 25);
-            this.lbHDTypeFood.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbHDTypeFood.Location = new System.Drawing.Point(204, 20);
             this.lbHDTypeFood.Name = "lbHDTypeFood";
-            this.lbHDTypeFood.Size = new System.Drawing.Size(370, 30);
+            this.lbHDTypeFood.Size = new System.Drawing.Size(278, 24);
             this.lbHDTypeFood.TabIndex = 67;
             this.lbHDTypeFood.Text = "Chọn loại loại thực phẩm muốn sửa hoặc xóa";
             // 
@@ -1271,25 +1242,24 @@
             this.txtNoteTypeFood.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtNoteTypeFood.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNoteTypeFood.HoverState.Parent = this.txtNoteTypeFood;
-            this.txtNoteTypeFood.Location = new System.Drawing.Point(1155, 328);
-            this.txtNoteTypeFood.Margin = new System.Windows.Forms.Padding(5);
+            this.txtNoteTypeFood.Location = new System.Drawing.Point(866, 266);
+            this.txtNoteTypeFood.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNoteTypeFood.Name = "txtNoteTypeFood";
             this.txtNoteTypeFood.PasswordChar = '\0';
             this.txtNoteTypeFood.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txtNoteTypeFood.PlaceholderText = "Nhập ghi chú nếu có";
             this.txtNoteTypeFood.SelectedText = "";
             this.txtNoteTypeFood.ShadowDecoration.Parent = this.txtNoteTypeFood;
-            this.txtNoteTypeFood.Size = new System.Drawing.Size(395, 52);
+            this.txtNoteTypeFood.Size = new System.Drawing.Size(296, 42);
             this.txtNoteTypeFood.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtNoteTypeFood.TabIndex = 66;
             // 
             // label14
             // 
             this.label14.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(1150, 143);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Location = new System.Drawing.Point(862, 116);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(184, 41);
+            this.label14.Size = new System.Drawing.Size(138, 33);
             this.label14.TabIndex = 65;
             this.label14.Text = "Tên loại phòng";
             // 
@@ -1308,25 +1278,24 @@
             this.txtNameTypeFood.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtNameTypeFood.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNameTypeFood.HoverState.Parent = this.txtNameTypeFood;
-            this.txtNameTypeFood.Location = new System.Drawing.Point(1155, 181);
-            this.txtNameTypeFood.Margin = new System.Windows.Forms.Padding(5);
+            this.txtNameTypeFood.Location = new System.Drawing.Point(866, 147);
+            this.txtNameTypeFood.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNameTypeFood.Name = "txtNameTypeFood";
             this.txtNameTypeFood.PasswordChar = '\0';
             this.txtNameTypeFood.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txtNameTypeFood.PlaceholderText = "Nhập loại thực phẩm muốn thêm";
             this.txtNameTypeFood.SelectedText = "";
             this.txtNameTypeFood.ShadowDecoration.Parent = this.txtNameTypeFood;
-            this.txtNameTypeFood.Size = new System.Drawing.Size(395, 52);
+            this.txtNameTypeFood.Size = new System.Drawing.Size(296, 42);
             this.txtNameTypeFood.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtNameTypeFood.TabIndex = 64;
             // 
             // label15
             // 
             this.label15.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(1150, 279);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Location = new System.Drawing.Point(862, 227);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(185, 41);
+            this.label15.Size = new System.Drawing.Size(139, 33);
             this.label15.TabIndex = 63;
             this.label15.Text = "Ghi chú";
             // 
@@ -1335,10 +1304,9 @@
             this.lbIDTypeFood.AutoSize = true;
             this.lbIDTypeFood.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbIDTypeFood.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lbIDTypeFood.Location = new System.Drawing.Point(1127, 61);
-            this.lbIDTypeFood.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbIDTypeFood.Location = new System.Drawing.Point(845, 50);
             this.lbIDTypeFood.Name = "lbIDTypeFood";
-            this.lbIDTypeFood.Size = new System.Drawing.Size(82, 49);
+            this.lbIDTypeFood.Size = new System.Drawing.Size(65, 39);
             this.lbIDTypeFood.TabIndex = 62;
             this.lbIDTypeFood.Text = "___";
             // 
@@ -1347,10 +1315,9 @@
             this.lbIdtf.AutoSize = true;
             this.lbIdtf.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbIdtf.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lbIdtf.Location = new System.Drawing.Point(1036, 61);
-            this.lbIdtf.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbIdtf.Location = new System.Drawing.Point(777, 50);
             this.lbIdtf.Name = "lbIdtf";
-            this.lbIdtf.Size = new System.Drawing.Size(98, 49);
+            this.lbIdtf.Size = new System.Drawing.Size(78, 39);
             this.lbIdtf.TabIndex = 61;
             this.lbIdtf.Text = "ID - ";
             // 
@@ -1365,20 +1332,20 @@
             this.dtgTypeFood.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtgTypeFood.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.dtgTypeFood.ColumnHeadersHeight = 68;
+            this.dtgTypeFood.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgTypeFood.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn11,
             this.dataGridViewTextBoxColumn13,
             this.dataGridViewTextBoxColumn20});
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
@@ -1386,14 +1353,14 @@
             this.dtgTypeFood.DefaultCellStyle = dataGridViewCellStyle9;
             this.dtgTypeFood.EnableHeadersVisualStyles = false;
             this.dtgTypeFood.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgTypeFood.Location = new System.Drawing.Point(42, 57);
-            this.dtgTypeFood.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtgTypeFood.Location = new System.Drawing.Point(32, 46);
+            this.dtgTypeFood.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtgTypeFood.Name = "dtgTypeFood";
             this.dtgTypeFood.ReadOnly = true;
             this.dtgTypeFood.RowHeadersVisible = false;
             this.dtgTypeFood.RowTemplate.Height = 24;
             this.dtgTypeFood.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgTypeFood.Size = new System.Drawing.Size(877, 586);
+            this.dtgTypeFood.Size = new System.Drawing.Size(658, 476);
             this.dtgTypeFood.TabIndex = 60;
             this.dtgTypeFood.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.dtgTypeFood.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -1405,14 +1372,14 @@
             this.dtgTypeFood.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtgTypeFood.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.dtgTypeFood.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dtgTypeFood.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtgTypeFood.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtgTypeFood.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dtgTypeFood.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dtgTypeFood.ThemeStyle.HeaderStyle.Height = 68;
+            this.dtgTypeFood.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgTypeFood.ThemeStyle.HeaderStyle.Height = 21;
             this.dtgTypeFood.ThemeStyle.ReadOnly = true;
             this.dtgTypeFood.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dtgTypeFood.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dtgTypeFood.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtgTypeFood.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtgTypeFood.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dtgTypeFood.ThemeStyle.RowsStyle.Height = 24;
             this.dtgTypeFood.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
@@ -1442,13 +1409,12 @@
             // 
             // UserFood
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UserFood";
-            this.Size = new System.Drawing.Size(2011, 774);
+            this.Size = new System.Drawing.Size(1508, 629);
             this.Load += new System.EventHandler(this.UserFood_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
