@@ -54,7 +54,7 @@ namespace ManagemenHotelApp.AllUserControll
                     from (HOADONPHONG inner join CT_HOADONPHONG
 		                    on HOADONPHONG.idhoadon = CT_HOADONPHONG.idhoadon)
 			                    inner join phong on CT_HOADONPHONG.idphong = PHONG.idphong
-                    where YEAR(ngaytao) = " + year + " group by Month(ngaytao)";
+                    where YEAR(ngaytao) = " + year + " and ngaythanhtoan IS NOT NULL group by Month(ngaytao) ";
                 DataSet ds = cn.getData(query);  
                  dataGridView1.DataSource = ds.Tables[0];
                 chart1.DataSource = ds.Tables[0];
