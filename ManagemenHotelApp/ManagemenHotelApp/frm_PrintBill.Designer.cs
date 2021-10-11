@@ -63,11 +63,13 @@
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.stt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idphong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenphong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dongia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mucgiamgia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tongtien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stt1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iddichvu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tendichvu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.thoigianyeucau = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,9 +77,11 @@
             this.mucgiamgia1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tongtien1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stt2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idthucpham = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenthucpham = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.thoigianyeucau1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soluong1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.donvitinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.giaban = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tongtien2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
@@ -235,9 +239,11 @@
             this.tbFood.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tbFood.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.stt2,
+            this.idthucpham,
             this.tenthucpham,
             this.thoigianyeucau1,
             this.soluong1,
+            this.donvitinh,
             this.giaban,
             this.tongtien2});
             this.tbFood.Location = new System.Drawing.Point(16, 433);
@@ -256,6 +262,7 @@
             this.tbSer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tbSer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.stt1,
+            this.iddichvu,
             this.tendichvu,
             this.thoigianyeucau,
             this.soluong,
@@ -278,6 +285,7 @@
             this.tbRoom.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tbRoom.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.stt,
+            this.idphong,
             this.tenphong,
             this.dongia,
             this.mucgiamgia,
@@ -492,6 +500,14 @@
             this.stt.Name = "stt";
             this.stt.ReadOnly = true;
             // 
+            // idphong
+            // 
+            this.idphong.DataPropertyName = "idphong";
+            this.idphong.FillWeight = 50F;
+            this.idphong.HeaderText = "Mã";
+            this.idphong.Name = "idphong";
+            this.idphong.ReadOnly = true;
+            // 
             // tenphong
             // 
             this.tenphong.DataPropertyName = "tenphong";
@@ -531,10 +547,18 @@
             this.stt1.Name = "stt1";
             this.stt1.ReadOnly = true;
             // 
+            // iddichvu
+            // 
+            this.iddichvu.DataPropertyName = "iddichvu";
+            this.iddichvu.FillWeight = 48F;
+            this.iddichvu.HeaderText = "Mã";
+            this.iddichvu.Name = "iddichvu";
+            this.iddichvu.ReadOnly = true;
+            // 
             // tendichvu
             // 
             this.tendichvu.DataPropertyName = "tendichvu";
-            this.tendichvu.FillWeight = 150F;
+            this.tendichvu.FillWeight = 130F;
             this.tendichvu.HeaderText = "Tên Dịch Vụ";
             this.tendichvu.Name = "tendichvu";
             this.tendichvu.ReadOnly = true;
@@ -542,7 +566,7 @@
             // thoigianyeucau
             // 
             this.thoigianyeucau.DataPropertyName = "thoigianyeucau";
-            this.thoigianyeucau.FillWeight = 150F;
+            this.thoigianyeucau.FillWeight = 140F;
             this.thoigianyeucau.HeaderText = "Thời Gian Đặt";
             this.thoigianyeucau.Name = "thoigianyeucau";
             this.thoigianyeucau.ReadOnly = true;
@@ -574,7 +598,7 @@
             // tongtien1
             // 
             this.tongtien1.DataPropertyName = "tongtien";
-            this.tongtien1.FillWeight = 120F;
+            this.tongtien1.FillWeight = 110F;
             this.tongtien1.HeaderText = "Thành Tiền";
             this.tongtien1.Name = "tongtien1";
             this.tongtien1.ReadOnly = true;
@@ -582,15 +606,23 @@
             // stt2
             // 
             this.stt2.DataPropertyName = "stt";
-            this.stt2.FillWeight = 35F;
+            this.stt2.FillWeight = 36F;
             this.stt2.HeaderText = "STT";
             this.stt2.Name = "stt2";
             this.stt2.ReadOnly = true;
             // 
+            // idthucpham
+            // 
+            this.idthucpham.DataPropertyName = "idthucpham";
+            this.idthucpham.FillWeight = 44F;
+            this.idthucpham.HeaderText = "Mã";
+            this.idthucpham.Name = "idthucpham";
+            this.idthucpham.ReadOnly = true;
+            // 
             // tenthucpham
             // 
             this.tenthucpham.DataPropertyName = "tenthucpham";
-            this.tenthucpham.FillWeight = 150F;
+            this.tenthucpham.FillWeight = 120F;
             this.tenthucpham.HeaderText = "Tên Thực Phẩm";
             this.tenthucpham.Name = "tenthucpham";
             this.tenthucpham.ReadOnly = true;
@@ -598,7 +630,7 @@
             // thoigianyeucau1
             // 
             this.thoigianyeucau1.DataPropertyName = "thoigianyeucau";
-            this.thoigianyeucau1.FillWeight = 150F;
+            this.thoigianyeucau1.FillWeight = 128.4033F;
             this.thoigianyeucau1.HeaderText = "Thời Gian Đặt";
             this.thoigianyeucau1.Name = "thoigianyeucau1";
             this.thoigianyeucau1.ReadOnly = true;
@@ -606,14 +638,23 @@
             // soluong1
             // 
             this.soluong1.DataPropertyName = "soluong";
-            this.soluong1.FillWeight = 30F;
+            this.soluong1.FillWeight = 25.68066F;
             this.soluong1.HeaderText = "SL";
             this.soluong1.Name = "soluong1";
             this.soluong1.ReadOnly = true;
             // 
+            // donvitinh
+            // 
+            this.donvitinh.DataPropertyName = "donvitinh";
+            this.donvitinh.FillWeight = 51.36133F;
+            this.donvitinh.HeaderText = "ĐV";
+            this.donvitinh.Name = "donvitinh";
+            this.donvitinh.ReadOnly = true;
+            // 
             // giaban
             // 
             this.giaban.DataPropertyName = "giaban";
+            this.giaban.FillWeight = 85.60222F;
             this.giaban.HeaderText = "Đơn Giá";
             this.giaban.Name = "giaban";
             this.giaban.ReadOnly = true;
@@ -621,7 +662,6 @@
             // tongtien2
             // 
             this.tongtien2.DataPropertyName = "tongtien";
-            this.tongtien2.FillWeight = 105F;
             this.tongtien2.HeaderText = "Thành Tiền";
             this.tongtien2.Name = "tongtien2";
             this.tongtien2.ReadOnly = true;
@@ -665,7 +705,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label lbDV;
-        private System.Windows.Forms.Label lbSum;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
@@ -684,18 +723,23 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn sodienthoai;
         private System.Windows.Forms.DataGridViewTextBoxColumn ngaytao;
         private System.Windows.Forms.DataGridViewTextBoxColumn ngaythanhtoan;
+        public System.Windows.Forms.Label lbSum;
         private System.Windows.Forms.DataGridViewTextBoxColumn stt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idphong;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenphong;
         private System.Windows.Forms.DataGridViewTextBoxColumn dongia;
         private System.Windows.Forms.DataGridViewTextBoxColumn mucgiamgia;
         private System.Windows.Forms.DataGridViewTextBoxColumn tongtien;
         private System.Windows.Forms.DataGridViewTextBoxColumn stt2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idthucpham;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenthucpham;
         private System.Windows.Forms.DataGridViewTextBoxColumn thoigianyeucau1;
         private System.Windows.Forms.DataGridViewTextBoxColumn soluong1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn donvitinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn giaban;
         private System.Windows.Forms.DataGridViewTextBoxColumn tongtien2;
         private System.Windows.Forms.DataGridViewTextBoxColumn stt1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iddichvu;
         private System.Windows.Forms.DataGridViewTextBoxColumn tendichvu;
         private System.Windows.Forms.DataGridViewTextBoxColumn thoigianyeucau;
         private System.Windows.Forms.DataGridViewTextBoxColumn soluong;

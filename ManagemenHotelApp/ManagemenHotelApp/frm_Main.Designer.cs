@@ -47,6 +47,12 @@
             this.btnAddCus = new Guna.UI2.WinForms.Guna2Button();
             this.btnExit = new Guna.UI2.WinForms.Guna2Button();
             this.panelContent = new System.Windows.Forms.Panel();
+            this.userManaInfoCus1 = new ManagemenHotelApp.AllUserControll.UserManaInfoCus();
+            this.userRegisterFood1 = new ManagemenHotelApp.AllUserControll.UserRegisterFood();
+            this.userRegisterService1 = new ManagemenHotelApp.AllUserControll.UserRegisterService();
+            this.userPayBill1 = new ManagemenHotelApp.AllUserControll.UserPayBill();
+            this.userRegisterRoom1 = new ManagemenHotelApp.AllUserControll.UserRegisterRoom();
+            this.userAddCus1 = new ManagemenHotelApp.AllUserControll.UserAddCus();
             this.lbTextContent = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
@@ -55,12 +61,6 @@
             this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2Elipse6 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.userManaInfoCus1 = new ManagemenHotelApp.AllUserControll.UserManaInfoCus();
-            this.userRegisterFood1 = new ManagemenHotelApp.AllUserControll.UserRegisterFood();
-            this.userRegisterService1 = new ManagemenHotelApp.AllUserControll.UserRegisterService();
-            this.userPayBill1 = new ManagemenHotelApp.AllUserControll.UserPayBill();
-            this.userRegisterRoom1 = new ManagemenHotelApp.AllUserControll.UserRegisterRoom();
-            this.userAddCus1 = new ManagemenHotelApp.AllUserControll.UserAddCus();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -81,9 +81,8 @@
             this.panel1.Controls.Add(this.panelScroll);
             this.panel1.Controls.Add(this.btnAddCus);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(339, 1060);
+            this.panel1.Size = new System.Drawing.Size(255, 862);
             this.panel1.TabIndex = 0;
             // 
             // guna2Button1
@@ -103,11 +102,10 @@
             this.guna2Button1.Image = global::ManagemenHotelApp.Properties.Resources.Logout_icon;
             this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button1.ImageSize = new System.Drawing.Size(32, 32);
-            this.guna2Button1.Location = new System.Drawing.Point(24, 870);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Button1.Location = new System.Drawing.Point(18, 707);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(295, 107);
+            this.guna2Button1.Size = new System.Drawing.Size(221, 87);
             this.guna2Button1.TabIndex = 6;
             this.guna2Button1.Text = "Đăng xuất";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
@@ -122,20 +120,18 @@
             this.panel2.Controls.Add(this.lbIdLogin);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(13, 12);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Location = new System.Drawing.Point(10, 10);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(309, 112);
+            this.panel2.Size = new System.Drawing.Size(233, 92);
             this.panel2.TabIndex = 2;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(-3, 7);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Location = new System.Drawing.Point(-2, 6);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(313, 37);
+            this.panel3.Size = new System.Drawing.Size(235, 30);
             this.panel3.TabIndex = 2;
             // 
             // label2
@@ -144,10 +140,9 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(121)))), ((int)(((byte)(155)))));
-            this.label2.Location = new System.Drawing.Point(28, 5);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(21, 4);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(249, 30);
+            this.label2.Size = new System.Drawing.Size(193, 22);
             this.label2.TabIndex = 7;
             this.label2.Text = "Thông tin nhân viên";
             // 
@@ -155,10 +150,9 @@
             // 
             this.lbNameLogin.AutoSize = true;
             this.lbNameLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(110)))), ((int)(((byte)(133)))));
-            this.lbNameLogin.Location = new System.Drawing.Point(99, 74);
-            this.lbNameLogin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbNameLogin.Location = new System.Drawing.Point(74, 60);
             this.lbNameLogin.Name = "lbNameLogin";
-            this.lbNameLogin.Size = new System.Drawing.Size(48, 27);
+            this.lbNameLogin.Size = new System.Drawing.Size(40, 21);
             this.lbNameLogin.TabIndex = 3;
             this.lbNameLogin.Text = "___";
             // 
@@ -166,10 +160,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(110)))), ((int)(((byte)(133)))));
-            this.label4.Location = new System.Drawing.Point(4, 74);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(3, 60);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(96, 27);
+            this.label4.Size = new System.Drawing.Size(76, 21);
             this.label4.TabIndex = 2;
             this.label4.Text = "Họ Tên: ";
             // 
@@ -177,10 +170,9 @@
             // 
             this.lbIdLogin.AutoSize = true;
             this.lbIdLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(110)))), ((int)(((byte)(133)))));
-            this.lbIdLogin.Location = new System.Drawing.Point(172, 48);
-            this.lbIdLogin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbIdLogin.Location = new System.Drawing.Point(129, 39);
             this.lbIdLogin.Name = "lbIdLogin";
-            this.lbIdLogin.Size = new System.Drawing.Size(48, 27);
+            this.lbIdLogin.Size = new System.Drawing.Size(40, 21);
             this.lbIdLogin.TabIndex = 1;
             this.lbIdLogin.Text = "___";
             // 
@@ -188,10 +180,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(110)))), ((int)(((byte)(133)))));
-            this.label1.Location = new System.Drawing.Point(4, 48);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(3, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(157, 27);
+            this.label1.Size = new System.Drawing.Size(120, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "ID Nhân Viên: ";
             // 
@@ -212,11 +203,10 @@
             this.btnCheckOut.Image = global::ManagemenHotelApp.Properties.Resources.check_out;
             this.btnCheckOut.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCheckOut.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnCheckOut.Location = new System.Drawing.Point(29, 620);
-            this.btnCheckOut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCheckOut.Location = new System.Drawing.Point(22, 504);
             this.btnCheckOut.Name = "btnCheckOut";
             this.btnCheckOut.ShadowDecoration.Parent = this.btnCheckOut;
-            this.btnCheckOut.Size = new System.Drawing.Size(295, 107);
+            this.btnCheckOut.Size = new System.Drawing.Size(221, 87);
             this.btnCheckOut.TabIndex = 5;
             this.btnCheckOut.Text = "Thanh toán";
             this.btnCheckOut.Click += new System.EventHandler(this.btnCheckOut_Click);
@@ -238,11 +228,10 @@
             this.btnManagement.Image = global::ManagemenHotelApp.Properties.Resources.file;
             this.btnManagement.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnManagement.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnManagement.Location = new System.Drawing.Point(29, 735);
-            this.btnManagement.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnManagement.Location = new System.Drawing.Point(22, 597);
             this.btnManagement.Name = "btnManagement";
             this.btnManagement.ShadowDecoration.Parent = this.btnManagement;
-            this.btnManagement.Size = new System.Drawing.Size(295, 107);
+            this.btnManagement.Size = new System.Drawing.Size(221, 87);
             this.btnManagement.TabIndex = 4;
             this.btnManagement.Text = "Quản lý TTKH";
             this.btnManagement.Click += new System.EventHandler(this.btnManagement_Click);
@@ -264,11 +253,10 @@
             this.btnAddFood.Image = global::ManagemenHotelApp.Properties.Resources.order_food;
             this.btnAddFood.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnAddFood.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnAddFood.Location = new System.Drawing.Point(29, 506);
-            this.btnAddFood.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddFood.Location = new System.Drawing.Point(22, 411);
             this.btnAddFood.Name = "btnAddFood";
             this.btnAddFood.ShadowDecoration.Parent = this.btnAddFood;
-            this.btnAddFood.Size = new System.Drawing.Size(295, 107);
+            this.btnAddFood.Size = new System.Drawing.Size(221, 87);
             this.btnAddFood.TabIndex = 3;
             this.btnAddFood.Text = "Đặt thực phẩm";
             this.btnAddFood.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -291,11 +279,10 @@
             this.btnAddService.Image = global::ManagemenHotelApp.Properties.Resources.car_rental;
             this.btnAddService.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnAddService.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnAddService.Location = new System.Drawing.Point(29, 391);
-            this.btnAddService.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddService.Location = new System.Drawing.Point(22, 318);
             this.btnAddService.Name = "btnAddService";
             this.btnAddService.ShadowDecoration.Parent = this.btnAddService;
-            this.btnAddService.Size = new System.Drawing.Size(295, 107);
+            this.btnAddService.Size = new System.Drawing.Size(221, 87);
             this.btnAddService.TabIndex = 2;
             this.btnAddService.Text = "Đặt dịch vụ";
             this.btnAddService.Click += new System.EventHandler(this.btnAddService_Click);
@@ -317,11 +304,10 @@
             this.btnAddRoom.Image = global::ManagemenHotelApp.Properties.Resources.room;
             this.btnAddRoom.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnAddRoom.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnAddRoom.Location = new System.Drawing.Point(29, 277);
-            this.btnAddRoom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddRoom.Location = new System.Drawing.Point(22, 225);
             this.btnAddRoom.Name = "btnAddRoom";
             this.btnAddRoom.ShadowDecoration.Parent = this.btnAddRoom;
-            this.btnAddRoom.Size = new System.Drawing.Size(295, 107);
+            this.btnAddRoom.Size = new System.Drawing.Size(221, 87);
             this.btnAddRoom.TabIndex = 1;
             this.btnAddRoom.Text = "Đặt phòng";
             this.btnAddRoom.Click += new System.EventHandler(this.btnAddRoom_Click);
@@ -329,10 +315,9 @@
             // panelScroll
             // 
             this.panelScroll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(179)))), ((int)(((byte)(194)))));
-            this.panelScroll.Location = new System.Drawing.Point(13, 162);
-            this.panelScroll.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelScroll.Location = new System.Drawing.Point(10, 132);
             this.panelScroll.Name = "panelScroll";
-            this.panelScroll.Size = new System.Drawing.Size(11, 107);
+            this.panelScroll.Size = new System.Drawing.Size(8, 87);
             this.panelScroll.TabIndex = 0;
             // 
             // btnAddCus
@@ -353,11 +338,10 @@
             this.btnAddCus.Image = global::ManagemenHotelApp.Properties.Resources.follow;
             this.btnAddCus.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnAddCus.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnAddCus.Location = new System.Drawing.Point(29, 162);
-            this.btnAddCus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddCus.Location = new System.Drawing.Point(22, 132);
             this.btnAddCus.Name = "btnAddCus";
             this.btnAddCus.ShadowDecoration.Parent = this.btnAddCus;
-            this.btnAddCus.Size = new System.Drawing.Size(280, 107);
+            this.btnAddCus.Size = new System.Drawing.Size(210, 87);
             this.btnAddCus.TabIndex = 0;
             this.btnAddCus.Text = "Thêm khách";
             this.btnAddCus.Click += new System.EventHandler(this.btnAddCus_Click);
@@ -373,11 +357,10 @@
             this.btnExit.ForeColor = System.Drawing.Color.White;
             this.btnExit.HoverState.FillColor = System.Drawing.Color.Red;
             this.btnExit.HoverState.Parent = this.btnExit;
-            this.btnExit.Location = new System.Drawing.Point(2000, 0);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExit.Location = new System.Drawing.Point(1500, 0);
             this.btnExit.Name = "btnExit";
             this.btnExit.ShadowDecoration.Parent = this.btnExit;
-            this.btnExit.Size = new System.Drawing.Size(47, 41);
+            this.btnExit.Size = new System.Drawing.Size(35, 33);
             this.btnExit.TabIndex = 2;
             this.btnExit.Text = "X";
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -391,11 +374,65 @@
             this.panelContent.Controls.Add(this.userPayBill1);
             this.panelContent.Controls.Add(this.userRegisterRoom1);
             this.panelContent.Controls.Add(this.userAddCus1);
-            this.panelContent.Location = new System.Drawing.Point(361, 165);
-            this.panelContent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelContent.Location = new System.Drawing.Point(271, 134);
             this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(1668, 875);
+            this.panelContent.Size = new System.Drawing.Size(1251, 711);
             this.panelContent.TabIndex = 3;
+            // 
+            // userManaInfoCus1
+            // 
+            this.userManaInfoCus1.BackColor = System.Drawing.Color.White;
+            this.userManaInfoCus1.Location = new System.Drawing.Point(0, -1);
+            this.userManaInfoCus1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.userManaInfoCus1.Name = "userManaInfoCus1";
+            this.userManaInfoCus1.Size = new System.Drawing.Size(1307, 697);
+            this.userManaInfoCus1.TabIndex = 5;
+            // 
+            // userRegisterFood1
+            // 
+            this.userRegisterFood1.BackColor = System.Drawing.Color.White;
+            this.userRegisterFood1.Location = new System.Drawing.Point(0, 0);
+            this.userRegisterFood1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.userRegisterFood1.Name = "userRegisterFood1";
+            this.userRegisterFood1.Size = new System.Drawing.Size(1251, 696);
+            this.userRegisterFood1.TabIndex = 4;
+            // 
+            // userRegisterService1
+            // 
+            this.userRegisterService1.BackColor = System.Drawing.Color.White;
+            this.userRegisterService1.Location = new System.Drawing.Point(0, 0);
+            this.userRegisterService1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.userRegisterService1.Name = "userRegisterService1";
+            this.userRegisterService1.Size = new System.Drawing.Size(1251, 696);
+            this.userRegisterService1.TabIndex = 3;
+            // 
+            // userPayBill1
+            // 
+            this.userPayBill1.BackColor = System.Drawing.Color.White;
+            this.userPayBill1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userPayBill1.Location = new System.Drawing.Point(0, 0);
+            this.userPayBill1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.userPayBill1.Name = "userPayBill1";
+            this.userPayBill1.Size = new System.Drawing.Size(1251, 696);
+            this.userPayBill1.TabIndex = 2;
+            // 
+            // userRegisterRoom1
+            // 
+            this.userRegisterRoom1.BackColor = System.Drawing.Color.White;
+            this.userRegisterRoom1.Location = new System.Drawing.Point(0, 0);
+            this.userRegisterRoom1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.userRegisterRoom1.Name = "userRegisterRoom1";
+            this.userRegisterRoom1.Size = new System.Drawing.Size(1251, 696);
+            this.userRegisterRoom1.TabIndex = 1;
+            // 
+            // userAddCus1
+            // 
+            this.userAddCus1.BackColor = System.Drawing.Color.White;
+            this.userAddCus1.Location = new System.Drawing.Point(0, 0);
+            this.userAddCus1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.userAddCus1.Name = "userAddCus1";
+            this.userAddCus1.Size = new System.Drawing.Size(1251, 696);
+            this.userAddCus1.TabIndex = 0;
             // 
             // lbTextContent
             // 
@@ -408,11 +445,10 @@
             this.lbTextContent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(121)))), ((int)(((byte)(155)))));
             this.lbTextContent.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.lbTextContent.HoverState.Parent = this.lbTextContent;
-            this.lbTextContent.Location = new System.Drawing.Point(571, 0);
-            this.lbTextContent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lbTextContent.Location = new System.Drawing.Point(428, 0);
             this.lbTextContent.Name = "lbTextContent";
             this.lbTextContent.ShadowDecoration.Parent = this.lbTextContent;
-            this.lbTextContent.Size = new System.Drawing.Size(1225, 158);
+            this.lbTextContent.Size = new System.Drawing.Size(919, 128);
             this.lbTextContent.TabIndex = 0;
             this.lbTextContent.Text = "THÊM KHÁCH HÀNG";
             this.lbTextContent.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
@@ -455,12 +491,11 @@
             this.guna2CircleButton1.HoverState.Parent = this.guna2CircleButton1;
             this.guna2CircleButton1.Image = global::ManagemenHotelApp.Properties.Resources._24h128;
             this.guna2CircleButton1.ImageSize = new System.Drawing.Size(128, 128);
-            this.guna2CircleButton1.Location = new System.Drawing.Point(361, 0);
-            this.guna2CircleButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2CircleButton1.Location = new System.Drawing.Point(271, 0);
             this.guna2CircleButton1.Name = "guna2CircleButton1";
             this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CircleButton1.ShadowDecoration.Parent = this.guna2CircleButton1;
-            this.guna2CircleButton1.Size = new System.Drawing.Size(196, 158);
+            this.guna2CircleButton1.Size = new System.Drawing.Size(147, 128);
             this.guna2CircleButton1.TabIndex = 6;
             // 
             // guna2Elipse6
@@ -468,73 +503,18 @@
             this.guna2Elipse6.BorderRadius = 30;
             this.guna2Elipse6.TargetControl = this.panelContent;
             // 
-            // userManaInfoCus1
-            // 
-            this.userManaInfoCus1.BackColor = System.Drawing.Color.White;
-            this.userManaInfoCus1.Location = new System.Drawing.Point(0, -1);
-            this.userManaInfoCus1.Name = "userManaInfoCus1";
-            this.userManaInfoCus1.Size = new System.Drawing.Size(1743, 858);
-            this.userManaInfoCus1.TabIndex = 5;
-            // 
-            // userRegisterFood1
-            // 
-            this.userRegisterFood1.BackColor = System.Drawing.Color.White;
-            this.userRegisterFood1.Location = new System.Drawing.Point(0, 0);
-            this.userRegisterFood1.Margin = new System.Windows.Forms.Padding(5);
-            this.userRegisterFood1.Name = "userRegisterFood1";
-            this.userRegisterFood1.Size = new System.Drawing.Size(1668, 857);
-            this.userRegisterFood1.TabIndex = 4;
-            // 
-            // userRegisterService1
-            // 
-            this.userRegisterService1.BackColor = System.Drawing.Color.White;
-            this.userRegisterService1.Location = new System.Drawing.Point(0, 0);
-            this.userRegisterService1.Margin = new System.Windows.Forms.Padding(5);
-            this.userRegisterService1.Name = "userRegisterService1";
-            this.userRegisterService1.Size = new System.Drawing.Size(1668, 857);
-            this.userRegisterService1.TabIndex = 3;
-            // 
-            // userPayBill1
-            // 
-            this.userPayBill1.BackColor = System.Drawing.Color.White;
-            this.userPayBill1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userPayBill1.Location = new System.Drawing.Point(0, 0);
-            this.userPayBill1.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.userPayBill1.Name = "userPayBill1";
-            this.userPayBill1.Size = new System.Drawing.Size(1668, 857);
-            this.userPayBill1.TabIndex = 2;
-            // 
-            // userRegisterRoom1
-            // 
-            this.userRegisterRoom1.BackColor = System.Drawing.Color.White;
-            this.userRegisterRoom1.Location = new System.Drawing.Point(0, 0);
-            this.userRegisterRoom1.Margin = new System.Windows.Forms.Padding(5);
-            this.userRegisterRoom1.Name = "userRegisterRoom1";
-            this.userRegisterRoom1.Size = new System.Drawing.Size(1668, 857);
-            this.userRegisterRoom1.TabIndex = 1;
-            // 
-            // userAddCus1
-            // 
-            this.userAddCus1.BackColor = System.Drawing.Color.White;
-            this.userAddCus1.Location = new System.Drawing.Point(0, 0);
-            this.userAddCus1.Margin = new System.Windows.Forms.Padding(5);
-            this.userAddCus1.Name = "userAddCus1";
-            this.userAddCus1.Size = new System.Drawing.Size(1668, 857);
-            this.userAddCus1.TabIndex = 0;
-            // 
             // frm_Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1920, 1051);
+            this.ClientSize = new System.Drawing.Size(1536, 884);
             this.Controls.Add(this.guna2CircleButton1);
             this.Controls.Add(this.lbTextContent);
             this.Controls.Add(this.panelContent);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_Main";

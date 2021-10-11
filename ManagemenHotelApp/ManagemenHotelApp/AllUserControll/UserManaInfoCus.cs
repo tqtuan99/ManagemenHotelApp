@@ -54,6 +54,7 @@ namespace ManagemenHotelApp.AllUserControll
 
         private void UserManaInfoCus_Load(object sender, EventArgs e)
         {
+            txtBirthDay.CustomFormat = "dd/MM/yyyy";
             FillData(dtgCus);
             setVisible(false);
         }
@@ -62,7 +63,6 @@ namespace ManagemenHotelApp.AllUserControll
         {
             try
             {
-                txtBirthDay.CustomFormat = "dd/MM/yyyy";
                 setVisible(true);
                 lbIDCus.Text = dtgCus.Rows[e.RowIndex].Cells[0].Value.ToString();
                 txtName.Text = dtgCus.Rows[e.RowIndex].Cells[1].Value.ToString();
@@ -135,7 +135,7 @@ namespace ManagemenHotelApp.AllUserControll
                 }
                 else if(MessageBox.Show("Bạn có chắc chắn muốn sửa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
-                    query = "update khachhang set hotenkh = N'"+Name+ "',gioitinh= N'" + Sex + "',ngaysinh= N'" + txtBirthDay.Value + "',socccd = N'" + txtCCCD + "',sodienthoai= N'" + Phone + "',quoctich= N'" + Nationality + "',ghichu= N'" + Note + "' where idkhachhang = N'" + lbIDCus.Text + "'";
+                    query = "update khachhang set hotenkh = N'"+Name+ "',gioitinh= N'" + Sex + "',ngaysinh= N'" + txtBirthDay.Value + "',socccd = N'" + CCCD + "',sodienthoai= N'" + Phone + "',quoctich= N'" + Nationality + "',ghichu= N'" + Note + "' where idkhachhang = N'" + lbIDCus.Text + "'";
                     cn.setData(query, "Sửa thành công");
                     UserManaInfoCus_Load(sender, e);
                 }

@@ -49,14 +49,15 @@ namespace ManagemenHotelApp.AllUserControll
         {
             UserPayBill_Load(this, null);
         }
-        String idroom, idser, idfood;
+        //String idroom, idser, idfood;
+        String idCus;
         private void tbCustumer_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             lbNote1.Visible = false;
             try
             {
                 //Lấy danh sách những khách hàng có hóa đơn chưa thanh toán
-                String idCus = tbCustumer.Rows[e.RowIndex].Cells[0].Value.ToString();//Lấy ra id khách hàng cần thanh toán khi click vào bảng
+                idCus = tbCustumer.Rows[e.RowIndex].Cells[0].Value.ToString();//Lấy ra id khách hàng cần thanh toán khi click vào bảng
                 FillDataTbInfCus(idCus);
                 //Lấy ngày đến và ngày đi ở bảng thông tin khách hàng để tính thành tiền
                 FillDataTbBillRoom(idCus, DateTime.ParseExact(tbInfCus.Rows[0].Cells[3].Value.ToString(), "dd/MM/yyyy h:mm tt", CultureInfo.InvariantCulture), DateTime.ParseExact(tbInfCus.Rows[0].Cells[4].Value.ToString(), "dd/MM/yyyy h:mm tt", CultureInfo.InvariantCulture));
@@ -74,7 +75,7 @@ namespace ManagemenHotelApp.AllUserControll
             try
             {
            
-                query = @"select ROW_NUMBER() OVER (ORDER BY ct_hoadonphong.idphong) AS stt, tenphong, dongia, mucgiamgia, "+CalSum(checkIn,checkOut)+"*(dongia-mucgiamgia*dongia) as tongtien " +
+                query = @"select ROW_NUMBER() OVER (ORDER BY ct_hoadonphong.idphong) AS stt, phong.idphong, tenphong, dongia, mucgiamgia, "+CalSum(checkIn,checkOut)+"*(dongia-mucgiamgia*dongia) as tongtien " +
                         "from hoadonphong, ct_hoadonphong, phong where hoadonphong.idkhachhang = "+idCus+" and ngaythanhtoan IS NULL" +
                         " and hoadonphong.idhoadon = ct_hoadonphong.idhoadon and ct_hoadonphong.idphong = phong.idphong ";
                 DataSet dsBillRoom = cn.getData(query);
@@ -90,7 +91,7 @@ namespace ManagemenHotelApp.AllUserControll
             try
             {
 
-                query = @"select ROW_NUMBER() OVER (ORDER BY ct_hoadondichvu.iddichvu) AS stt, tendichvu, FORMAT(thoigianyeucau,'dd/MM/yyyy hh:mm tt') as thoigianyeucau, CT_HOADONDICHVU.soluong, giadichvu, mucgiamgia, (giadichvu-mucgiamgia*giadichvu)*CT_HOADONDICHVU.soluong as tongtien
+                query = @"select ROW_NUMBER() OVER (ORDER BY ct_hoadondichvu.iddichvu) AS stt, dichvu.iddichvu, tendichvu, FORMAT(thoigianyeucau,'dd/MM/yyyy hh:mm tt') as thoigianyeucau, CT_HOADONDICHVU.soluong, giadichvu, mucgiamgia, (giadichvu-mucgiamgia*giadichvu)*CT_HOADONDICHVU.soluong as tongtien
                             from hoadondichvu, ct_hoadondichvu, dichvu
                             where HOADONDICHVU.idkhachhang = "+idCus+@" and ngaythanhtoan IS NULL
 		                    and HOADONDICHVU.idhoadon = CT_HOADONDICHVU.idhoadon and CT_HOADONDICHVU.iddichvu = DICHVU.iddichvu";
@@ -108,7 +109,7 @@ namespace ManagemenHotelApp.AllUserControll
             try
             {
 
-                query = @"select ROW_NUMBER() OVER (ORDER BY ct_hoadonthucpham.idthucpham) AS stt, tenthucpham, FORMAT(thoigianyeucau,'dd/MM/yyyy hh:mm tt') as thoigianyeucau, CT_HOADONTHUCPHAM.soluong, giaban, CT_HOADONTHUCPHAM.soluong*giaban as tongtien
+                query = @"select ROW_NUMBER() OVER (ORDER BY ct_hoadonthucpham.idthucpham) AS stt, thucpham.idthucpham, tenthucpham, FORMAT(thoigianyeucau,'dd/MM/yyyy hh:mm tt') as thoigianyeucau, CT_HOADONTHUCPHAM.soluong, donvitinh, giaban, CT_HOADONTHUCPHAM.soluong*giaban as tongtien
                         from hoadonthucpham, CT_HOADONTHUCPHAM, THUCPHAM
                         where HOADONTHUCPHAM.idkhachhang = "+idCus+@" and ngaythanhtoan IS NULL
 		                and HOADONTHUCPHAM.idhoadon = CT_HOADONTHUCPHAM.idhoadon and CT_HOADONTHUCPHAM.idthucpham = THUCPHAM.idthucpham";
@@ -146,10 +147,15 @@ namespace ManagemenHotelApp.AllUserControll
 
         private void btnViewBill_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Vui lòng kiểm tra kĩ thông tin trước khi tiến hành xuất hóa đơn, không thể quay lại bước kiểm tra sau khi click vào đây, bạn có chắc muốn xuất hóa đơn không?","Xác nhận",MessageBoxButtons.OKCancel,MessageBoxIcon.Question) == DialogResult.OK)
+            if(tbInfCus.Rows.Count == 1)
             {
-               // query = "update ngaythanhtoan from hoadonphong where idhoadon = "
-                int hr = 26;
+                MessageBox.Show("Chưa lựa chọn khách hàng cần thanh toán, vui lòng chọn khách hàng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if(MessageBox.Show("Vui lòng kiểm tra kĩ thông tin trước khi tiến hành xuất hóa đơn, không thể quay lại bước kiểm tra sau khi click vào đây, bạn có chắc muốn xuất hóa đơn không?","Xác nhận",MessageBoxButtons.OKCancel,MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                updateBill();
+                updateRoomState();
+                updateQuantitySer();
                 frm_PrintBill frm = new frm_PrintBill();
                 frm.tbCus.DataSource = tbInfCus.DataSource;
                 frm.tbRoom.DataSource = tbBillRoom.DataSource;
@@ -169,8 +175,66 @@ namespace ManagemenHotelApp.AllUserControll
                 setAutoHeight(frm.tbSer, frm.tbFood);
                 //.....Filldata to tbFood
                 setAutoHeight(frm.tbFood, frm.tbBot);
+                //Tính tổng tiền
+                float sumMo = sumBill(tbBillRoom,"tongtien") + sumBill(tbBillSer,"tongtien1") + sumBill(tbBillFood,"tongtien2");
+                frm.lbSum.Text = sumMo.ToString("N");
                 frm.Show();
+                clear();
             } 
+        }
+        public void clear()
+        {
+            txtNameSearch.Clear();
+            lbNote1.Visible = true;
+            
+            fillData("");
+            FillDataTbInfCus("-1");
+            FillDataTbBillRoom("-1",DateTime.Now,DateTime.Now);
+            FillDataTbBillService("-1");
+            FillDataTbBillFood("-1");
+        }
+      
+        public void updateBill()
+        {
+            query = @"update HOADONPHONG set ngaythanhtoan = '"+tbInfCus.Rows[0].Cells[4].Value.ToString()+"' where idkhachhang = "+idCus + " and ngaythanhtoan IS NULL";
+            cn.setData(query, "");
+            query = @"update HOADONDICHVU set ngaythanhtoan = '" + tbInfCus.Rows[0].Cells[4].Value.ToString() + "' where idkhachhang = " + idCus + " and ngaythanhtoan IS NULL";
+            cn.setData(query, "");
+            query = @"update HOADONTHUCPHAM set ngaythanhtoan = '" + tbInfCus.Rows[0].Cells[4].Value.ToString() + "' where idkhachhang = " + idCus + " and ngaythanhtoan IS NULL";
+            cn.setData(query, "");
+        }
+        public void updateRoomState()
+        {
+            int rows = tbBillRoom.Rows.Count;
+            for (int i = 0; i < rows - 1; i++)
+            {
+                query = "Update PHONG set trangthai = 1 where idphong = " + tbBillRoom.Rows[i].Cells["idphong"].Value.ToString();
+                cn.setData(query, "");
+            }
+        }
+        public void updateQuantitySer()
+        {
+            int rows = tbBillSer.Rows.Count;
+            for(int i = 0; i < rows - 1; i++)
+            {
+                query = "select soluong from dichvu where iddichvu = " + tbBillSer.Rows[i].Cells["iddichvu"].Value.ToString();
+                DataSet getQuantity = cn.getData(query);
+                String current = getQuantity.Tables[0].Rows[0][0].ToString();
+                query = "update DICHVU set soluong = " + current + " + " + tbBillSer.Rows[i].Cells["soluong"].Value.ToString();
+                cn.setData(query, "");
+            }
+        }
+
+        //Hàm tính tổng tiền
+        public float sumBill(DataGridView dtg, String nameCol)
+        {
+            int col = dtg.Rows.Count;
+            float money = 0;
+            for(int i = 0; i < col-1; i++)
+            {
+                money += float.Parse(dtg.Rows[i].Cells[nameCol].Value.ToString());
+            }
+            return money;
         }
         public void setAutoHeight(DataGridView dtgNative, DataGridView dtg)
         {
@@ -187,7 +251,7 @@ namespace ManagemenHotelApp.AllUserControll
                     sumHr += row.Height;
                 dtgNative.Height = sumHr;
             }
-            dtg.Location = new Point(dtgNative.Location.X, dtgNative.Location.Y + dtgNative.Height + 2);
+            dtg.Location = new Point(dtgNative.Location.X, dtgNative.Location.Y + dtgNative.Height + 5);
         }
 
         private void txtNameSearch_TextChanged(object sender, EventArgs e)
@@ -214,10 +278,11 @@ namespace ManagemenHotelApp.AllUserControll
         public double CalSum (DateTime checkIn, DateTime checkOut)
         {
             double sum = 0;
-            TimeSpan ts = checkOut - checkIn;
-            double day = Math.Floor(ts.TotalDays);
-            if (day < 1) day = 1; 
-            sum = day; 
+            TimeSpan ts = checkOut.Date - checkIn.Date;
+            //double day = Math.Floor(ts.TotalDays);
+            int days = ts.Days;
+            //if (days < 1) days = 1; 
+            sum = days; 
             if(checkIn.Hour >= 5 && checkIn.Hour <=9)
             {
                 sum += 0.5;
@@ -229,11 +294,11 @@ namespace ManagemenHotelApp.AllUserControll
             {
                 sum +=  0.3;
             }
-            else if(checkOut.Hour >15 && checkOut.Hour <18)
+            else if(checkOut.Hour >=15 && checkOut.Hour <18)
             {
                 sum +=  0.5;
             }
-            else if (checkOut.Hour>18)
+            else if (checkOut.Hour>=18)
             {
                 sum += 1;
             } 
