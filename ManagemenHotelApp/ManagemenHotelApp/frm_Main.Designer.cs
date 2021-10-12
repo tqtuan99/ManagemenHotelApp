@@ -61,6 +61,7 @@
             this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2Elipse6 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.btnZoomOut = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -382,8 +383,9 @@
             // userManaInfoCus1
             // 
             this.userManaInfoCus1.BackColor = System.Drawing.Color.White;
+            this.userManaInfoCus1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userManaInfoCus1.Location = new System.Drawing.Point(0, -1);
-            this.userManaInfoCus1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.userManaInfoCus1.Margin = new System.Windows.Forms.Padding(2);
             this.userManaInfoCus1.Name = "userManaInfoCus1";
             this.userManaInfoCus1.Size = new System.Drawing.Size(1307, 697);
             this.userManaInfoCus1.TabIndex = 5;
@@ -392,7 +394,7 @@
             // 
             this.userRegisterFood1.BackColor = System.Drawing.Color.White;
             this.userRegisterFood1.Location = new System.Drawing.Point(0, 0);
-            this.userRegisterFood1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.userRegisterFood1.Margin = new System.Windows.Forms.Padding(4);
             this.userRegisterFood1.Name = "userRegisterFood1";
             this.userRegisterFood1.Size = new System.Drawing.Size(1251, 696);
             this.userRegisterFood1.TabIndex = 4;
@@ -401,7 +403,7 @@
             // 
             this.userRegisterService1.BackColor = System.Drawing.Color.White;
             this.userRegisterService1.Location = new System.Drawing.Point(0, 0);
-            this.userRegisterService1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.userRegisterService1.Margin = new System.Windows.Forms.Padding(4);
             this.userRegisterService1.Name = "userRegisterService1";
             this.userRegisterService1.Size = new System.Drawing.Size(1251, 696);
             this.userRegisterService1.TabIndex = 3;
@@ -411,7 +413,7 @@
             this.userPayBill1.BackColor = System.Drawing.Color.White;
             this.userPayBill1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userPayBill1.Location = new System.Drawing.Point(0, 0);
-            this.userPayBill1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.userPayBill1.Margin = new System.Windows.Forms.Padding(5);
             this.userPayBill1.Name = "userPayBill1";
             this.userPayBill1.Size = new System.Drawing.Size(1251, 696);
             this.userPayBill1.TabIndex = 2;
@@ -420,7 +422,7 @@
             // 
             this.userRegisterRoom1.BackColor = System.Drawing.Color.White;
             this.userRegisterRoom1.Location = new System.Drawing.Point(0, 0);
-            this.userRegisterRoom1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.userRegisterRoom1.Margin = new System.Windows.Forms.Padding(4);
             this.userRegisterRoom1.Name = "userRegisterRoom1";
             this.userRegisterRoom1.Size = new System.Drawing.Size(1251, 696);
             this.userRegisterRoom1.TabIndex = 1;
@@ -429,7 +431,7 @@
             // 
             this.userAddCus1.BackColor = System.Drawing.Color.White;
             this.userAddCus1.Location = new System.Drawing.Point(0, 0);
-            this.userAddCus1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.userAddCus1.Margin = new System.Windows.Forms.Padding(4);
             this.userAddCus1.Name = "userAddCus1";
             this.userAddCus1.Size = new System.Drawing.Size(1251, 696);
             this.userAddCus1.TabIndex = 0;
@@ -503,12 +505,31 @@
             this.guna2Elipse6.BorderRadius = 30;
             this.guna2Elipse6.TargetControl = this.panelContent;
             // 
+            // btnZoomOut
+            // 
+            this.btnZoomOut.CheckedState.Parent = this.btnZoomOut;
+            this.btnZoomOut.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnZoomOut.CustomImages.Parent = this.btnZoomOut;
+            this.btnZoomOut.FillColor = System.Drawing.Color.Transparent;
+            this.btnZoomOut.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnZoomOut.ForeColor = System.Drawing.Color.White;
+            this.btnZoomOut.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(210)))), ((int)(((byte)(210)))));
+            this.btnZoomOut.HoverState.Parent = this.btnZoomOut;
+            this.btnZoomOut.Location = new System.Drawing.Point(1465, 0);
+            this.btnZoomOut.Name = "btnZoomOut";
+            this.btnZoomOut.ShadowDecoration.Parent = this.btnZoomOut;
+            this.btnZoomOut.Size = new System.Drawing.Size(35, 33);
+            this.btnZoomOut.TabIndex = 8;
+            this.btnZoomOut.Text = "__";
+            this.btnZoomOut.Click += new System.EventHandler(this.btnZoomOut_Click);
+            // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1536, 884);
+            this.Controls.Add(this.btnZoomOut);
             this.Controls.Add(this.guna2CircleButton1);
             this.Controls.Add(this.lbTextContent);
             this.Controls.Add(this.panelContent);
@@ -563,5 +584,6 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse6;
         private AllUserControll.UserManaInfoCus userManaInfoCus1;
+        private Guna.UI2.WinForms.Guna2Button btnZoomOut;
     }
 }

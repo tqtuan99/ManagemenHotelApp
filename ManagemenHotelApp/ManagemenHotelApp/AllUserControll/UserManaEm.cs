@@ -46,6 +46,7 @@ namespace ManagemenHotelApp.AllUserControll
                 dtgListBill.DataSource = null;
                 dtgDetailBill.DataSource = null;
                 lbNoti1.Visible = true;
+                lbIDEm.Text = "__";
             }
             else if (tabControl1.SelectedIndex == 2)
             {
@@ -169,19 +170,89 @@ namespace ManagemenHotelApp.AllUserControll
         {
             try
             {
+                String id = dtgEmDetail.Rows[e.RowIndex].Cells[1].Value.ToString();
+                lbIDEm.Text = id;
+                dtgDetailBill.DataSource = null;
+                lbNoti1.Visible = false;
                 if (txtNameBill.SelectedIndex == 0)
                 {
-                    String id = dtgEmDetail.Rows[e.RowIndex].Cells[1].Value.ToString();
+                    FillDataListRoomBill(id);
+                }else if(txtNameBill.SelectedIndex == 1)
+                {
+                    FillDataListServiceBill(id);
+                }
+                else
+                {
+                    FillDataListFoodBill(id);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Vui lòng click vào hàng chứa thông tin nhân viên cần tra cứu!", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        //Thay đổi danh sách hóa đơn hiển thị theo loại hóa đơn được chọn
+        private void txtNameBill_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dtgEmDetail.SelectedCells.Count != 0)
+                {
+                    String id = dtgEmDetail.SelectedCells[1].Value.ToString();
                     lbIDEm.Text = id;
-                    //query = @"Select  HOADONPHONG.idhoadon as 'ID Hóa Đơn', hotennv as 'Tên Nhân Viên', hotenkh as 'Tên Khách Hàng', ngaytao as 'Ngày Tạo', ngaythanhtoan as 'Ngày Thanh Toán',
-                    //          COUNT(CT_HOADONPHONG.idhoadon) as 'Số Lượng Phòng',SUM(dongia * (1-mucgiamgia)) as 'Tổng Tiền', hoadonphong.ghichu as 'Ghi Chú', (case when ngaythanhtoan IS NULL then N'Chưa thanh toán' else N'Đã thanh toán' end) as 'Trạng Thái'
-                    //          from(((nhanvien inner join hoadonphong
-                    //              on NHANVIEN.idnhanvien = HOADONPHONG.idnhanvien)
-                    //                  inner join KHACHHANG on HOADONPHONG.idkhachhang = KHACHHANG.idkhachhang)
-                    //                            inner join CT_HOADONPHONG on CT_HOADONPHONG.idhoadon = HOADONPHONG.idhoadon)
-                    //                          inner join PHONG on ct_HoaDonPhong.idphong = phong.idphong
-                    //          where nhanvien.idnhanvien = '" + id + "'Group by HOADONPHONG.idhoadon,hotenkh,hotennv,ngaytao,ngaythanhtoan,hoadonphong.ghichu";
-                    query = @"Select  HOADONPHONG.idhoadon as 'ID Hóa Đơn', hotennv as 'Tên Nhân Viên', hotenkh as 'Tên Khách Hàng', FORMAT (ngaytao, 'dd/MM/yyyy h:mm tt') as 'Ngày Tạo', FORMAT (ngaythanhtoan, 'dd/MM/yyyy h:mm tt') as 'Ngày Thanh Toán',
+                    dtgDetailBill.DataSource = null;
+                    lbNoti1.Visible = false;
+                    if (txtNameBill.SelectedIndex == 0)
+                    {
+                        FillDataListRoomBill(id);
+                    }
+                    else if (txtNameBill.SelectedIndex == 1)
+                    {
+                        FillDataListServiceBill(id);
+                    }
+                    else
+                    {
+                        FillDataListFoodBill(id);
+                    }
+                }
+                else
+                {
+                    return;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Vui lòng click vào hàng chứa thông tin nhân viên cần tra cứu!", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        //Filldata vào bảng chi tiết hóa đơn sau khi click vào id hóa đơn cần xem trong bảng hóa đơn
+        private void dtgListBill_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                String idhoadon = dtgListBill.Rows[e.RowIndex].Cells[0].Value.ToString();
+                lbNoti2.Visible = false;
+                if (txtNameBill.SelectedIndex == 0)
+                {
+                    FillDataRoomBillDetail(idhoadon);
+                }else if(txtNameBill.SelectedIndex == 1) {
+                    FillDataServiceBillDetail(idhoadon);
+                }else
+                {
+                    FillDataFoodBillDetail(idhoadon);
+                }             
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Vui lòng click vào hàng chứa thông tin nhân viên cần tra cứu!", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+        }
+        //===============================================Các hàm đổ dữ liệu vào bảng hóa đơn trong tra cứu nhân vien===============================================
+        //Hàm fill data hóa đơn phòng vào bảng hóa đơn
+        public void FillDataListRoomBill(String id)
+        {
+            query = @"Select  HOADONPHONG.idhoadon as 'ID Hóa Đơn', hotennv as 'Tên Nhân Viên', hotenkh as 'Tên Khách Hàng', FORMAT (ngaytao, 'dd/MM/yyyy h:mm tt') as 'Ngày Tạo', FORMAT (ngaythanhtoan, 'dd/MM/yyyy h:mm tt') as 'Ngày Thanh Toán',
                               COUNT(CT_HOADONPHONG.idhoadon) as 'Số Lượng Phòng',
                               SUM(dongia * (1-mucgiamgia) * (case when (5<DATEPART(hour, ngaytao) and 9>=DATEPART(hour, ngaytao) and ngaythanhtoan IS NOT NULL) then 0.5
 			                                                     when (9<DATEPART(hour, ngaytao) and 14>= DATEPART(hour, ngaytao) and ngaythanhtoan IS NOT NULL) then 0.3
@@ -199,34 +270,64 @@ namespace ManagemenHotelApp.AllUserControll
                                                 inner join CT_HOADONPHONG on CT_HOADONPHONG.idhoadon = HOADONPHONG.idhoadon)
 		                                            inner join PHONG on ct_HoaDonPhong.idphong = phong.idphong
                               where nhanvien.idnhanvien = '" + id + "'Group by HOADONPHONG.idhoadon,hotenkh,hotennv,ngaytao,ngaythanhtoan,hoadonphong.ghichu";
-                    DataSet ds = cn.getData(query);
-                    dtgListBill.DataSource = ds.Tables[0];
-                    dtgDetailBill.DataSource = null;
-                    lbNoti1.Visible = false;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex +"Vui lòng click vào hàng chứa thông tin nhân viên cần tra cứu!", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            DataSet ds = cn.getData(query);
+            dtgListBill.DataSource = ds.Tables[0];
         }
-        //Filldata vào bảng chi tiết hóa đơn sau khi click vào id hóa đơn cần xem trong bảng hóa đơn
-        private void dtgListBill_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        //Hàm fill data hóa đơn dịch vụ vào bảng hóa đơn
+        public void FillDataListServiceBill(String id)
         {
-            try
-            {
-                String idhoadon = dtgListBill.Rows[e.RowIndex].Cells[0].Value.ToString();
-                query = @"Select idhoadon as 'ID Hóa Đơn', tenphong as 'Tên Phòng', dongia as 'Đơn Giá', mucgiamgia as 'Mức Giảm Giá' from CT_HOADONPHONG,PHONG where CT_HOADONPHONG.idphong = PHONG.idphong and idhoadon = '" + idhoadon + "'";
-                DataSet ds = cn.getData(query);
-                dtgDetailBill.DataSource = ds.Tables[0];
-                lbNoti2.Visible = false;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Vui lòng click vào hàng chứa thông tin nhân viên cần tra cứu!", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-            }
+            query = @"Select  HOADONDICHVU.idhoadon as 'ID Hóa Đơn', hotennv as 'Tên Nhân Viên', hotenkh as 'Tên Khách Hàng', FORMAT (ngaytao, 'dd/MM/yyyy h:mm tt') as 'Ngày Tạo', FORMAT (ngaythanhtoan, 'dd/MM/yyyy h:mm tt') as 'Ngày Thanh Toán',
+                              COUNT(CT_HOADONDICHVU.iddichvu) as 'Số Lượng DV',
+                              SUM(giadichvu * (1-mucgiamgia)* CT_HOADONDICHVU.soluong) as 'Tổng Tiền', (case when ngaythanhtoan IS NULL then N'Chưa thanh toán' else N'Đã thanh toán' end) as 'Trạng Thái'
+                              from(((NHANVIEN inner join HOADONDICHVU
+		                                on NHANVIEN.idnhanvien = HOADONDICHVU.idnhanvien)
+		                                    inner join KHACHHANG on HOADONDICHVU.idkhachhang = KHACHHANG.idkhachhang)
+                                                inner join CT_HOADONDICHVU on CT_HOADONDICHVU.idhoadon = HOADONDICHVU.idhoadon)
+		                                            inner join DICHVU on CT_HOADONDICHVU.iddichvu = DICHVU.iddichvu
+                              where nhanvien.idnhanvien = '" + id + "'Group by HOADONDICHVU.idhoadon,hotenkh,hotennv,ngaytao,ngaythanhtoan,hoadondichvu.ghichu";
+            DataSet ds = cn.getData(query);
+            dtgListBill.DataSource = ds.Tables[0];
         }
+        //Hàm fill data hóa đơn thực phẩm vào bảng hóa đơn
+        public void FillDataListFoodBill(String id)
+        {
+            query = @"Select  HOADONTHUCPHAM.idhoadon as 'ID Hóa Đơn', hotennv as 'Tên Nhân Viên', hotenkh as 'Tên Khách Hàng', FORMAT (ngaytao, 'dd/MM/yyyy h:mm tt') as 'Ngày Tạo', FORMAT (ngaythanhtoan, 'dd/MM/yyyy h:mm tt') as 'Ngày Thanh Toán',
+                              COUNT(CT_HOADONTHUCPHAM.idthucpham) as 'Số Lượng TP',
+                              SUM(giaban * CT_HOADONTHUCPHAM.soluong) as 'Tổng Tiền', (case when ngaythanhtoan IS NULL then N'Chưa thanh toán' else N'Đã thanh toán' end) as 'Trạng Thái'
+                              from(((NHANVIEN inner join HOADONTHUCPHAM
+		                                on NHANVIEN.idnhanvien = HOADONTHUCPHAM.idnhanvien)
+		                                    inner join KHACHHANG on HOADONTHUCPHAM.idkhachhang = KHACHHANG.idkhachhang)
+                                                inner join CT_HOADONTHUCPHAM on CT_HOADONTHUCPHAM.idhoadon = HOADONTHUCPHAM.idhoadon)
+		                                            inner join THUCPHAM on CT_HOADONTHUCPHAM.idthucpham = THUCPHAM.idthucpham
+                              where nhanvien.idnhanvien = '" + id + "'Group by HOADONTHUCPHAM.idhoadon,hotenkh,hotennv,ngaytao,ngaythanhtoan,hoadonthucpham.ghichu";
+            DataSet ds = cn.getData(query);
+            dtgListBill.DataSource = ds.Tables[0];
+        }
+
+        //===============================================END - Các hàm đổ dữ liệu vào bảng hóa đơn trong tra cứu nhân vien===============================================
+
+        //===============================================Các hàm đổ dữ liệu vào bảng chi tiết hóa đơn=====================================================
+
+        public void FillDataRoomBillDetail(String id)
+        {
+            query = @"Select idhoadon as 'ID Hóa Đơn', tenphong as 'Tên Phòng', dongia as 'Đơn Giá', mucgiamgia as 'Giảm Giá' from CT_HOADONPHONG,PHONG where CT_HOADONPHONG.idphong = PHONG.idphong and idhoadon = '" + id + "'";
+            DataSet ds = cn.getData(query);
+            dtgDetailBill.DataSource = ds.Tables[0];
+        }
+        public void FillDataServiceBillDetail(String id)
+        {
+            query = @"Select idhoadon as 'ID Hóa Đơn', tendichvu as 'Tên DV', giadichvu as 'Giá', CT_HOADONDICHVU.soluong as 'SL', mucgiamgia as 'Giảm Giá' from CT_HOADONDICHVU,DICHVU where CT_HOADONDICHVU.iddichvu = DICHVU.iddichvu and idhoadon = '" + id + "'";
+            DataSet ds = cn.getData(query);
+            dtgDetailBill.DataSource = ds.Tables[0];
+        }
+        public void FillDataFoodBillDetail(String id)
+        {
+            query = @"Select idhoadon as 'ID Hóa Đơn', tenthucpham as 'Tên TP', giaban as 'Giá', CT_HOADONTHUCPHAM.soluong as 'SL' from CT_HOADONTHUCPHAM,THUCPHAM where CT_HOADONTHUCPHAM.idthucpham = THUCPHAM.idthucpham and idhoadon = '" + id + "'";
+            DataSet ds = cn.getData(query);
+            dtgDetailBill.DataSource = ds.Tables[0];
+        }
+
+        //===============================================END - Các hàm đổ dữ liệu vào bảng chi tiết hóa đơn===============================================
 
         //======================================================CẬP NHẬT THÔNG TIN====================================================================
         //Fill data vào bảng danh sách nhân viên khi nhập id vào ô search
@@ -612,5 +713,6 @@ namespace ManagemenHotelApp.AllUserControll
                 return;
             }
         }
+
     }
 }

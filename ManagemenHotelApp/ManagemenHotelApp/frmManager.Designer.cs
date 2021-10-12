@@ -78,6 +78,7 @@
             // btnLogout
             // 
             this.btnLogout.CheckedState.Parent = this.btnLogout;
+            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogout.CustomImages.Parent = this.btnLogout;
             this.btnLogout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(121)))), ((int)(((byte)(155)))));
             this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -101,7 +102,7 @@
             this.btnZoomOut.FillColor = System.Drawing.Color.Transparent;
             this.btnZoomOut.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnZoomOut.ForeColor = System.Drawing.Color.White;
-            this.btnZoomOut.HoverState.FillColor = System.Drawing.Color.Red;
+            this.btnZoomOut.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(210)))), ((int)(((byte)(210)))));
             this.btnZoomOut.HoverState.Parent = this.btnZoomOut;
             this.btnZoomOut.Location = new System.Drawing.Point(1465, 0);
             this.btnZoomOut.Name = "btnZoomOut";

@@ -54,7 +54,7 @@ namespace ManagemenHotelApp
 
             userRegisterRoom1.Visible = true;
             userRegisterRoom1.BringToFront();
-            userRegisterRoom1.Tag = idEm; 
+            userRegisterRoom1.Tag = idEm;
         }
 
         private void btnAddCus_Click(object sender, EventArgs e)
@@ -238,5 +238,9 @@ namespace ManagemenHotelApp
             }
             
         }
-    }
+        private void btnZoomOut_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+    } 
 }
