@@ -22,27 +22,29 @@ namespace ManagemenHotelApp.AllUserControll
 
         private void UserSta_Load(object sender, EventArgs e)
         {
+            txtYear.SelectedItem = DateTime.Now.ToString("yyyy");
+            txtMonth.SelectedItem = DateTime.Now.ToString("MM");
+            checkDayInMonth.Checked = true;
             //FillMonthInYear("2021");
             setChart(dataGridView1);
-            //FillMonthInYear("2021");
-            //chart1.Series[0].ChartType = SeriesChartType.Pie;
-
+            FillDayInMonthAndYear(txtMonth.Text, txtYear.Text);
+            chart1.Series[0].ChartType = SeriesChartType.Pie;
         }
 
         public void setChart(DataGridView dtg)
         {
             chart1.ChartAreas["ChartArea1"].AxisX.MajorGrid.Enabled = false;
             chart1.Series["Salary"].IsValueShownAsLabel = true;
-            chart1.DataSource = dataGridView1.DataSource;
-            chart1.Series["Salary"].XValueMember = dataGridView1.Columns[0].Name;
-            chart1.Series["Salary"].YValueMembers = dataGridView1.Columns[1].Name;
+            //chart1.DataSource = dataGridView1.DataSource;
+            //chart1.Series["Salary"].XValueMember = dataGridView1.Columns[0].Name;
+            //chart1.Series["Salary"].YValueMembers = dataGridView1.Columns[1].Name;
         }
 
         public void FillMonthInYear( string year)
         {
             try
             {
-                query = @"select Month(ngaytao) as paraname,SUM(dongia * (1-mucgiamgia) * (case when (5<DATEPART(hour, ngaytao) and 9>=DATEPART(hour, ngaytao) and ngaythanhtoan IS NOT NULL) then 0.5
+                query = @"select Month(ngaytao) as 'Tháng',SUM(dongia * (1-mucgiamgia) * (case when (5<DATEPART(hour, ngaytao) and 9>=DATEPART(hour, ngaytao) and ngaythanhtoan IS NOT NULL) then 0.5
 			                                                     when (9<DATEPART(hour, ngaytao) and 14>= DATEPART(hour, ngaytao) and ngaythanhtoan IS NOT NULL) then 0.3
 			                                                     else 0 end 
 	                                                      + case when (12<DATEPART(hour, ngaythanhtoan) and 15>=DATEPART(hour, ngaytao) ) then 0.3
@@ -50,7 +52,7 @@ namespace ManagemenHotelApp.AllUserControll
 			                                                     when (18<DATEPART(hour, ngaythanhtoan)) then 1
 			                                                     else 0 end 
 	                                                      + case when ngaythanhtoan IS NOT NULL then DATEDIFF(DAY,ngaytao,ngaythanhtoan)
-		                                                    else 0 end)) as value
+		                                                    else 0 end)) as 'Tổng Tiền'
                     from (HOADONPHONG inner join CT_HOADONPHONG
 		                    on HOADONPHONG.idhoadon = CT_HOADONPHONG.idhoadon)
 			                    inner join phong on CT_HOADONPHONG.idphong = PHONG.idphong

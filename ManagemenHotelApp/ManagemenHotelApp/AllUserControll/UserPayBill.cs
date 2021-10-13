@@ -147,7 +147,8 @@ namespace ManagemenHotelApp.AllUserControll
 
         private void btnViewBill_Click(object sender, EventArgs e)
         {
-            if(tbInfCus.Rows.Count == 1)
+            
+            if (tbInfCus.Rows.Count == 1)
             {
                 MessageBox.Show("Chưa lựa chọn khách hàng cần thanh toán, vui lòng chọn khách hàng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -196,12 +197,20 @@ namespace ManagemenHotelApp.AllUserControll
       
         public void updateBill()
         {
-            query = @"update HOADONPHONG set ngaythanhtoan = '"+tbInfCus.Rows[0].Cells[4].Value.ToString()+"' where idkhachhang = "+idCus + " and ngaythanhtoan IS NULL";
-            cn.setData(query, "");
-            query = @"update HOADONDICHVU set ngaythanhtoan = '" + tbInfCus.Rows[0].Cells[4].Value.ToString() + "' where idkhachhang = " + idCus + " and ngaythanhtoan IS NULL";
-            cn.setData(query, "");
-            query = @"update HOADONTHUCPHAM set ngaythanhtoan = '" + tbInfCus.Rows[0].Cells[4].Value.ToString() + "' where idkhachhang = " + idCus + " and ngaythanhtoan IS NULL";
-            cn.setData(query, "");
+            try
+            {
+                DateTimePicker pk = new DateTimePicker();
+                pk.Value = DateTime.Now;
+                query = @"update HOADONPHONG set ngaythanhtoan = '" + pk.Value.ToString() + "' where idkhachhang = " + idCus + " and ngaythanhtoan IS NULL";
+                cn.setData(query, "");
+                query = @"update HOADONDICHVU set ngaythanhtoan = '" + pk.Value.ToString() + "' where idkhachhang = " + idCus + " and ngaythanhtoan IS NULL";
+                cn.setData(query, "");
+                query = @"update HOADONTHUCPHAM set ngaythanhtoan = '" + pk.Value.ToString() + "' where idkhachhang = " + idCus + " and ngaythanhtoan IS NULL";
+                cn.setData(query, "");
+            }catch
+            {
+                MessageBox.Show("Không kết nối!");
+            }
         }
         public void updateRoomState()
         {

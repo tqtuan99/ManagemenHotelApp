@@ -225,7 +225,7 @@ namespace ManagemenHotelApp
             userPayBill1.Visible = false;
             userRegisterService1.Visible = false;
             userRegisterFood1.Visible = false;
-            btnAddFood.PerformClick();
+            btnAddCus.PerformClick();
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -241,6 +241,16 @@ namespace ManagemenHotelApp
         private void btnZoomOut_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void guna2Button1_MouseHover(object sender, EventArgs e)
+        {
+            lbLogout.Visible = true;
+        }
+
+        private void guna2Button1_MouseLeave(object sender, EventArgs e)
+        {
+            lbLogout.Visible = false;
         }
     } 
 }

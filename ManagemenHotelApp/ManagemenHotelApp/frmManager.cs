@@ -24,7 +24,7 @@ namespace ManagemenHotelApp
             userRoom1.Visible = false;
             userFood1.Visible = false;
             userServive1.Visible = false;
-            btnManaService.PerformClick();
+            btnManaEm.PerformClick();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -125,6 +125,16 @@ namespace ManagemenHotelApp
                 frm_Login f = new frm_Login();
                 f.Show();
             }
+        }
+
+        private void btnLogout_MouseHover(object sender, EventArgs e)
+        {
+            lbLogout.Visible = true;
+        }
+
+        private void frmManager_MouseLeave(object sender, EventArgs e)
+        {
+            lbLogout.Visible = false;
         }
     }
 }

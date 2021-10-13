@@ -62,6 +62,7 @@
             this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2Elipse6 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btnZoomOut = new Guna.UI2.WinForms.Guna2Button();
+            this.lbLogout = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -72,6 +73,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(121)))), ((int)(((byte)(155)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.lbLogout);
             this.panel1.Controls.Add(this.guna2Button1);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.btnCheckOut);
@@ -106,6 +108,8 @@
             this.guna2Button1.Size = new System.Drawing.Size(37, 37);
             this.guna2Button1.TabIndex = 6;
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.guna2Button1.MouseLeave += new System.EventHandler(this.guna2Button1_MouseLeave);
+            this.guna2Button1.MouseHover += new System.EventHandler(this.guna2Button1_MouseHover);
             // 
             // panel2
             // 
@@ -519,6 +523,18 @@
             this.btnZoomOut.Text = "__";
             this.btnZoomOut.Click += new System.EventHandler(this.btnZoomOut_Click);
             // 
+            // lbLogout
+            // 
+            this.lbLogout.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lbLogout.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLogout.Location = new System.Drawing.Point(10, 797);
+            this.lbLogout.Name = "lbLogout";
+            this.lbLogout.Padding = new System.Windows.Forms.Padding(6, 4, 4, 2);
+            this.lbLogout.Size = new System.Drawing.Size(87, 23);
+            this.lbLogout.TabIndex = 7;
+            this.lbLogout.Text = "Đăng Xuất";
+            this.lbLogout.Visible = false;
+            // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -581,5 +597,6 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse6;
         private AllUserControll.UserManaInfoCus userManaInfoCus1;
         private Guna.UI2.WinForms.Guna2Button btnZoomOut;
+        private System.Windows.Forms.Label lbLogout;
     }
 }

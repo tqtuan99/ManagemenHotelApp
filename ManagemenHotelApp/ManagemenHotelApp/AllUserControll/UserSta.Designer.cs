@@ -39,15 +39,13 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.checkMonthInYear = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.checkDayInMonth = new System.Windows.Forms.RadioButton();
             this.txtMonth = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtYear = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.dataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.paraname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.value = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
@@ -75,7 +73,7 @@
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.checkMonthInYear);
-            this.tabPage1.Controls.Add(this.radioButton1);
+            this.tabPage1.Controls.Add(this.checkDayInMonth);
             this.tabPage1.Controls.Add(this.txtMonth);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.txtYear);
@@ -94,32 +92,35 @@
             // checkMonthInYear
             // 
             this.checkMonthInYear.AutoSize = true;
+            this.checkMonthInYear.BackColor = System.Drawing.Color.Transparent;
             this.checkMonthInYear.Location = new System.Drawing.Point(877, 516);
             this.checkMonthInYear.Name = "checkMonthInYear";
             this.checkMonthInYear.Size = new System.Drawing.Size(258, 28);
             this.checkMonthInYear.TabIndex = 12;
             this.checkMonthInYear.TabStop = true;
             this.checkMonthInYear.Text = "Theo tháng trong năm";
-            this.checkMonthInYear.UseVisualStyleBackColor = true;
+            this.checkMonthInYear.UseVisualStyleBackColor = false;
             this.checkMonthInYear.Click += new System.EventHandler(this.checkMonthInYear_Click);
             // 
-            // radioButton1
+            // checkDayInMonth
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(1179, 516);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(262, 28);
-            this.radioButton1.TabIndex = 11;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Theo ngày trong tháng";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.Click += new System.EventHandler(this.radioButton1_Click);
+            this.checkDayInMonth.AutoSize = true;
+            this.checkDayInMonth.Location = new System.Drawing.Point(1179, 516);
+            this.checkDayInMonth.Name = "checkDayInMonth";
+            this.checkDayInMonth.Size = new System.Drawing.Size(262, 28);
+            this.checkDayInMonth.TabIndex = 11;
+            this.checkDayInMonth.TabStop = true;
+            this.checkDayInMonth.Text = "Theo ngày trong tháng";
+            this.checkDayInMonth.UseVisualStyleBackColor = true;
+            this.checkDayInMonth.Click += new System.EventHandler(this.radioButton1_Click);
             // 
             // txtMonth
             // 
             this.txtMonth.BackColor = System.Drawing.Color.Transparent;
+            this.txtMonth.BorderColor = System.Drawing.Color.Cyan;
             this.txtMonth.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.txtMonth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtMonth.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txtMonth.FocusedColor = System.Drawing.Color.Empty;
             this.txtMonth.FocusedState.Parent = this.txtMonth;
             this.txtMonth.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -160,8 +161,10 @@
             // txtYear
             // 
             this.txtYear.BackColor = System.Drawing.Color.Transparent;
+            this.txtYear.BorderColor = System.Drawing.Color.Cyan;
             this.txtYear.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.txtYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtYear.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txtYear.FocusedColor = System.Drawing.Color.Empty;
             this.txtYear.FocusedState.Parent = this.txtYear;
             this.txtYear.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -194,8 +197,10 @@
             // guna2ComboBox1
             // 
             this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ComboBox1.BorderColor = System.Drawing.Color.Cyan;
             this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.guna2ComboBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.guna2ComboBox1.FocusedColor = System.Drawing.Color.Empty;
             this.guna2ComboBox1.FocusedState.Parent = this.guna2ComboBox1;
             this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -222,7 +227,7 @@
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(305, 18);
+            this.chart1.Location = new System.Drawing.Point(308, 18);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
             series1.ChartArea = "ChartArea1";
@@ -230,7 +235,7 @@
             series1.Legend = "Legend1";
             series1.Name = "Salary";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(1136, 467);
+            this.chart1.Size = new System.Drawing.Size(1133, 467);
             this.chart1.TabIndex = 6;
             this.chart1.Text = "chart1";
             // 
@@ -252,9 +257,6 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeight = 26;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.paraname,
-            this.value});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 15.75F);
@@ -269,7 +271,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(278, 467);
+            this.dataGridView1.Size = new System.Drawing.Size(271, 467);
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.dataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -293,18 +295,6 @@
             this.dataGridView1.ThemeStyle.RowsStyle.Height = 22;
             this.dataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // paraname
-            // 
-            this.paraname.DataPropertyName = "paraname";
-            this.paraname.HeaderText = "Tháng";
-            this.paraname.Name = "paraname";
-            // 
-            // value
-            // 
-            this.value.DataPropertyName = "value";
-            this.value.HeaderText = "Tổng Thu";
-            this.value.Name = "value";
             // 
             // label1
             // 
@@ -357,8 +347,6 @@
         private Guna.UI2.WinForms.Guna2ComboBox txtMonth;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RadioButton checkMonthInYear;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn paraname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn value;
+        private System.Windows.Forms.RadioButton checkDayInMonth;
     }
 }

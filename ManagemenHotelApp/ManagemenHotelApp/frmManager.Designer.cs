@@ -52,6 +52,7 @@
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.lbLogout = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.pnContent.SuspendLayout();
             this.SuspendLayout();
@@ -60,6 +61,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(121)))), ((int)(((byte)(155)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.lbLogout);
             this.panel1.Controls.Add(this.btnLogout);
             this.panel1.Controls.Add(this.btnZoomOut);
             this.panel1.Controls.Add(this.btnExit);
@@ -93,6 +95,7 @@
             this.btnLogout.Size = new System.Drawing.Size(32, 37);
             this.btnLogout.TabIndex = 8;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            this.btnLogout.MouseHover += new System.EventHandler(this.btnLogout_MouseHover);
             // 
             // btnZoomOut
             // 
@@ -380,6 +383,18 @@
             this.guna2Elipse5.BorderRadius = 30;
             this.guna2Elipse5.TargetControl = this.pnContent;
             // 
+            // lbLogout
+            // 
+            this.lbLogout.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lbLogout.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLogout.Location = new System.Drawing.Point(10, 37);
+            this.lbLogout.Name = "lbLogout";
+            this.lbLogout.Padding = new System.Windows.Forms.Padding(6, 4, 4, 2);
+            this.lbLogout.Size = new System.Drawing.Size(87, 23);
+            this.lbLogout.TabIndex = 5;
+            this.lbLogout.Text = "Đăng Xuất";
+            this.lbLogout.Visible = false;
+            // 
             // frmManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -395,6 +410,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmManager";
             this.Load += new System.EventHandler(this.frmManager_Load);
+            this.MouseLeave += new System.EventHandler(this.frmManager_MouseLeave);
             this.panel1.ResumeLayout(false);
             this.pnContent.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -426,5 +442,6 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse5;
         private AllUserControll.UserService userServive1;
         private Guna.UI2.WinForms.Guna2Button btnLogout;
+        private System.Windows.Forms.Label lbLogout;
     }
 }

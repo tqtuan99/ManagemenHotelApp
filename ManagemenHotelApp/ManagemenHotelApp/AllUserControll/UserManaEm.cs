@@ -30,6 +30,8 @@ namespace ManagemenHotelApp.AllUserControll
             clear();
             Fill_dtgAcount();
             setVisibleAcount(false);
+            setTableEm(0, 410, false);
+            setTableBill(1431, false);
         }
 
         //===================================================Di chuyển giữa các tab thêm mới, tra cứu, chỉnh sửa, xóa==============================================
@@ -168,6 +170,8 @@ namespace ManagemenHotelApp.AllUserControll
         //Filldata vào bảng danh sách hóa đơn khi click vào nhân viên trong bảng danh sách nhân viên
         private void dtgEmDetail_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            setTableEm(550, 182, true);
+            setTableBill(1431, false);
             try
             {
                 String id = dtgEmDetail.Rows[e.RowIndex].Cells[1].Value.ToString();
@@ -196,6 +200,8 @@ namespace ManagemenHotelApp.AllUserControll
         {
             try
             {
+                setTableEm(550, 182, true);
+                setTableBill(1431, false);
                 if (dtgEmDetail.SelectedCells.Count != 0)
                 {
                     String id = dtgEmDetail.SelectedCells[1].Value.ToString();
@@ -228,6 +234,8 @@ namespace ManagemenHotelApp.AllUserControll
         //Filldata vào bảng chi tiết hóa đơn sau khi click vào id hóa đơn cần xem trong bảng hóa đơn
         private void dtgListBill_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            setTableEm(260, 182, true);
+            setTableBill(953, true);
             try
             {
                 String idhoadon = dtgListBill.Rows[e.RowIndex].Cells[0].Value.ToString();
@@ -328,7 +336,24 @@ namespace ManagemenHotelApp.AllUserControll
         }
 
         //===============================================END - Các hàm đổ dữ liệu vào bảng chi tiết hóa đơn===============================================
-
+        //Hàm resize table
+        public void setTableEm(int location, int height, Boolean b)
+        {
+            dtgEmDetail.Height = height;
+            tbName.Location = new Point(location, tbName.Location.Y);
+            tbName.Visible = b;
+            lbNoti2.Location = new Point(location - 15, lbNoti2.Location.Y);
+            lbNoti2.Visible = b;
+            lbIDEm.Location = new Point(tbName.Location.X + tbName.Width, tbName.Location.Y);
+            lbIDEm.Visible = b;
+            dtgListBill.Visible = b;
+        }
+        public void setTableBill(int w, Boolean b)
+        {
+            dtgListBill.Width = w;
+            lbDetail.Visible = b;
+            dtgDetailBill.Visible = b;
+        }
         //======================================================CẬP NHẬT THÔNG TIN====================================================================
         //Fill data vào bảng danh sách nhân viên khi nhập id vào ô search
         private void txtIdUpdate_TextChanged(object sender, EventArgs e)
@@ -700,7 +725,6 @@ namespace ManagemenHotelApp.AllUserControll
             return 0;
 
         }
-
         private void txtFind_Acount_TextChanged(object sender, EventArgs e)
         {
             try
