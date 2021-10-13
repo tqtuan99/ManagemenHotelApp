@@ -35,6 +35,7 @@ namespace ManagemenHotelApp.AllUserControll
         {
             chart1.ChartAreas["ChartArea1"].AxisX.MajorGrid.Enabled = false;
             chart1.Series["Salary"].IsValueShownAsLabel = true;
+        
             //chart1.DataSource = dataGridView1.DataSource;
             //chart1.Series["Salary"].XValueMember = dataGridView1.Columns[0].Name;
             //chart1.Series["Salary"].YValueMembers = dataGridView1.Columns[1].Name;
